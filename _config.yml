@@ -1,4 +1,4 @@
-theme: minimal-mistakes-jekyll
+theme: jekyll-theme-minimal
 title: Netgíró
 heading_anchors: true
 aux_links:
