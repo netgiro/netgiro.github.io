@@ -1,2 +1,6 @@
 theme: jekyll-theme-minimal
-title: Netgíró 
+title: Netgíró
+heading_anchors: true
+aux_links:
+  "Just the Docs on GitHub":
+    - "//github.com/pmarsceill/just-the-docs"
