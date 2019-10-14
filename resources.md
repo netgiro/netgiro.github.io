@@ -1,5 +1,5 @@
 ---
-title: HTTP Post request
+title: Resources
 parent: Netgíró iFrame and HTTP POST
-nav_order: 2
+nav_order: 5
 ---
