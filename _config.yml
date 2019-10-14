@@ -4,5 +4,3 @@ heading_anchors: true
 aux_links:
   "Just the Docs on GitHub":
     - "//github.com/pmarsceill/just-the-docs"
-
-theme: jekyll-theme-minimal
