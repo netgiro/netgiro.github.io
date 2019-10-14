@@ -37,7 +37,7 @@ nav_order: 2
 | Items[n].Amount | numeric | Yes | Total price for product | 3980 |
 | Items[n].Quantity | numeric | Yes | Quantity of products | 2000 |
 
-#### Subscriptions
+### Subscriptions
 Subscriptions are optional, but each cart needs to have at least one item or subscription.
 
 | Name | Data Type | Required | Description | Example |
@@ -64,12 +64,12 @@ You should repeat Items[n] fields for every product in the cart, where n is a se
 
 ***Subscriptions can be predefined in providers portal https://partner.netgiro.is.
 
-### HTTP Post integration with iFrame
+## HTTP Post integration with iFrame
 You can display Netgíró inside your site using an iFrame. In that case, you have to set the Iframe parameter of the request to true.
 
 To display Netgíró within an iframe you have to set up the iframe element on your site, and post the Netgíró request to the iframe.
 
-### Partial payments
+## Partial payments
 Netgíró offers the option of paying with partial payments i.e. multiple installments. Partial payments must be enabled before you can use them in the post request.
 
 You can control how Netgíró displays partial payment options to the user with two optional parameters:
@@ -81,12 +81,12 @@ If you provide the value 2 for this parameter, the user will be presented with t
 MaxNumberOfInstallments
 This parameter controls the maximum number of installments the user can choose to pay with. Please note that Netgíró determines the number of installments based on minimum monthly rate and other factors, so the actual number of installments offered to the user can be smaller than specified with this parameter, but it will never be bigger
 
-### Payment confirmations
+## Payment confirmations
 Only confirmed payments are processed in Netgíró and in bank. If the payment is not confirmed, it can be confirmed manually, calling the confirmation POST request or doing it in merchant’s Netgíró pages. Netgíró has 3 types of confirmation options:
 
-#### Automatic confirmation (default)
+### Automatic confirmation (default)
 If nothing is provided in request, Netgíró automatically marks successful payment as confirmed. Payment can be canceled before it is settled to merchant
-#### Merchant payment confirmation
+### Merchant payment confirmation
 If merchant sets parameters (ConfirmationType=1, PaymentConfirmedURL=”url on merchant pages”), Netgíró sets the payment to pending, and before redirecting tries to confirm payment by calling the PaymentConfirmedURL. **Requests can be GET or POST with parameters shown in table below.**
 
 | Name | Data Type | Required | Description | Example  |
@@ -105,7 +105,7 @@ If merchant sets parameters (ConfirmationType=1, PaymentConfirmedURL=”url on m
 
 If Netgíró receives “OK” (HTTP status 200), payment is confirmed, and user is redirected back to the merchant pages (defined in PaymentSuccessfulURL) with response ([[#HTTP-Redirect|chapter HTTP-Redirect]])
 
-#### Manual confirmation
+### Manual confirmation
 
 If merchant sets parameters (ConfirmationType=2), Netgíró sets the payment to pending, redirects user back to merchant pages (PaymentSuccessfulURL), with response like in table below.
 
@@ -119,7 +119,7 @@ If merchant sets parameters (ConfirmationType=2), Netgíró sets the payment to 
 
 After that merchant needs to call manual confirm payment ([[#Manual-payment-confirmation|chapter 2.4]]).
 
-#### HTTP Redirect
+## HTTP Redirect
 
 After successful purchase Netgíró will redirect the user to PaymentSuccessfulURL you provided, together with the following parameters:
 
@@ -150,7 +150,7 @@ Also, if you get HTTP error 414 (URI too long) on PaymentSuccessfulURL for too m
 
 For validating the response from Netgiro you should verify that the **NetgiroSignature** is correct with => SHA256(SecretKey, ReferenceNumber, TransactionId, InvoiceNumber, TotalAmount, Status). See chapter Message Signing for Security below for details on the encryption mechanism.
 
-#### Message signing for security
+## Message signing for security
 
 To prevent users from manipulating prices of items sent over to the Gateway each sale is encrypted with a secret key that only the merchant and Netgiro knows.
 
@@ -193,7 +193,7 @@ You can try out the encryption with http://www.xorbin.com/tools/sha256-hash-calc
 
 {{/sha256calculator.png|Xorbin's SHA256 hash calculator}}
 
-#### Manual payment confirmation
+## Manual payment confirmation
 
 If merchant is confirming payments manually ([[#Manual-confirmation|2.1.3.3]]) he will need to confirm payment either in his Netgíró merchant pages, or by making POST request to ConfirmPayment.Url for confirm payment is Url 
 for Netgíró payment + ConfirmPayment).
