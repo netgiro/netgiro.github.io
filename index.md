@@ -9,7 +9,7 @@ Customer browses merchant's shop and chooses the items she wants to buy. When th
 You can choose if you want to integrate Netgíró into your site using a redirect to Netgíró site, or you want to display Netgíró inside an iframe on your site. The process is practically the same for both approaches.
 
 ### HTTP Post request
-| Name | Data Type | Required | Description | Example  |
+| Name | Data Type | Required | Description | Example |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | ApplicationID | string | Yes | Merchant identifier | 1234 |
 | PaymentSuccessfulURL  | string | No | If supplied, Netgíró will redirect the user to this url after successful purchase | shop.com/success |
