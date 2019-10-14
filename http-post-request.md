@@ -175,25 +175,26 @@ The input string for the hash function is determined using:
 (X) For **subscriptions** the "TotalAmount" parameter value should be 0 and the Total Amount for the signature is the amount in **Subscriptions[n].IntervalPrice**.
 
 Which gives:
-{{{
+~~~
 secret2221999123
-}}}
+~~~
 
 The signature is then the result of the hash function 
-{{{
+~~~
 SHA256("secret2221999123") = 8980d8fa8e6cdd593d646e235f77bf6175fbad630f6688aeaa922145f58e5719
-}}}
+~~~
 
 If there is a problem with calculating the signature you should check if the following is true for you:
 
-{{{
+~~~
 SHA256("abc") = ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
-}}}
+~~~
 
 You can try out the encryption with http://www.xorbin.com/tools/sha256-hash-calculator
 
 
-{{/sha256calculator.png|Xorbin's SHA256 hash calculator}}
+<img src="images/sha256calculator.png?raw=true" alt="sha256calculator.png">
+Xorbin's SHA256 hash calculator
 
 ## Manual payment confirmation
 
