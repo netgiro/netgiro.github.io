@@ -12,7 +12,7 @@ You can choose if you want to integrate Netgíró into your site using a redirec
 | Name | Data Type | Required | Description | Example  |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | ApplicationID | string | Yes | Merchant identifier | 1234 |
-| PaymentSuccessfulURL  | string | No | If supplied, Netgíró will redirect the user to this url after successful purchase| shop.com/success |
+| PaymentSuccessfulURL  | string | No | If supplied, Netgíró will redirect the user to this url after successful purchase | shop.com/success |
 | PaymentCancelledURL | string  | No  | If supplied, Netgíró will show cancel button to user and redirect to this url | shop.com/cancel |
 | PaymentConfirmedURL | string | No  | If supplied, Netgíró will make server call to this url to confirm purchase. If call fails, purchase is canceled | shop.com/confirm |
 |  PrefixUrlParameters| boolean | No | If provider is using WordPress or some other framework that has reserved terms, by sending this parameter, all response parameters from Netgíró will be prefixed to avoid collision. (http://codex.wordpress.org/Function_Reference/register_taxonomy#Reserved_Terms)| true |
