@@ -42,8 +42,8 @@ You can choose if you want to integrate Netgíró into your site using a redirec
 
 | Name | Data Type | Required | Description | Example |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Subscriptions[n].Name | string | yes | Name of subscription | Golf club membership |
-| Subscriptions[n].Code | string | no | Code of predefined subscription. This field can be used to associate subscription to predefined*** subscription in provider, so provider can easily change parameters of all subscriptions in future. | NG123 |
+| ApplicationID | string | Yes | Merchant identifier | 1234 |
+| PaymentSuccessfulURL | string | No | If supplied, Netgíró will redirect the user to this url after successful purchase | shop.com/success |
 | Subscriptions[n].IntervalType | numeric | yes | Interval of subscription(1 - week, 2 - month, 3 - year) | 2 |
 | Subscriptions[n].IntervalPrice | numeric | yes | Price of one subscription interval | 1000 |
 | Subscriptions[n].BillingInterval | numeric | yes | Bill every X intervals | 1 |
