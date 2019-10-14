@@ -160,15 +160,15 @@ Netgíró uses SHA256 hash algorithm for generating the signatures. Input string
 
 For example if you are posting a cart with the following values:
 
-* SecretKey: **secret**
-*ReferenceNumber: **222**
-*Total Amount*: **1999**
-*ApplicationId: **123**
+- SecretKey: **secret**
+- ReferenceNumber: **222**
+- Total Amount*: **1999**
+- ApplicationId: **123**
 
 The input string for the hash function is determined using: 
-{{{
- SecretKey + ReferenceNumber + Total Amount + ApplicationId 
-}}}
+
+ ~~~ SecretKey + ReferenceNumber + Total Amount + ApplicationId ~~~
+
 
 (X) For **subscriptions** the "TotalAmount" parameter value should be 0 and the Total Amount for the signature is the amount in **Subscriptions[n].IntervalPrice**.
 
