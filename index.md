@@ -40,6 +40,17 @@ You can choose if you want to integrate Netgíró into your site using a redirec
 | Items[n].Amount | numeric | Yes | Total price for product | 3980 |
 | Items[n].Quantity | numeric | Yes | Quantity of products | 2000 |
 
+| Name | Data Type | Required | Description | Example |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Subscriptions[n].Name | string | yes | Name of subscription | Golf club membership |
+| Subscriptions[n].Code | string | no | Code of predefined subscription. This field can be used to associate subscription to predefined*** subscription in provider, so provider can easily change parameters of all subscriptions in future. | NG123 |
+| Subscriptions[n].IntervalType | numeric | yes | Interval of subscription(1 - week, 2 - month, 3 - year) | 2 |
+| Subscriptions[n].IntervalPrice | numeric | yes | Price of one subscription interval | 1000 |
+| Subscriptions[n].BillingInterval | numeric | yes | Bill every X intervals | 1 |
+| Subscriptions[n].TotalIntervalCount | numeric | no | Total number of intervals(if NULL, subscription has no end date) | 12 |
+| Subscriptions[n].Quantity | numeric | yes | Quantity of a subscription item | 1000|
+| Subscriptions[n].TrialPeriodDays| numeric | no | If subscription has free period at start(it will not be billed for TrialPeriodDays) | 30 |
+
 #### Subscriptions
 Subscriptions are optional, but each cart needs to have at least one item or subscription.
 
