@@ -9,6 +9,7 @@ Customer browses merchant's shop and chooses the items she wants to buy. When th
 You can choose if you want to integrate Netgíró into your site using a redirect to Netgíró site, or you want to display Netgíró inside an iframe on your site. The process is practically the same for both approaches.
 
 ### HTTP Post request
+
 | Name | Data Type | Required | Description | Example |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | ApplicationID | string | Yes | Merchant identifier | 1234 |
@@ -39,17 +40,6 @@ You can choose if you want to integrate Netgíró into your site using a redirec
 | Items[n].UnitPrice | numeric | Yes | Price of single product | 1990 |
 | Items[n].Amount | numeric | Yes | Total price for product | 3980 |
 | Items[n].Quantity | numeric | Yes | Quantity of products | 2000 |
-
-| Name | Data Type | Required | Description | Example |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| ApplicationID | string | Yes | Merchant identifier | 1234 |
-| PaymentSuccessfulURL | string | No | If supplied, Netgíró will redirect the user to this url after successful purchase | shop.com/success |
-| Subscriptions[n].IntervalType | numeric | yes | Interval of subscription(1 - week, 2 - month, 3 - year) | 2 |
-| Subscriptions[n].IntervalPrice | numeric | yes | Price of one subscription interval | 1000 |
-| Subscriptions[n].BillingInterval | numeric | yes | Bill every X intervals | 1 |
-| Subscriptions[n].TotalIntervalCount | numeric | no | Total number of intervals(if NULL, subscription has no end date) | 12 |
-| Subscriptions[n].Quantity | numeric | yes | Quantity of a subscription item | 1000|
-| Subscriptions[n].TrialPeriodDays| numeric | no | If subscription has free period at start(it will not be billed for TrialPeriodDays) | 30 |
 
 #### Subscriptions
 Subscriptions are optional, but each cart needs to have at least one item or subscription.
