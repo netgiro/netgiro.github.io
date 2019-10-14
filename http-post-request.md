@@ -167,7 +167,9 @@ For example if you are posting a cart with the following values:
 
 The input string for the hash function is determined using: 
 
- ~~~ SecretKey + ReferenceNumber + Total Amount + ApplicationId ~~~
+ ~~~ 
+ SecretKey + ReferenceNumber + Total Amount + ApplicationId 
+ ~~~
 
 
 (X) For **subscriptions** the "TotalAmount" parameter value should be 0 and the Total Amount for the signature is the amount in **Subscriptions[n].IntervalPrice**.
