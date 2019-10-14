@@ -1,4 +1,4 @@
-remote_theme: "pmarsceill/just-the-docs"
+remote_theme: "dbtek/dbyll"
 title: Netgíró
 heading_anchors: true
 aux_links:
