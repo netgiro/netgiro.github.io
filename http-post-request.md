@@ -195,7 +195,7 @@ You can try out the encryption with http://www.xorbin.com/tools/sha256-hash-calc
 
 ## Manual payment confirmation
 
-If merchant is confirming payments manually ([2.1.3.3](#manual-confirmation")) he will need to confirm payment either in his Netgíró merchant pages, or by making POST request to ConfirmPayment.Url for confirm payment is Url 
+If merchant is confirming payments manually ([2.1.3.3](#manual-confirmation)) he will need to confirm payment either in his Netgíró merchant pages, or by making POST request to ConfirmPayment.Url for confirm payment is Url 
 for Netgíró payment + ConfirmPayment).
 
 | Name | Data Type | Required | Description | Example |
