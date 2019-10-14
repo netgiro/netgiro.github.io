@@ -144,7 +144,15 @@ After successful purchase Netgíró will redirect the user to PaymentSuccessfulU
 
 [deprecated] - These fields are being deprecated, please use other fields with same description.
 
-**If //PrefixUrlParameters// was used in request all parameters will have "ng_" before name, example //ng_invoiceNumber//.**
+**If 
+~~~
+PrefixUrlParameters
+~~~
+ was used in request all parameters will have "ng_" before name, example 
+ ~~~
+ ng_invoiceNumber
+ ~~
+ .**
 
 Also, if you get HTTP error 414 (URI too long) on PaymentSuccessfulURL for too many parameters in URL, you can request to accept just 3 key parameters from table above: Signature, InvoiceNumber and OrderId.
 
