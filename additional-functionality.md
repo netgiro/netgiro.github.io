@@ -8,7 +8,7 @@ nav_order: 3
 ##  Examples
 Here you can see examples of the request message, and also the implementation of message signing using C#.
 
-####  Standard request message
+###  Standard request message
 This is an example of a sale with two items. The request message also contains supported parameters such as shipping and handling:
 
 ~~~ js
@@ -46,7 +46,7 @@ This is an example of a sale with two items. The request message also contains s
 </form>
 ~~~
 
-####  Request message with subscription
+###  Request message with subscription
 
 his is an example of the request message with a subscription item + two standard one time items in the same transaction. (Normally when dealing with subscriptions however they are the only item in the cart):
 
@@ -91,7 +91,7 @@ his is an example of the request message with a subscription item + two standard
 </form>
 ~~~
 
-####  C# message signing
+###  C# message signing
 
 If you are e.g. using ASP.NET you can use this server side helper method in C# to calculate the message signatures: 
 
@@ -127,7 +127,7 @@ For validating the response from Netgiro you should verify that the **NetgiroSig
 ~~~
 
 
-####  ASP.NET Web forms remote post
+###  ASP.NET Web forms remote post
 
 If you are using ASP.Net web forms, you can send the POST request to Netgíró using the following helper class:
 
