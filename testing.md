@@ -54,7 +54,7 @@ Here you can generate an authentication token (Barcode or SMS) for the test cust
 Keep in mind that the token expires after 5 minutes.
 
 <a href="#" class="btn btn-primary btn-generate-code">Generate token</a> <br>
-Token: <span class="bold" id="span-code" style="font-size:45px"></span>
+Token: </br><span class="bold" id="span-code" style="font-size:45px"></span>
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
