@@ -103,7 +103,7 @@ If merchant sets parameters (ConfirmationType=1, PaymentConfirmedURL=”url on m
 | [deprecated] Name| string | No | - | - |
 | [deprecated] Email| string | No | - | - |
 
-If Netgíró receives “OK” (HTTP status 200), payment is confirmed, and user is redirected back to the merchant pages (defined in PaymentSuccessfulURL) with response ([[#HTTP-Redirect|chapter HTTP-Redirect]])
+If Netgíró receives “OK” (HTTP status 200), payment is confirmed, and user is redirected back to the merchant pages (defined in PaymentSuccessfulURL) with response ([chapter HTTP-Redirect](#http-redirect)).
 
 ### Manual confirmation
 
@@ -115,9 +115,9 @@ If merchant sets parameters (ConfirmationType=2), Netgíró sets the payment to 
 | [deprecated] ConfirmationCode | string | No | Reference number for the payment in Netgíró system | 982as34-1ss23123-4asd12 |
 | TransactionId | string | Yes | Identifier of the payment in Netgíró system | 982as34-1ss23123-4asd12 |
 | InvoiceNumber | numeric | Yes | Invoice number for the payment. Customer gets this number in his invoice via email and in Netgíró system. | 1234 |
-| Signature | string | Yes | Signature for the message calculated as SHA256(SecretKey, ReferenceNumber / [deprecated] OrderId, ConfirmationCode, InvoiceNumber) |  |
+| Signature | string | Yes | Signature for the message calculated as SHA256(SecretKey, ReferenceNumber / [deprecated] OrderId, ConfirmationCode, InvoiceNumber) |
 
-After that merchant needs to call manual confirm payment ([[#Manual-payment-confirmation|chapter 2.4]]).
+After that merchant needs to call manual confirm payment ([chapter 2.4](#manual-payment-confirmation)).
 
 ## HTTP Redirect
 
