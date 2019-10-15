@@ -1,4 +1,4 @@
-remote_theme: "daattali/beautiful-jekyll"
+remote_theme: "pmarsceill/just-the-docs"
 title: Netgíró
 heading_anchors: true
 logo: "https://user-images.githubusercontent.com/47334837/66752194-29c5ac80-ee91-11e9-8c01-30e919383b77.png"
