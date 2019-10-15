@@ -5,6 +5,8 @@ nav_order: 2
 ---
 
 # HTTP Post request
+
+When the customer is ready to checkout you must make a POST request to Netgíró with the following parameters:
  
 | Name | Data Type | Required | Description | Example |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
@@ -62,7 +64,7 @@ You should repeat Items[n] fields for every product in the cart, where n is a se
 
 **Payment processing depends on ConfirmationType. If type is manual confirmation, any unconfirmed payments will not be processed, and will be marked invalid after 7 days.
 
-***Subscriptions can be predefined in providers portal https://partner.netgiro.is.
+***Subscriptions can be predefined in providers portal ([https://partner.netgiro.is](https://partner.netgiro.is)).
 
 ## HTTP Post integration with iFrame
 You can display Netgíró inside your site using an iFrame. In that case, you have to set the Iframe parameter of the request to true.
@@ -74,12 +76,12 @@ Netgíró offers the option of paying with partial payments i.e. multiple instal
 
 You can control how Netgíró displays partial payment options to the user with two optional parameters:
 
-PaymentOption
-If you don’t provide the value for this parameter, or provide the value 1, the user will be presented with the options to pay using 14 days
-If you provide the value 2 for this parameter, the user will be presented with the options to pay using multiple payments
-If you provide the value 2 for this parameter, the user will be presented with the option to pay using multiple payments, where merchant pays for interest
-MaxNumberOfInstallments
-This parameter controls the maximum number of installments the user can choose to pay with. Please note that Netgíró determines the number of installments based on minimum monthly rate and other factors, so the actual number of installments offered to the user can be smaller than specified with this parameter, but it will never be bigger
+- PaymentOption
+    - If you don’t provide the value for this parameter, or provide the value 1, the user will be presented with the options to pay using 14 days
+    - If you provide the value 2 for this parameter, the user will be presented with the options to pay using multiple payments
+    - If you provide the value 2 for this parameter, the user will be presented with the option to pay using multiple payments, where merchant pays for interest
+- MaxNumberOfInstallments
+    - This parameter controls the maximum number of installments the user can choose to pay with. Please note that Netgíró determines the number of installments based on minimum monthly rate and other factors, so the actual number of installments offered to the user can be smaller than specified with this parameter, but it will never be bigger
 
 ## Payment confirmations
 Only confirmed payments are processed in Netgíró and in bank. If the payment is not confirmed, it can be confirmed manually, calling the confirmation POST request or doing it in merchant’s Netgíró pages. Netgíró has 3 types of confirmation options:
