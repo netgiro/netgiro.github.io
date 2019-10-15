@@ -11,7 +11,7 @@ Here you can see examples of the request message, and also the implementation of
 ####  Standard request message
 This is an example of a sale with two items. The request message also contains supported parameters such as shipping and handling:
 
-[[[code lang=js|
+~~~ js
 <form method="post" action="https://test.netgiro.is/securepay">
 <!-- Example form data -->
 
@@ -44,13 +44,13 @@ This is an example of a sale with two items. The request message also contains s
 
 <button type="submit">Test - Pay with Netgiro</button>
 </form>
-]]]
+~~~
 
 ####  Request message with subscription
 
 his is an example of the request message with a subscription item + two standard one time items in the same transaction. (Normally when dealing with subscriptions however they are the only item in the cart):
 
-[[[code lang=js|
+~~~ js
 <form method="post" action="https://test.netgiro.is/securepay">
 <!-- Example form data -->
 
@@ -89,13 +89,13 @@ his is an example of the request message with a subscription item + two standard
 <input type="hidden" name="Subscriptions[0].TrialPeriodDays" value="15"/>
 
 </form>
-]]]
+~~~
 
 ####  C# message signing
 
 If you are e.g. using ASP.NET you can use this server side helper method in C# to calculate the message signatures: 
 
-[[[code lang=c#|
+~~~ c#
 public static string CalculateSignature(params string[] args)
     {
         string input = string.Join("", args);
@@ -110,28 +110,28 @@ public static string CalculateSignature(params string[] args)
 
         return calculatedSignature;
     }
-]]]
+~~~
 
 Equivalent methods are easily attainable for PHP, Java, etc. 
 
 Example usage of the method is:
 
-{{{
+~~~
   CalculateSignature("secret", "222", "1999", "123");
-}}}
+~~~
 
 For validating the response from Netgiro you should verify that the **NetgiroSignature** is correct with => SHA256(SecretKey, ReferenceNumber, TransactionId, InvoiceNumber, TotalAmount, Status), like e.g. 
 
-{{{
+~~~
   CalculateSignature("secret", "WEB-123", "982as34-1ss23123-4asd12", "1234", "1990", "1");
-}}}
+~~~
 
 
 ####  ASP.NET Web forms remote post
 
 If you are using ASP.Net web forms, you can send the POST request to Netgíró using the following helper class:
 
-[[[code lang=c#|
+~~~ c#
 public class RemotePost
     {
         private System.Collections.Specialized.NameValueCollection Inputs = new System.Collections.Specialized.NameValueCollection();
@@ -165,4 +165,4 @@ string.Format("</head><body onload=\"document.{0}.submit()\">", FormName));
             System.Web.HttpContext.Current.Response.End();
         }
     }
-]]]
+~~~
