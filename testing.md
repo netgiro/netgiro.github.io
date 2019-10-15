@@ -56,8 +56,8 @@ Keep in mind that the token expires after 5 minutes.
 <a href="#" class="btn btn-primary btn-generate-code">Generate token</a> <br>
 Token: <span class="bold" id="span-code" style="font-size:45px"></span>
 <script
-  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
 <script src="https://api.netgiro.is/Scripts/CodeGenerator.js"></script>
 <script src="https://api.netgiro.is/Scripts/sha256.js"></script>
