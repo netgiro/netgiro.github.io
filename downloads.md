@@ -70,15 +70,15 @@ Full api reference can be found at https://api.netgiro.is/v1/help . For now ther
 
 | Download link | Description | Last updated | Details |
 | ------------- | ------------- | ------------- | ------------- |
-| [API wrapper 3.5](http://developer.netgiro.is/Attachments/documents/Netg%C3%ADr%C3%B3%20-%20API%20Wrapper%203.5.zip) | API wrapper for .NET 3.5 | 2.2.2016. |  |
-| [API wrapper 4.0](http://developer.netgiro.is/Attachments/documents/Netg%C3%ADr%C3%B3%20-%20API%20Wrapper%204.0.zip) | API wrapper for .NET 4.0 | 2.2.2016. |  |
+| [API wrapper 3.5](https://github.com/netgiro/netgiro.github.io/raw/master/documents/wrappers/Netg%C3%ADr%C3%B3%20-%20API%20Wrapper%203.5.zip) | API wrapper for .NET 3.5 | 2.2.2016. |  |
+| [API wrapper 4.0](https://github.com/netgiro/netgiro.github.io/raw/master/documents/wrappers/Netg%C3%ADr%C3%B3%20-%20API%20Wrapper%204.0.zip) | API wrapper for .NET 4.0 | 2.2.2016. |  |
 
 ## Demo projects
 
 | Download link | Description |
 | ------------- | ------------- |
-| [Demo projects](http://developer.netgiro.is/Attachments/documents/NetgiroDemos.zip) | Demo projects showing integration with Netgiro on ASP.NET MVC project. |
-| [Html demo projects](http://developer.netgiro.is/Attachments/documents/Netgiro%20-%20html%20demos.zip) | Demo project showing integration with Netgiro using only html and javascript. |
+| [Demo projects](https://github.com/netgiro/netgiro.github.io/raw/master/documents/demos/NetgiroDemos.zip) | Demo projects showing integration with Netgiro on ASP.NET MVC project. |
+| [Html demo projects](https://github.com/netgiro/netgiro.github.io/raw/master/documents/demos/Netgiro%20-%20html%20demos.zip) | Demo project showing integration with Netgiro using only html and javascript. |
 
 ## POS modules
 
@@ -86,7 +86,7 @@ If you need to create your own POS integration for systems running on Windows yo
 
 | Download link | Description | Last updated | Details |
 | ------------- | ------------- | ------------- | ------------- |
-| [.NET POS module 3.2](http://developer.netgiro.is/Attachments/documents/Netg%C3%ADr%C3%B3%20-%20POS%20Module%20(v_3.2.1).zip) | 	.NET POS module (version 3.2). Supports .NET 3.5 and .NET 4.0+ | 29.4.2019. |  |
+| [.NET POS module 3.2](https://github.com/netgiro/netgiro.github.io/raw/master/documents/Netg%C3%ADr%C3%B3%20-%20POS%20Module%20(v_3.2.1).zip) | 	.NET POS module (version 3.2). Supports .NET 3.5 and .NET 4.0+ | 29.4.2019. |  |
 | [.NET POS module 3.0 - Documentation](https://github.com/netgiro/netgiro.github.io/raw/master/documents/Netg%C3%ADr%C3%B3%20-%20POS%20Module%20(v_3.0)%20-%20Documentation.zip) | .NET POS module (version 3.0) documentation | 18.3.2019. |  |
 
 ## Installable POS modules based on your system
