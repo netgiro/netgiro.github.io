@@ -61,3 +61,46 @@ NetgiroCalculator({amount: 10000, containerId: "#widget-wrapper"})
 Netgiro exposes public API that you can use to calculate partial payments in Netgiro
 
 https://api.netgiro.is/calculator/index.html
+
+## Netgíró API
+
+Full api reference can be found at https://api.netgiro.is/v1/help . For now there is only .NET wrappers for API calls, soon there will be for all platforms. Also .NET wrappers are listed in NuGet, so it's easy to version and get them.
+
+## API wrappers
+
+| Download link | Description | Last updated | Details |
+| ------------- | ------------- | ------------- | ------------- |
+| [API wrapper 3.5](http://developer.netgiro.is/Attachments/documents/Netg%C3%ADr%C3%B3%20-%20API%20Wrapper%203.5.zip) | API wrapper for .NET 3.5 | 2.2.2016. |  |
+| [API wrapper 4.0](http://developer.netgiro.is/Attachments/documents/Netg%C3%ADr%C3%B3%20-%20API%20Wrapper%204.0.zip) | API wrapper for .NET 4.0 | 2.2.2016. |  |
+
+## POS modules
+
+If you need to create your own POS integration for systems running on Windows you can use our .NET POS module. It's quite convenient method for fast and secure integration. The whole payment workflow is at hand with few lines of code in your system. See the .NET POS module documentation for more info. We also have a module written in Delphi available.
+
+| Download link | Description | Last updated | Details |
+| ------------- | ------------- | ------------- | ------------- |
+| [.NET POS module 3.2](http://developer.netgiro.is/Attachments/documents/Netg%C3%ADr%C3%B3%20-%20POS%20Module%20(v_3.2.1).zip) | 	.NET POS module (version 3.2). Supports .NET 3.5 and .NET 4.0+ | 29.4.2019. |  |
+| [.NET POS module 3.0 - Documentation](http://developer.netgiro.is/Attachments/documents/Netg%C3%ADr%C3%B3%20-%20POS%20Module%20(v_3.0)%20-%20Documentation.zip) | .NET POS module (version 3.0) documentation | 18.3.2019. |  |
+
+## Installable POS modules based on your system
+
+We support all the major POS systems in Iceland. Please contact us for details and download packages based on your system version.
+
+| Download link | Description | Last updated | Details |
+| ------------- | ------------- | ------------- | ------------- |
+| Centara |	Centara |  |  |
+| Dynamics Ax |	Microsoft Dynamics Ax |  |  |
+| DK |	dkPos and dk iPos |  |  |
+| LS Retail 6 |	LS Retail 6 (LS NAV 2009) |  |  |
+| LS Retail 8 - LS Retail 10 |	Module for various LS Retail versions (LS NAV 2013-2017) |  |  |
+| [Business Central / NAV 2018 (VERSION 1.0.1.9)](http://developer.netgiro.is/Attachments/documents/Netgiro_NAV2018_1.0.1.9.zip) |		Business Central / NAV 2018 module | 27.9.2019. | V.1.0.1.9. - Setup improvements |
+| Business Central / NAV 2018 (VERSION 1.0.1.8 - Not available) |	Business Central / NAV 2018 module | 22.8.2019. | 	V.1.0.1.8. - Simplified store setup |
+| SagaPOS |	SagaPOS from Strikamerki/Origo |  |  |
+
+## Netposi
+
+Netposi is Netgíró's POS web only solution. You need to be registered Netgíró partner to use it.
+
+| Download link | Description |
+| ------------- | ------------- |
+| [Netposi manual](http://developer.netgiro.is/Attachments/documents/Netposa-lei%C3%B0beiningar-v1.0.pdf) |	Quick instructions to get you up and running in no time - the quickest way to start charging Netgíró users. |
