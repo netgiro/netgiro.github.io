@@ -14,7 +14,7 @@ Please take a look at our [styleguide](https://netgiro.frontify.com/d/8oC7BJpSmc
 | ------------- | ------------- |
 | [logos](developer.netgiro.is/Attachments/documents/logo_multi_size.zip) | Set of netgiro logos in multiple sizes you can use when integrating netgiro. |
 | [logos in SVG format](developer.netgiro.is/Attachments/documents/Netgiro_logo_svg.zip) | Set of netgiro logos in SVG format. |
-| https://developer.netgiro.is/Attachments/Netgiro_Logo_100.png | Path to Netgiro logo (Size 100) |
+| [logo](https://github.com/netgiro/netgiro.github.io/blob/master/images/Netgiro_Logo_100.png) | Path to Netgiro logo (Size 100) |
 
 ## Netgíró loader screen
 
@@ -24,8 +24,8 @@ Screen with branding elements and a text to which purpose is to give user inform
 | ------------- | ------------- |
 | [logo](https://static.netgiro.is/assets/logo/logo-light-bg.svg) | Logo format used in the design. |
 | [loader](https://static.netgiro.is/assets/loaders/dot-loader.gif) | Loader used in the design. |
-| [Implementation example - Desktop](http://developer.netgiro.is/Attachments/documents/Netg%C3%ADr%C3%B3-loader-desktop-example.png) | Example of how the loader screen should look on desktop. |
-| [Implementation example - Mobile](http://developer.netgiro.is/Attachments/documents/Netg%C3%ADr%C3%B3-loader-mobile-example.png) | Example of how the loader screen should look on mobile. |
+| [Implementation example - Desktop](https://github.com/netgiro/netgiro.github.io/blob/master/images/Netg%C3%ADr%C3%B3-loader-desktop-example.png) | Example of how the loader screen should look on desktop. |
+| [Implementation example - Mobile](https://github.com/netgiro/netgiro.github.io/blob/master/images/Netg%C3%ADr%C3%B3-loader-mobile-example.png) | Example of how the loader screen should look on mobile. |
 
 **Text required on the screen:**
 ~~~
@@ -36,7 +36,7 @@ Screen with branding elements and a text to which purpose is to give user inform
 
 Netgíró branded widget that calculates the lowest possible installment for a given amount.
 
-http://developer.netgiro.is/Attachments/ng-widget.png
+<img src="images/ng-widget.png?raw=true" alt="widget.png">
 
 | Link to reference | Description |
 | ------------- | ------------- |
