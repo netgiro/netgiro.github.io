@@ -24,8 +24,8 @@ Screen with branding elements and a text to which purpose is to give user inform
 | ------------- | ------------- |
 | [logo](https://static.netgiro.is/assets/logo/logo-light-bg.svg) | Logo format used in the design. |
 | [loader](https://static.netgiro.is/assets/loaders/dot-loader.gif) | Loader used in the design. |
-| [Implementation example - Desktop](https://github.com/netgiro/netgiro.github.io/blob/master/images/Netg%C3%ADr%C3%B3-loader-desktop-example.png) | Example of how the loader screen should look on desktop. |
-| [Implementation example - Mobile](https://github.com/netgiro/netgiro.github.io/blob/master/images/Netg%C3%ADr%C3%B3-loader-mobile-example.png) | Example of how the loader screen should look on mobile. |
+| [Implementation example - Desktop](https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/Netg%C3%ADr%C3%B3-loader-desktop-example.png) | Example of how the loader screen should look on desktop. |
+| [Implementation example - Mobile](https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/Netg%C3%ADr%C3%B3-loader-mobile-example.png) | Example of how the loader screen should look on mobile. |
 
 **Text required on the screen:**
 ~~~
