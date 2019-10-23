@@ -73,6 +73,13 @@ Full api reference can be found at https://api.netgiro.is/v1/help . For now ther
 | [API wrapper 3.5](http://developer.netgiro.is/Attachments/documents/Netg%C3%ADr%C3%B3%20-%20API%20Wrapper%203.5.zip) | API wrapper for .NET 3.5 | 2.2.2016. |  |
 | [API wrapper 4.0](http://developer.netgiro.is/Attachments/documents/Netg%C3%ADr%C3%B3%20-%20API%20Wrapper%204.0.zip) | API wrapper for .NET 4.0 | 2.2.2016. |  |
 
+## Demo projects
+
+| Download link | Description |
+| ------------- | ------------- |
+| [Demo projects](http://developer.netgiro.is/Attachments/documents/NetgiroDemos.zip) | Demo projects showing integration with Netgiro on ASP.NET MVC project. |
+| [Html demo projects](http://developer.netgiro.is/Attachments/documents/Netgiro%20-%20html%20demos.zip) | Demo project showing integration with Netgiro using only html and javascript. |
+
 ## POS modules
 
 If you need to create your own POS integration for systems running on Windows you can use our .NET POS module. It's quite convenient method for fast and secure integration. The whole payment workflow is at hand with few lines of code in your system. See the .NET POS module documentation for more info. We also have a module written in Delphi available.
