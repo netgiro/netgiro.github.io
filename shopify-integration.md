@@ -41,13 +41,13 @@ title: Shopify integration
 
     <img src="http://developer.netgiro.is/Attachments/shopify/Shopify_Codes.png">
       
-  5) Click Activate.
+5. Click Activate.
     
-  6) [Click here](https://netgiro.github.io/testing.html) to see the testing guideline on how to proceed with testing.
+6. [Click here](https://netgiro.github.io/testing.html) to see the testing guideline on how to proceed with testing.
   
-      **Note!**    
-       If you have a credit card payment gateway from Borgun or Valitor it might disappear when adding Netgiro. 
-       Then you need to reselect the respective payment gateway and re-activate it in Shopify. 
-       See [Borgun's documentation](https://docs.borgun.is/hostedpayments/plugins/shopify/) for more info
+    **Note!**    
+     If you have a credit card payment gateway from Borgun or Valitor it might disappear when adding Netgiro. 
+     Then you need to reselect the respective payment gateway and re-activate it in Shopify. 
+     See [Borgun's documentation](https://docs.borgun.is/hostedpayments/plugins/shopify/) for more info
     
         
