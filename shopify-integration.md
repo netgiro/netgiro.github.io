@@ -8,17 +8,17 @@ title: Shopify integration
 
 ## How to Configure Netgiro as Payment Gateway in Shopify
 
-1. [Click here](https://accounts.shopify.com/store-login?redirect=authorize_gateway%2F1030172) and login to Shopify to get invitation for Netgiro's payment gateway.
+- [Click here](https://accounts.shopify.com/store-login?redirect=authorize_gateway%2F1030172) and login to Shopify to get invitation for Netgiro's payment gateway.
 
-2. In the Shopify admin interface add Netgiro by clicking the "Add payment gateway" button.
+- In the Shopify admin interface add Netgiro by clicking the "Add payment gateway" button.
 
   <img src="http://developer.netgiro.is/Attachments/shopify/Shopify_AddNetgiro.png">
 
-3. On the Payments settings page select Netgiro as an "Alternative payment".
+- On the Payments settings page select Netgiro as an "Alternative payment".
 
   <img src="http://developer.netgiro.is/Attachments/shopify/Shopify_Settings.png">
 
-4. Copy/Paste the ApplicatioID and SecretKey codes.
+- Copy/Paste the ApplicatioID and SecretKey codes.
 
   - For **TESTING** check **"Use Test Mode"** and use the following codes:
 
@@ -41,9 +41,9 @@ title: Shopify integration
 
     <img src="http://developer.netgiro.is/Attachments/shopify/Shopify_Codes.png">
       
-5. Click Activate.
+- Click Activate.
     
-6. [Click here](https://netgiro.github.io/testing.html) to see the testing guideline on how to proceed with testing.
+- [Click here](https://netgiro.github.io/testing.html) to see the testing guideline on how to proceed with testing.
   
     **Note!**    
      If you have a credit card payment gateway from Borgun or Valitor it might disappear when adding Netgiro. 
