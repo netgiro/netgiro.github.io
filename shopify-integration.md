@@ -4,7 +4,7 @@ title: Shopify integration
 
 # Shopify integration
 
-<img src="http://developer.netgiro.is/Attachments/shopify/shopify-logo-785x231.png">
+<img src="/images/shopify-logo-785x231.png">
 
 ## How to Configure Netgiro as Payment Gateway in Shopify
 
@@ -12,11 +12,11 @@ title: Shopify integration
 
 - In the Shopify admin interface add Netgiro by clicking the "Add payment gateway" button.
 
-  <img src="http://developer.netgiro.is/Attachments/shopify/Shopify_AddNetgiro.png">
+  <img src="images/Shopify_AddNetgiro.png">
 
 - On the Payments settings page select Netgiro as an "Alternative payment".
 
-  <img src="http://developer.netgiro.is/Attachments/shopify/Shopify_Settings.png">
+  <img src="images/Shopify_Settings.png">
 
 - Copy/Paste the ApplicatioID and SecretKey codes.
 
@@ -39,7 +39,7 @@ title: Shopify integration
     **Note!** 
     When using production codes **"Use Test Mode"** may **NOT** be checked, otherwise you'll get a security error.
 
-    <img src="http://developer.netgiro.is/Attachments/shopify/Shopify_Codes.png">
+    <img src="images/Shopify_Codes.png">
       
 - Click Activate.
     
