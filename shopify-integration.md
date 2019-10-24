@@ -1,5 +1,6 @@
 ---
 title: Shopify integration
+parent: Downloads
 ---
 
 # Shopify integration
