@@ -1,6 +1,7 @@
 ---
 title: Shopify integration
-parent: Downloads
+parent: Web shop plugins
+nav_order: 8
 ---
 
 # Shopify integration
