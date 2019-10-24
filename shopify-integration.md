@@ -1,6 +1,6 @@
 ---
 title: Shopify integration
-parent: downloads/web-shop-plugins
+parent: web-shop-plugins
 nav_order: 8
 ---
 
