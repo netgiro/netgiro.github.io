@@ -74,12 +74,8 @@ To display Netgíró within an iframe you have to set up the iframe element on y
 ## Partial payments
 Netgíró offers the option of paying with partial payments i.e. multiple installments. Partial payments must be enabled before you can use them in the post request.
 
-You can control how Netgíró displays partial payment options to the user with two optional parameters:
+You can control how Netgíró displays partial payment options to the user with optional parameter:
 
-- PaymentOption
-    - If you don’t provide the value for this parameter, or provide the value 1, the user will be presented with the options to pay using 14 days
-    - If you provide the value 2 for this parameter, the user will be presented with the options to pay using multiple payments
-    - If you provide the value 2 for this parameter, the user will be presented with the option to pay using multiple payments, where merchant pays for interest
 - MaxNumberOfInstallments
     - This parameter controls the maximum number of installments the user can choose to pay with. Please note that Netgíró determines the number of installments based on minimum monthly rate and other factors, so the actual number of installments offered to the user can be smaller than specified with this parameter, but it will never be bigger
 
