@@ -2,6 +2,7 @@ remote_theme: "pmarsceill/just-the-docs"
 title: Netgíró
 heading_anchors: true
 logo: "https://user-images.githubusercontent.com/47334837/66752194-29c5ac80-ee91-11e9-8c01-30e919383b77.png"
+footer_content: "© 2019 Netgíró hf. - Kt: 6812122050 | Borgartúni 27, 105 Reykjavík | Sími: 4 300 330 | netgiro@netgiro.is"
 aux_links:
   "Just the Docs on GitHub":
     - "//github.com/pmarsceill/just-the-docs"
