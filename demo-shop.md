@@ -16,7 +16,7 @@ Example application for testing Netgiro API can be found at: https://demoshop.ne
 
 Netgiro API can be implemented following the next steps:
 
-1. InsertCart method (https://test.netgiro.is/api/checkout/InsertCart) has to be called when clicking the Buy/Checkout button in your system with the following parameters in the request body: Amount, Description and Reference.
+1. InsertCart method (https://test.netgiro.is/api/checkout/InsertCart) has to be called when clicking the Buy/Checkout button in your system with the following parameters in the request body: Amount, Description and Reference and CustomerId (CustomerId is his GSM number).
 
 2. After successfull response from InsertCart method you need to create a frontend loop which will check the status of the cart every few seconds (recommendation is 3 seconds). This check will be performed using CheckCart method from https://test.netgiro.is/api/checkout/CheckCart
 
