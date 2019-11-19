@@ -4,9 +4,13 @@ has_children: true
 nav_order: 6
 ---
 
+# Introduction
+Netgíró provides web API for easy client integration. API is available on https://api.netgiro.is/v1/. You can integrate your application with Netgíró from any platform that supports standard HTTP requests and can process JSON or XML results (.NET, Java, PHP, etc.).
+
+
 # Request protocol
  
- ## Netgíró  headers
+## Netgíró  headers
  
  Every API request requires custom headers to be sent with HTTP request/response. Netgíró defines four custom headers:
  
