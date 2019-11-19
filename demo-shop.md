@@ -1,7 +1,7 @@
 ---
 title: Demo shop
-parent: Testing
-nav_order: 6
+parent: API
+nav_order: 7
 ---
 
 # Netgíró  API - checkout
