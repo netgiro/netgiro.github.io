@@ -36,6 +36,8 @@ Every API request must have full set of Netgíró header attributes. With every 
 * netgiro_signature
 Where netgiro_signature is computed as explained in chapter signing
 
+<img src="images/Netgiro-API-request.png?raw=true" alt="Netgiro-API-request.png">
+
 Netgíró will check headers of every request and verify if all headers are present and if **netgiro_signature** is valid. If any of the headers are missing or if signature isn’t valid request will be rejected.
 
 Response from Netgíró will contain same set of headers, with different nonce, new signature and **netgiro_referenceId**, which identifies call in netgiro system(useful when contacting netgiro support to identify which call). Client should verify response that he gets from the server. Servers signature should match the one client creates on same data. If signatures don’t match client should discard any data he got from the server.
