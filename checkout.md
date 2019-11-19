@@ -17,17 +17,17 @@ Example application for testing Netgiro API can be found at: https://demoshop.ne
 Netgíró  API can be implemented following the next steps:
 
 
-### Initiate purchase
+## Initiate purchase
 
-**InsertCart
+### InsertCart
 
 In this step InsertCart method (https://test.netgiro.is/api/checkout/InsertCart) has to be called with the following parameters in the request body: Amount, Description, Reference, CustomerId (CustomerId is his GSM number), and  CallbackUrl (url to which we will make post request after customer had confirmed the sale).
 
-### Checking status of the purchase
+## Checking status of the purchase
 
 After customer has confirmed the purchase, we will make a post request to the CallbackUrl you've provided in the InserCart request.
 
-**CheckCart** method
+### CheckCart method
 
 If you need to check the status of the purchase manually, you can call the CheckCart method (https://test.netgiro.is/api/checkout/CheckCart). In the request of a CheckCart method, TransactionId returned from the InsertCart method has to be sent as a parameter.
 
