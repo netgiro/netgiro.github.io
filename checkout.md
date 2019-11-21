@@ -21,9 +21,16 @@ Netgíró  API can be implemented following the next steps:
 
 ### InsertCart
 
-In this step InsertCart method (https://test.netgiro.is/api/checkout/InsertCart) has to be called with the following parameters in the request body: Amount, Description, Reference, CustomerId (CustomerId is his GSM number), and  CallbackUrl (url to which we will make post request after customer had confirmed the sale).
+In this step InsertCart method (https://test.netgiro.is/api/checkout/InsertCart) has to be called with the following parameters in the request body: 
 
-## Checking status of the purchase
+| Name  | Required | Description |
+| ------------- | ------------- |------------- |
+| Amount  | Yes |Total amount of the purchase  |
+| Description | No | Optional parameter which describes purchase |
+| CustomerId | Yes | GSM number |
+| CallbackUrl| Yes | Url to which we'll make post request after customer has confirmed the sale|
+
+## Confirming purchase
 
 After customer has confirmed the purchase, we will make a post request to the CallbackUrl you've provided in the InserCart request.
 
