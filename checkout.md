@@ -72,6 +72,7 @@ Possible responses for InsertCart:
 **https://test.netgiro.is/api/checkout/CancelCart**
  <br><br>
 Cancels cart (if customer hasn't already confirmed it). If customer already confirmed cart it can't be canceled from provider side.
+
  <br>
 Request body:
 
@@ -103,6 +104,7 @@ Possible responses for CancelCart:
  <br><br>
 If CallbackUrl is not provided on InsertCart, provider won't get callback and needs to check the status of the purchase manually.
 This can be done by calling CheckCart method.
+
  <br>
 Request body:
 
