@@ -4,42 +4,134 @@ parent: API
 nav_order: 7
 ---
 
-# Netgíró  API - checkout
+# Netgíró API - checkout
 
-Testing url for Netgíró  API - checkout is: https://test.netgiro.is/api/checkout
+Testing url: https://test.netgiro.is/api/checkout
 
-Swagger documentation for the API can be found at: https://test.netgiro.is/api/swagger/ui/index#/Checkout
+Swagger documentation: https://test.netgiro.is/api/swagger/ui/index#/Checkout
 
-Example application for testing Netgiro API can be found at: https://demoshop.netgiro.is/ and its source code is available on: https://github.com/netgiro/api-demo-client
+Example application: https://demoshop.netgiro.is/ with [source code](https://github.com/netgiro/api-demo-client)
 
-## Implementation
+## Netgiró API - checkout flow
+  1. Provider creates cart on his website
+      - InsertCart method
+    
+  2. Customer gets notification in his Netgiró mobile app about cart created from provider
+      - Customer confirms/rejects cart
+    
+  3. Provider gets customer response
+      - If CallbackUrl provided on InsertCart
+        - Provider gets callback on that url that customer confirmed cart
+      - If CallbackUrl not provided on InsertCart
+        - Provider needs to call CheckCart periodically to check if customer confirmed cart
+      - Also, CheckCart can be used from provider to check if customer rejected cart
 
-Netgíró  API can be implemented following the next steps:
+## InsertCart
+https://test.netgiro.is/api/checkout/InsertCart
 
-
-## Initiate purchase
-
-### InsertCart
-
-In this step InsertCart method (https://test.netgiro.is/api/checkout/InsertCart) has to be called with the following parameters in the request body: 
+Request body:
 
 | Name  | Required | Description |
 | ------------- | ------------- |------------- |
-| Amount  | Yes |Total amount of the purchase  |
+| Amount  | Yes | Total amount of the purchase  |
+| Reference  | Yes | Reference |
+| CustomerId | Yes | GSM number for confirming purchase |
 | Description | No | Optional parameter which describes purchase |
-| CustomerId | Yes | GSM number |
-| CallbackUrl| Yes | Url to which we'll make post request after customer has confirmed the sale|
+| CallbackUrl*| No | Url to which will be made post request after customer has confirmed the sale |
 
-## Confirming purchase
+*If you provide CallbackUrl on InsertCart:
+  - Callback on that url will be received when customer confirms payment request in mobile app
+  - Callback won't be received if customer cancelled, but CheckCart will check that purchase is canceled
 
-After customer has confirmed the purchase, we will make a post request to the CallbackUrl you've provided in the InserCart request.
 
-### CheckCart method
+Response body:
 
-If you need to check the status of the purchase manually, you can call the CheckCart method (https://test.netgiro.is/api/checkout/CheckCart). In the request of a CheckCart method, TransactionId returned from the InsertCart method has to be sent as a parameter.
+| Name | Values |
+| ------------- |------------- |
+| Success | true or false |
+| ResultCode | 200 or 400 |
+| TransactionId | GUID (cart identifier used later for checking or canceling cart) |
 
-CheckCart method can return various responses:
 
-1. If Success value of true and PaymentSuccessful url are returned, sale has been confirmed by the customer
-2. If ResultCode of 10423 is returned, customer has canceled the sale
-3. If none of the above are returned, customer did not take any action
+Possible responses for InsertCart:
+  - Successful insert
+      - Success = true
+      - ResultCode = Success (200)
+      - TransactionId = GUID
+      
+  - Wrong gsm (or not a customer) or any other validation error
+    - Success = false
+    - ResultCode = GenericError (400)
+
+## CancelCart
+https://test.netgiro.is/api/checkout/CancelCart
+
+Cancels cart (if customer hasn't already confirmed it). If customer already confirmed cart it can't be canceled from provider side.
+
+Request body:
+
+| Name  | Required | Description |
+| ------------- | ------------- |------------- |
+| TransactionId  | Yes | Cart identifier  |
+
+
+Response body:
+
+| Name  | Values |
+| ------------- | ------------- |
+| Success | true or false |
+| ResultCode | 10200 or 10201 |
+
+
+Possible responses for CancelCart:
+  - Customer confirms before provider cancel (loan exists, can't be canceled)
+    - Success = false
+    - ResultCode = PaymentConfirmed (10200)
+			
+  - Provider cancels on time
+    - Success = true
+    - ResultCode = PaymentCanceled (10201)
+
+
+## CheckCart method
+https://test.netgiro.is/api/checkout/CheckCart
+
+If CallbackUrl is not provided on InsertCart, provider won't get callback and needs to check the status of the purchase manually.
+This can be done by calling CheckCart method.
+
+Request body:
+
+| Name  | Required | Description |
+| ------------- | ------------- |------------- |
+| TransactionId  | Yes | Cart identifier  |
+
+
+Response body:
+
+| Name  | Values |
+| ------------- | ------------- |
+| Success | true or false |
+| PaymentSuccessful | true or false (describes if cart is confirmed by customer) |
+| ResultCode | 10200 or 10201 or 10425 |
+
+
+Possible responses for CheckCart:
+  - Cart canceled or doesn't exist, etc.
+    - Success = true
+		- PaymentSuccessful = false
+		- ResultCode = PaymentCanceled (10201)
+			
+  - Cart active, waiting for customer confirm or reject
+    - Success = true
+    - PaymentSuccessful = false
+    - ResultCode = PendingCustomerConfirmation (10425)
+			
+  - Cart canceled
+    - Success = true
+    - PaymentSuccessful = false
+    - ResultCode = PaymentCanceled (10201)
+
+  - Cart confirmed
+    - Success = true
+    - PaymentSuccessful = TRUE
+    - ResultCode = PaymentConfirmed (10200)
