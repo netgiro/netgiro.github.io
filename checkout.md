@@ -13,25 +13,25 @@ Swagger documentation: [https://test.netgiro.is/api/swagger/ui/index#/Checkout](
 Example application: [https://demoshop.netgiro.is/](https://demoshop.netgiro.is/) with source code [here](https://github.com/netgiro/api-demo-client)
 
 ## Netgiró API - checkout flow
-  1. Provider creates cart on his website
-      - InsertCart method
-    <br>
+- Provider creates cart on his website
+	- InsertCart method
     
-  2. Customer gets notification in his Netgiró mobile app about cart created from provider
-      - Customer confirms/rejects cart
-     <br>
+- Customer gets notification in his Netgiró mobile app about cart created from provider
+	- Customer confirms/rejects cart
     
-  3. Provider gets customer response
-      - If CallbackUrl provided on InsertCart
-        - Provider gets callback on that url that customer confirmed cart
-	 <br>
-      - If CallbackUrl not provided on InsertCart
-        - Provider needs to call CheckCart periodically to check if customer confirmed cart
-	 <br>
-      - Also, CheckCart can be used from provider to check if customer rejected cart
+- Provider gets customer response
+	- If CallbackUrl provided on InsertCart
+		- Provider gets callback on that url that customer confirmed cart
+
+	- If CallbackUrl not provided on InsertCart
+		- Provider needs to call CheckCart periodically to check if customer confirmed cart
+
+	- Also, CheckCart can be used from provider to check if customer rejected cart
 
 ## InsertCart
 https://test.netgiro.is/api/checkout/InsertCart
+<br><br>
+Creates and inserts cart
 
  <br>
 Request body:
@@ -70,7 +70,7 @@ Possible responses for InsertCart:
 
 ## CancelCart
 https://test.netgiro.is/api/checkout/CancelCart
- <br>
+ <br><br>
 Cancels cart (if customer hasn't already confirmed it). If customer already confirmed cart it can't be canceled from provider side.
  <br>
 Request body:
@@ -98,9 +98,9 @@ Possible responses for CancelCart:
     - ResultCode = PaymentCanceled (10201)
 
 
-## CheckCart method
+## CheckCart
 https://test.netgiro.is/api/checkout/CheckCart
- <br>
+ <br><br>
 If CallbackUrl is not provided on InsertCart, provider won't get callback and needs to check the status of the purchase manually.
 This can be done by calling CheckCart method.
  <br>
@@ -109,8 +109,8 @@ Request body:
 | Name  | Required | Description |
 | ------------- | ------------- |------------- |
 | TransactionId  | Yes | Cart identifier  |
- <br> <br>
 
+<br><br>
 Response body:
 
 | Name  | Values |
