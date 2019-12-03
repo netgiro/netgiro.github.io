@@ -6,11 +6,11 @@ nav_order: 7
 
 # Netgíró API - checkout
 
-Testing url: [https://test.netgiro.is/api/checkout](https://test.netgiro.is/api/checkout)
+Testing url: [**https://test.netgiro.is/api/checkout**](https://test.netgiro.is/api/checkout)
 
-Swagger documentation: [https://test.netgiro.is/api/swagger/ui/index#/Checkout](https://test.netgiro.is/api/swagger/ui/index#/Checkout)
+Swagger documentation: [**https://test.netgiro.is/api/swagger/ui/index#/Checkout**](https://test.netgiro.is/api/swagger/ui/index#/Checkout)
 
-Example application: [https://demoshop.netgiro.is/](https://demoshop.netgiro.is/) with source code [here](https://github.com/netgiro/api-demo-client)
+Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro.is/) with source code [**here**](https://github.com/netgiro/api-demo-client)
 
 ## Netgiró API - checkout flow
 - Provider creates cart on his website
@@ -29,7 +29,7 @@ Example application: [https://demoshop.netgiro.is/](https://demoshop.netgiro.is/
 	- Also, CheckCart can be used from provider to check if customer rejected cart
 
 ## InsertCart
-https://test.netgiro.is/api/checkout/InsertCart
+**https://test.netgiro.is/api/checkout/InsertCart**
 <br><br>
 Creates and inserts cart
 
@@ -69,7 +69,7 @@ Possible responses for InsertCart:
     - ResultCode = GenericError (400)
 
 ## CancelCart
-https://test.netgiro.is/api/checkout/CancelCart
+**https://test.netgiro.is/api/checkout/CancelCart**
  <br><br>
 Cancels cart (if customer hasn't already confirmed it). If customer already confirmed cart it can't be canceled from provider side.
  <br>
@@ -99,7 +99,7 @@ Possible responses for CancelCart:
 
 
 ## CheckCart
-https://test.netgiro.is/api/checkout/CheckCart
+**https://test.netgiro.is/api/checkout/CheckCart**
  <br><br>
 If CallbackUrl is not provided on InsertCart, provider won't get callback and needs to check the status of the purchase manually.
 This can be done by calling CheckCart method.
