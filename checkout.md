@@ -86,12 +86,16 @@ Request body:
 | ------------- | ------------- |------------- |
 | Amount  | Yes | Total amount of the purchase  |
 | Reference  | Yes | Reference |
-| CustomerId | Yes | GSM number for confirming purchase (use 7700001 on test api) |
-| ConfirmationType | Yes | Provider's way of confirming purchases after customer confirmation (0 - automatic, 1 - server callback, 2 - manual) |
+| CustomerId* | Yes | SSN, AppCode or GSM number for client identification |
+| ConfirmationType** | Yes | Provider's way of confirming purchases after customer confirmation |
 | Description | No | Purchase description |
-| CallbackUrl*| No | Url to which will be made post request after customer has confirmed the sale |
+| CallbackUrl***| No | Url to which will be made post request after customer has confirmed the sale |
 
-*If you provide CallbackUrl on InsertCart:
+***SSN** for testing is **1111111119**, **GSM** for testing is **7700001**
+
+**Confirmation type values: 0 - automatic, 1 - server callback, 2 - manual
+
+***If you provide CallbackUrl on InsertCart:
   - Callback on that url will be received when customer confirms payment request in mobile app
   - Callback won't be received if customer cancelled, but CheckCart will check that purchase is canceled
  <br> <br>
