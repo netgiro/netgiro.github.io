@@ -10,7 +10,7 @@ Testing url (with swagger documentation): [**https://test.netgiro.is/api/checkou
 
 Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro.is/) with source code [**here**](https://github.com/netgiro/api-demo-client)
 
-## Online checkout flow
+## Online checkout flow (webshop)
 
 ### Chronology
 1. Provider calls `InsertCart` (specifies `ConfirmationType` and `CustomerId`)
