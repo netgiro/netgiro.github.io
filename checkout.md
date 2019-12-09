@@ -34,7 +34,7 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 	- Customer gets **SMS with payment code**
 	- Provider enters payment code and calls ConfirmCart
 
-- If provider entered **SSN+AppCode** (customer reads it from mobile app) as CustomerId
+- If provider entered **AppCode** (customer reads it from mobile app) as CustomerId
 	- Provider calls ConfirmCart
 		
 ### ConfirmationType variations
