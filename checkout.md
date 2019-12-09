@@ -52,7 +52,7 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 	<br><br>
 - Provider has to periodically call CheckCart on his side to check if loan is created of canceled
 
-## Offline version (POS)
+## Offline version flow (POS)
 - Same as in online version, except there is no ServerCallback as ConfirmationType option in offline versions
 
 ## InsertCart
