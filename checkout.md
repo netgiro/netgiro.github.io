@@ -14,8 +14,8 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 
 ### Chronology
 1. Provider calls `InsertCart` (specifies `ConfirmationType` and `CustomerId`)
-2. Customer confirms cart*
-3. Provider confirms cart**
+2. Customer confirms cart *
+3. Provider confirms cart **
 	- If `ConfirmationType = Automatic` => Cart is confirmed automatically on server and provider just calls `CheckCart` periodically to check status of cart
 	- If `ConfirmationType = Manual` => Provider calls `ConfirmCart`
 	- If `ConfirmationType = ServerCallback` => Provider gets callback from server that cart is confirmed
@@ -44,8 +44,8 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 ### Chronology
 1. Provider calls `InsertCart` (specifies `ConfirmationType` and `CustomerId`)
 	- If provider didn't specified `CustomerId` he needs to call `ConfirmCart` (with `CustomerId`) after `InsertCart`
-2. Customer confirms cart*
-3. Provider confirms cart**
+2. Customer confirms cart *
+3. Provider confirms cart **
 	- If `ConfirmationType = Automatic` => Cart is confirmed automatically on server and provider just calls `CheckCart` periodically to check status of cart
 	- If `ConfirmationType = Manual` => Provider calls `ConfirmCart`
     
