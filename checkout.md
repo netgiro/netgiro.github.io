@@ -51,7 +51,7 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 	- If (ConfirmationType = Automatic) => Cart is confirmed automatically on server and provider just calls CheckCart periodically to check status of cart
 	- If (ConfirmationType = Manual) => Provider calls ConfirmCart
     
-### Customer can confirm cart in 3 ways:
+### Customer can confirm cart in 3 ways (CustomerId param on InsertCart or ConfirmCart):
 - If provider entered **GSM** as CustomerId
 	- Customer gets **push notification** where he can accept/reject payment request (if customer doesn't have Netgiro mobile app he gets SMS to install it)
 	- Customer accepts payment request
@@ -63,7 +63,7 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 - If provider entered **AppCode** (customer reads it from mobile app) as CustomerId
 	- Provider calls ConfirmCart
 		
-### Provider can confirm cart in 2 ways:
+### Provider can confirm cart in 2 ways (CustomerId param on InsertCart):
 - If provider specified **Automatic** as ConfirmationType
 	- Server automatically creates loan after customer confirmation
 	- Provider doesn't need to confirm cart, just calls CheckCart periodically and checks if loan is created (or canceled if customer rejected)
