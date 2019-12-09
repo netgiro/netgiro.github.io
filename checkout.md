@@ -18,9 +18,9 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 1. Provider calls `InsertCart` (specifies `ConfirmationType` and `CustomerId`)
 2. Customer confirms cart
 3. Provider confirms cart
-	- If (`ConfirmationType = Automatic`) => Cart is confirmed automatically on server and provider just calls `CheckCart` periodically to check status of cart
-	- If (`ConfirmationType = Manual`) => Provider calls `ConfirmCart`
-	- If (`ConfirmationType = ServerCallback`) => Provider gets callback from server that cart is confirmed
+	- If `ConfirmationType = Automatic` => Cart is confirmed automatically on server and provider just calls `CheckCart` periodically to check status of cart
+	- If `ConfirmationType = Manual` => Provider calls `ConfirmCart`
+	- If `ConfirmationType = ServerCallback` => Provider gets callback from server that cart is confirmed
     
 ### Customer can confirm cart in 1 way (`CustomerId` param on `InsertCart`):
 - If provider entered **GSM** as `CustomerId`
@@ -48,8 +48,8 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 	- If provider didn't specified `CustomerId` he needs to call `ConfirmCart` (with `CustomerId`) after `InsertCart`
 2. Customer confirms cart
 3. Provider confirms cart
-	- `If ConfirmationType = Automatic` => Cart is confirmed automatically on server and provider just calls `CheckCart` periodically to check status of cart
-	- `If ConfirmationType = Manual` => Provider calls `ConfirmCart`
+	- If `ConfirmationType = Automatic` => Cart is confirmed automatically on server and provider just calls `CheckCart` periodically to check status of cart
+	- If `ConfirmationType = Manual` => Provider calls `ConfirmCart`
     
 ### Customer can confirm cart in 3 ways (`CustomerId` param on `InsertCart` or `ConfirmCart`):
 - If provider entered **GSM** as `CustomerId`
@@ -61,7 +61,7 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 	- Provider enters payment code and calls `ConfirmCart`
 
 - If provider entered **AppCode** (customer reads it from mobile app) as `CustomerId`
-	- Provider calls ConfirmCart
+	- Provider calls `ConfirmCart`
 		
 ### Provider can confirm cart in 2 ways (`CustomerId` param on `InsertCart`):
 - If provider specified **Automatic** as `ConfirmationType`
@@ -170,7 +170,7 @@ Possible responses for `CheckCart`:
 ## ConfirmCart
 [**https://test.netgiro.is/api/checkout/ConfirmCart**](https://test.netgiro.is/api/swagger/ui/index#!/Checkout/Checkout_ConfirmCart)
  <br><br>
-Confirms cart from provider side `if ConfirmationType = Manual`.
+Confirms cart from provider side if `ConfirmationType = Manual`.
 
  <br>
 Request body:
