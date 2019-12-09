@@ -25,30 +25,31 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 - Provider creates cart on his website
 	- calls InsertCart method (specifies ConfirmationType and CustomerId)
     
-	### CustomerId variations
-	- If provider entered **GSM** as CustomerId
-		- Customer gets **push notification** where he can accept/reject payment request (if customer doesn't have Netgiro mobile app he gets SMS to install it)
-		- Customer accepts payment request
+### CustomerId variations
+- If provider entered **GSM** as CustomerId
+	- Customer gets **push notification** where he can accept/reject payment request (if customer doesn't have Netgiro mobile app he gets SMS to install it)
+	- Customer accepts payment request
 
-	- If provider entered **SSN** as CustomerId
-		- Customer gets **SMS with payment code**
-		- Provider enters payment code and calls ConfirmCart
+- If provider entered **SSN** as CustomerId
+	- Customer gets **SMS with payment code**
+	- Provider enters payment code and calls ConfirmCart
 
-	- If provider entered **SSN+AppCode** (customer reads it from mobile app) as CustomerId
-		- Provider calls ConfirmCart
+- If provider entered **SSN+AppCode** (customer reads it from mobile app) as CustomerId
+	- Provider calls ConfirmCart
 		
-	### ConfirmationType variations
-	- If provider specified **ServerCallback** as ConfirmationType (CallbackUrl has to be specified)
-		- Provider gets callback from server that loan is created
-			
-	- If provider specified **Automatic** as ConfirmationType
-		- Server automatically creates loan after customer confirmation
-		- Provider calls CheckCart periodically and checks if loan is created (or canceled if customer rejected)
-			
-	- If provider specified **Manual** as ConfirmationType
-		- Server creates reservation after customer confirmation
-		- Provider calls CheckCart periodically and checks if reservation is created (or canceled if customer rejected)
-		- When CheckCart returns that reservation is created, provider calls ConfirmCart to create loan
+### ConfirmationType variations
+- If provider specified **ServerCallback** as ConfirmationType (CallbackUrl has to be specified)
+	- Provider gets callback from server that loan is created
+
+- If provider specified **Automatic** as ConfirmationType
+	- Server automatically creates loan after customer confirmation
+	- Provider calls CheckCart periodically and checks if loan is created (or canceled if customer rejected)
+
+- If provider specified **Manual** as ConfirmationType
+	- Server creates reservation after customer confirmation
+	- Provider calls CheckCart periodically and checks if reservation is created (or canceled if customer rejected)
+	- When CheckCart returns that reservation is created, provider calls ConfirmCart to create loan
+	
 - Provider has to periodically call CheckCart on his side to check if loan is created of canceled
 
 ## Offline version (POS)
