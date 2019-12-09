@@ -12,11 +12,46 @@ Swagger documentation: [**https://test.netgiro.is/api/swagger/ui/index#/Checkout
 
 Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro.is/) with source code [**here**](https://github.com/netgiro/api-demo-client)
 
-## Checkout flow		
-- Provider creates cart on his website
-	- calls InsertCart method (specifies ConfirmationType and CustomerId)
+## Online checkout flow
+
+### Chronology
+1. Provider calls InsertCart (specifies ConfirmationType and CustomerId)
+2. Customer confirms cart
+3. Provider confirms cart
+	- If (ConfirmationType = Automatic) => Cart is confirmed automatically on server and provider just calls CheckCart periodically to check status of cart
+	- If (ConfirmationType = Manual) => Provider calls ConfirmCart
+	- If (ConfirmationType = ServerCallback) => Provider gets callback from server that cart is confirmed
     
-### CustomerId variations
+### Customer can confirm cart in 1 way (CustomerId param on InsertCart):
+- If provider entered **GSM** as CustomerId
+	- Customer gets **push notification** where he can accept/reject payment request (if customer doesn't have Netgiro mobile app he gets SMS to install it)
+		
+### Provider can confirm cart in 3 ways (ConfirmationType param on InsertCart):
+- If provider specified **ServerCallback** as ConfirmationType (CallbackUrl has to be specified)
+	- Provider gets callback from server that loan is created
+	- Provider doesn't need to confirm cart, just calls CheckCart periodically and checks if loan is created (or canceled if customer rejected)
+
+- If provider specified **Automatic** as ConfirmationType
+	- Server automatically creates loan after customer confirmation
+	- Provider doesn't need to confirm cart, just calls CheckCart periodically and checks if loan is created (or canceled if customer rejected)
+
+- If provider specified **Manual** as ConfirmationType
+	- Server creates reservation after customer confirmation
+	- Provider calls CheckCart periodically and checks if reservation is created (or canceled if customer rejected)
+	- When CheckCart returns that reservation is created, provider needs to call ConfirmCart to create loan
+	<br><br>
+
+## Offline checkout flow (POS)
+
+### Chronology
+1. Provider calls InsertCart (specifies ConfirmationType)
+2. Provider calls ConfirmCart (specifies CustomerId)
+3. Customer confirms cart
+4. Provider confirms cart
+	- If (ConfirmationType = Automatic) => Cart is confirmed automatically on server and provider just calls CheckCart periodically to check status of cart
+	- If (ConfirmationType = Manual) => Provider calls ConfirmCart
+    
+### Customer can confirm cart in 3 ways:
 - If provider entered **GSM** as CustomerId
 	- Customer gets **push notification** where he can accept/reject payment request (if customer doesn't have Netgiro mobile app he gets SMS to install it)
 	- Customer accepts payment request
@@ -28,20 +63,16 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 - If provider entered **AppCode** (customer reads it from mobile app) as CustomerId
 	- Provider calls ConfirmCart
 		
-### ConfirmationType variations
-- If provider specified **ServerCallback** as ConfirmationType (CallbackUrl has to be specified)
-	- Provider gets callback from server that loan is created
-
+### Provider can confirm cart in 2 ways:
 - If provider specified **Automatic** as ConfirmationType
 	- Server automatically creates loan after customer confirmation
-	- Provider calls CheckCart periodically and checks if loan is created (or canceled if customer rejected)
+	- Provider doesn't need to confirm cart, just calls CheckCart periodically and checks if loan is created (or canceled if customer rejected)
 
 - If provider specified **Manual** as ConfirmationType
 	- Server creates reservation after customer confirmation
 	- Provider calls CheckCart periodically and checks if reservation is created (or canceled if customer rejected)
-	- When CheckCart returns that reservation is created, provider calls ConfirmCart to create loan
+	- When CheckCart returns that reservation is created, provider needs to call ConfirmCart to create loan
 	<br><br>
-- Provider has to periodically call CheckCart on his side to check if loan is created of canceled
 
 <br><br>
 ## InsertCart
@@ -73,6 +104,7 @@ Response body:
 | Success | true, false |
 | ResultCode | 200, 400 (or any other error code) |
 | TransactionId | GUID (cart identifier used later for checking or canceling cart) |
+| ProcessCartCheckIntervalMiliseconds | int? (The pace how often the cart should be checked by provider) |
 
 
 Possible responses for InsertCart:
@@ -85,42 +117,14 @@ Possible responses for InsertCart:
     - Success = false
     - ResultCode = GenericError (400) or any other error code
 
-## CancelCart
-**https://test.netgiro.is/api/checkout/CancelCart**
- <br><br>
-Cancels cart (if customer hasn't already confirmed it). If customer already confirmed cart it can't be canceled from provider side.
-
- <br>
-Request body:
-
-| Name  | Required | Description |
-| ------------- | ------------- |------------- |
-| TransactionId  | Yes | Cart identifier  |
-
- <br> <br>
-Response body:
-
-| Name  | Values |
-| ------------- | ------------- |
-| Success | true, false |
-| ResultCode | 10200, 10201 |
-
-
-Possible responses for CancelCart:
-  - Customer confirms before provider cancel (loan exists, can't be canceled)
-    - Success = false
-    - ResultCode = PaymentConfirmed (10200)
-			
-  - Provider cancels on time
-    - Success = true
-    - ResultCode = PaymentCanceled (10201)
-
 
 ## CheckCart
 **https://test.netgiro.is/api/checkout/CheckCart**
  <br><br>
-If CallbackUrl is not provided on InsertCart, provider won't get callback and needs to check the status of the purchase manually.
-This can be done by calling CheckCart method.
+- This method needs to be called periodically to check status of cart when customer confirms/rejects cart.
+
+- If ConfirmationType = Automatic or ServerCallback, this method just tells provider that loan is created.
+- If ConfirmationType = Manual, this method tells provider that customer confirmed cart and after that provider needs to confirm it by calling ConfirmCart.
 
  <br>
 Request body:
@@ -158,3 +162,68 @@ Possible responses for CheckCart:
     - Success = true
     - PaymentSuccessful = TRUE
     - ResultCode = PaymentConfirmed (10200)
+
+
+## ConfirmCart
+**https://test.netgiro.is/api/checkout/ConfirmCart**
+ <br><br>
+Confirms cart from provider side if ConfirmationType = Manual.
+
+ <br>
+Request body:
+
+| Name  | Required | Description |
+| ------------- | ------------- |------------- |
+| TransactionId  | Yes | Cart identifier  |
+| Identifier  | Yes | Customer identifier(SSN, app code, phone number) |
+
+ <br> <br>
+Response body:
+
+| Name  | Values |
+| ------------- | ------------- |
+| Success | true, false |
+| PaymentSuccessful | true, false |
+| ResultCode | 200, 400 (or any other error code) |
+
+
+Possible responses for ConfirmCart:
+  - Payment failed
+    - Success = true
+    - PaymentSuccessful = false
+    - ResultCode = 400 or some error other code
+    
+  - Loan created
+    - Success = true
+    - PaymentSuccessful = true
+    - ResultCode = PaymentConfirmed (10200)
+
+## CancelCart
+**https://test.netgiro.is/api/checkout/CancelCart**
+ <br><br>
+Cancels cart (if customer hasn't already confirmed it). If customer already confirmed cart it can't be canceled from provider side.
+
+ <br>
+Request body:
+
+| Name  | Required | Description |
+| ------------- | ------------- |------------- |
+| TransactionId  | Yes | Cart identifier  |
+
+ <br> <br>
+Response body:
+
+| Name  | Values |
+| ------------- | ------------- |
+| Success | true, false |
+| ResultCode | 10200, 10201 |
+
+
+Possible responses for CancelCart:
+  - Customer confirms before provider cancel (loan exists, can't be canceled)
+    - Success = false
+    - ResultCode = PaymentConfirmed (10200)
+			
+  - Provider cancels on time
+    - Success = true
+    - ResultCode = PaymentCanceled (10201)
