@@ -40,7 +40,7 @@ Request body:
 | ------------- | ------------- |------------- |
 | Amount  | Yes | Total amount of the purchase  |
 | Reference  | Yes | Reference |
-| CustomerId | Yes | GSM number for confirming purchase |
+| CustomerId | Yes | GSM number for confirming purchase (use 770001 on test api) |
 | Description | No | Optional parameter which describes purchase |
 | CallbackUrl*| No | Url to which will be made post request after customer has confirmed the sale |
 
