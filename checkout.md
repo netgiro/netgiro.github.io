@@ -74,7 +74,7 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 	- When CheckCart returns that reservation is created, provider needs to call ConfirmCart to create loan
 	<br><br>
 
-<br><br>
+<br>
 ## InsertCart
 **https://test.netgiro.is/api/checkout/InsertCart**
 <br><br>
