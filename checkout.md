@@ -12,21 +12,47 @@ Swagger documentation: [**https://test.netgiro.is/api/swagger/ui/index#/Checkout
 
 Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro.is/) with source code [**here**](https://github.com/netgiro/api-demo-client)
 
-## Netgiró API - checkout flow
+- There are 3 different confirmation types on InsertCart using which provider can confirm cart (after customer confirmation):
+	1. Automatic
+		- provider's side automatically confirms cart and creates loan
+	2. Manual
+		- provider's side has to manualy confirm cart (call method ConfirmCart) and creates loan
+	3. Server callback
+		- provider's side gets server callback after loan created
+		- not available in offline version (on POS)
+
+## Online version flow		
 - Provider creates cart on his website
-	- InsertCart method
+	- calls InsertCart method (specifies ConfirmationType and CustomerId)
     
-- Customer gets notification in his Netgiró mobile app about cart created from provider
-	- Customer confirms/rejects cart
-    
-- Provider gets customer response
-	- If CallbackUrl provided on InsertCart
-		- Provider gets callback on that url that customer confirmed cart
+	### CustomerId variations
+	- If provider entered **GSM** as CustomerId
+		- Customer gets **push notification** where he can accept/reject payment request (if customer doesn't have Netgiro mobile app he gets SMS to install it)
+		- Customer accepts payment request
 
-	- If CallbackUrl not provided on InsertCart
-		- Provider needs to call CheckCart periodically to check if customer confirmed cart
+	- If provider entered **SSN** as CustomerId
+		- Customer gets **SMS with payment code**
+		- Provider enters payment code and calls ConfirmCart
 
-	- Also, CheckCart can be used from provider to check if customer rejected cart
+	- If provider entered **SSN+AppCode** (customer reads it from mobile app) as CustomerId
+		- Provider calls ConfirmCart
+		
+	### ConfirmationType variations
+	- If provider specified **ServerCallback** as ConfirmationType (CallbackUrl has to be specified)
+		- Provider gets callback from server that loan is created
+			
+	- If provider specified **Automatic** as ConfirmationType
+		- Server automatically creates loan after customer confirmation
+		- Provider calls CheckCart periodically and checks if loan is created (or canceled if customer rejected)
+			
+	- If provider specified **Manual** as ConfirmationType
+		- Server creates reservation after customer confirmation
+		- Provider calls CheckCart periodically and checks if reservation is created (or canceled if customer rejected)
+		- When CheckCart returns that reservation is created, provider calls ConfirmCart to create loan
+- Provider has to periodically call CheckCart on his side to check if loan is created of canceled
+
+## Offline version (POS)
+- Same as in online version, except there is no ServerCallback as ConfirmationType option in offline versions
 
 ## InsertCart
 **https://test.netgiro.is/api/checkout/InsertCart**
@@ -41,7 +67,8 @@ Request body:
 | Amount  | Yes | Total amount of the purchase  |
 | Reference  | Yes | Reference |
 | CustomerId | Yes | GSM number for confirming purchase (use 7700001 on test api) |
-| Description | No | Optional parameter which describes purchase |
+| ConfirmationType | No | Provider's way of confirming purchases after customer confirmation (0 - automatic, 1 - server callback, 2 - manual) |
+| Description | No | Purchase description |
 | CallbackUrl*| No | Url to which will be made post request after customer has confirmed the sale |
 
 *If you provide CallbackUrl on InsertCart:
