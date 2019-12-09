@@ -4,7 +4,7 @@ parent: API
 nav_order: 7
 ---
 
-# Netgíró API - checkout
+# Netgiro API - checkout
 
 Testing url: [**https://test.netgiro.is/api/checkout**](https://test.netgiro.is/api/checkout)
 
