@@ -156,7 +156,7 @@ Possible responses for `CheckCart`:
     - PaymentSuccessful = false
     - ResultCode = PendingCustomerConfirmation (10425)
 
-  - Cart confirmed by customer, reservation created and provider needs to confirm purchase by calling `ConfirmCart` (**this is only for cases where provider sends `ConfirmationType = Manual` on `InsertCart`** )
+  - Cart confirmed by customer, reservation created and provider needs to confirm purchase by calling `ConfirmCart` -> **(this is only for cases where provider sends `ConfirmationType = Manual` on `InsertCart`)**
     - Success = true
     - PaymentSuccessful = false
     - ResultCode = ReservationCreatedAnd (10426)
