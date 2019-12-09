@@ -49,7 +49,7 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 	- Server creates reservation after customer confirmation
 	- Provider calls CheckCart periodically and checks if reservation is created (or canceled if customer rejected)
 	- When CheckCart returns that reservation is created, provider calls ConfirmCart to create loan
-	
+	<br><br>
 - Provider has to periodically call CheckCart on his side to check if loan is created of canceled
 
 ## Offline version (POS)
