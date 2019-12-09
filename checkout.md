@@ -88,8 +88,8 @@ Request body:
 | Reference  | Yes | Reference |
 | CustomerId* | Yes | SSN, AppCode or GSM number for client identification |
 | ConfirmationType** | Yes | Provider's way of confirming purchases after customer confirmation |
-| Description | No | Purchase description |
 | CallbackUrl***| No | Url to which will be made post request after customer has confirmed the sale |
+| Description | No | Purchase description |
 
 ***SSN** for testing is **1111111119**, **GSM** for testing is **7700001**
 
