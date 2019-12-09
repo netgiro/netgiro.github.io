@@ -105,11 +105,11 @@ formated value should look like this:
 
 If secret key is:
 
-`YCFd6hiA8lUjZejVcIf/LhRXO4wTDxY0JhOXvQZwnMSiNynSxmNIMjMf1HHwdV6cMN48NX3ZipA9q9hLPb9C1ZIzMH5dvELPAHceiu7LbZzmIAGeOf/OUaDrk2Zq2dbGacIAzU6yyk4KmOXRaSLi8KW8t3krdQSX7Ecm8Qunc/A= (base 64 encoded)`
+`YCFd6hiA8lUjZejVcIf/LhRXO4wTDxY0JhOXvQZwnMSiNynSxmNIMjMf1HHwdV6cMN48NX3ZipA9q9hLPb9C1ZIzMH5dvELPAHceiu7LbZzmIAGeOf/OUaDrk2Zq2dbGacIAzU6yyk4KmOXRaSLi8KW8t3krdQSX7Ecm8Qunc/A=` (base 64 encoded)
 
 Then **netgiro_signature** needs to be:
 
-`ec7fa41fa070a191b3e48caa6c49ea52e43b6fcc0a62ba32a4844fdea4b85e5a (base 64 encoded string)`
+`ec7fa41fa070a191b3e48caa6c49ea52e43b6fcc0a62ba32a4844fdea4b85e5a` (base 64 encoded string)
 
 ## Netgíró response
 
