@@ -70,8 +70,8 @@ Response body:
 
 | Name | Values |
 | ------------- |------------- |
-| Success | true or false |
-| ResultCode | 200 or 400 |
+| Success | true, false |
+| ResultCode | 200, 400 (or any other error code) |
 | TransactionId | GUID (cart identifier used later for checking or canceling cart) |
 
 
@@ -83,7 +83,7 @@ Possible responses for InsertCart:
 
   - Wrong gsm (or not a customer) or any other validation error
     - Success = false
-    - ResultCode = GenericError (400)
+    - ResultCode = GenericError (400) or any other error code
 
 ## CancelCart
 **https://test.netgiro.is/api/checkout/CancelCart**
@@ -102,8 +102,8 @@ Response body:
 
 | Name  | Values |
 | ------------- | ------------- |
-| Success | true or false |
-| ResultCode | 10200 or 10201 |
+| Success | true, false |
+| ResultCode | 10200, 10201 |
 
 
 Possible responses for CancelCart:
@@ -134,9 +134,9 @@ Response body:
 
 | Name  | Values |
 | ------------- | ------------- |
-| Success | true or false |
-| PaymentSuccessful | true or false (describes if cart is confirmed by customer) |
-| ResultCode | 10200 or 10201 or 10425 |
+| Success | true, false |
+| PaymentSuccessful | true, false (describes if cart is confirmed by customer) |
+| ResultCode | 10200, 10201, 10425, 10426 |
 
 Possible responses for CheckCart:
   - Cart canceled or doesn't exist, etc.
@@ -148,13 +148,14 @@ Possible responses for CheckCart:
     - Success = true
     - PaymentSuccessful = false
     - ResultCode = PendingCustomerConfirmation (10425)
-	
-  - Cart canceled
+
+  - **This is only for cases where provider sends ConfirmationType = Manual on InsertCart** 
+  - Cart confirmed by customer, reservation created and provider needs to confirm purchase by calling ConfirmCart
     - Success = true
     - PaymentSuccessful = false
-    - ResultCode = PaymentCanceled (10201)
+    - ResultCode = ReservationCreatedAnd (10426)
 
-  - Cart confirmed
+  - Loan created
     - Success = true
     - PaymentSuccessful = TRUE
     - ResultCode = PaymentConfirmed (10200)
