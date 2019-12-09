@@ -12,16 +12,7 @@ Swagger documentation: [**https://test.netgiro.is/api/swagger/ui/index#/Checkout
 
 Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro.is/) with source code [**here**](https://github.com/netgiro/api-demo-client)
 
-- There are 3 different confirmation types on InsertCart using which provider can confirm cart (after customer confirmation):
-	1. Automatic
-		- provider's side automatically confirms cart and creates loan
-	2. Manual
-		- provider's side has to manualy confirm cart (call method ConfirmCart) and creates loan
-	3. Server callback
-		- provider's side gets server callback after loan created
-		- not available in offline version (on POS)
-
-## Online version flow		
+## Checkout flow		
 - Provider creates cart on his website
 	- calls InsertCart method (specifies ConfirmationType and CustomerId)
     
@@ -52,9 +43,7 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 	<br><br>
 - Provider has to periodically call CheckCart on his side to check if loan is created of canceled
 
-## Offline version flow (POS)
-- Same as in online version, except there is no ServerCallback as ConfirmationType option in offline versions
-
+<br><br>
 ## InsertCart
 **https://test.netgiro.is/api/checkout/InsertCart**
 <br><br>
