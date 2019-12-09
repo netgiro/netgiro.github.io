@@ -57,7 +57,7 @@ Request body:
 | Amount  | Yes | Total amount of the purchase  |
 | Reference  | Yes | Reference |
 | CustomerId | Yes | GSM number for confirming purchase (use 7700001 on test api) |
-| ConfirmationType | No | Provider's way of confirming purchases after customer confirmation (0 - automatic, 1 - server callback, 2 - manual) |
+| ConfirmationType | Yes | Provider's way of confirming purchases after customer confirmation (0 - automatic, 1 - server callback, 2 - manual) |
 | Description | No | Purchase description |
 | CallbackUrl*| No | Url to which will be made post request after customer has confirmed the sale |
 
