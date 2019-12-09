@@ -72,11 +72,10 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 	- Server creates reservation after customer confirmation
 	- Provider calls CheckCart periodically and checks if reservation is created (or canceled if customer rejected)
 	- When CheckCart returns that reservation is created, provider needs to call ConfirmCart to create loan
-	<br><br>
 
-<br>
+<br><br>
 ## InsertCart
-**https://test.netgiro.is/api/checkout/InsertCart**
+[**https://test.netgiro.is/api/checkout/InsertCart**](https://test.netgiro.is/api/swagger/ui/index#!/Checkout/Checkout_InsertCart)
 <br><br>
 Creates and inserts cart
 
@@ -119,7 +118,7 @@ Possible responses for InsertCart:
 
 
 ## CheckCart
-**https://test.netgiro.is/api/checkout/CheckCart**
+[**https://test.netgiro.is/api/checkout/CheckCart**](https://test.netgiro.is/api/swagger/ui/index#!/Checkout/Checkout_CheckCart)
  <br><br>
 - This method needs to be called periodically to check status of cart when customer confirms/rejects cart.
 
@@ -165,7 +164,7 @@ Possible responses for CheckCart:
 
 
 ## ConfirmCart
-**https://test.netgiro.is/api/checkout/ConfirmCart**
+[**https://test.netgiro.is/api/checkout/ConfirmCart**](https://test.netgiro.is/api/swagger/ui/index#!/Checkout/Checkout_ConfirmCart)
  <br><br>
 Confirms cart from provider side if ConfirmationType = Manual.
 
@@ -199,7 +198,7 @@ Possible responses for ConfirmCart:
     - ResultCode = PaymentConfirmed (10200)
 
 ## CancelCart
-**https://test.netgiro.is/api/checkout/CancelCart**
+[**https://test.netgiro.is/api/checkout/CancelCart**](https://test.netgiro.is/api/swagger/ui/index#!/Checkout/Checkout_CancelCart)
  <br><br>
 Cancels cart (if customer hasn't already confirmed it). If customer already confirmed cart it can't be canceled from provider side.
 
