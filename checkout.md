@@ -10,6 +10,8 @@ Testing url (with swagger documentation): [**https://test.netgiro.is/api/checkou
 
 Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro.is/) with source code [**here**](https://github.com/netgiro/api-demo-client)
 
+For any questions and concerns about API integration, please contact this mail: **dev@netgiro.is**
+
 ## Online checkout flow (webshop) 
 
 ### Chronology
