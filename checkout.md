@@ -157,7 +157,7 @@ Possible responses for `CheckCart`:
   - Cart confirmed by customer, reservation created and provider needs to confirm purchase by calling `ConfirmCart` -> **this is only for cases where provider sends `ConfirmationType = Manual` on `InsertCart`**
     - Success = true
     - PaymentSuccessful = false
-    - ResultCode = ReservationCreatedAnd (10426)
+    - ResultCode = ReservationCreatedAndWaitingForProviderConfirm (10426)
 
   - Loan created
     - Success = true
@@ -176,7 +176,7 @@ Request body:
 | Name  | Required | Description |
 | ------------- | ------------- |------------- |
 | TransactionId  | Yes | Cart identifier  |
-| Identifier  | Yes | Customer identifier(SSN, app code, phone number) |
+| Identifier  | No | Customer identifier(SSN, app code, phone number) |
 
  <br> <br>
 Response body:
