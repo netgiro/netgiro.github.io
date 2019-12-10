@@ -84,7 +84,7 @@ Request body:
 | ------------- | ------------- |------------- |
 | Amount  | Yes | Total amount of the purchase  |
 | Reference  | Yes | Reference |
-| CustomerId* | Yes | SSN, AppCode or GSM number for client identification |
+| CustomerId* | Yes | SSN, SMS code, AppCode or GSM number for client identification |
 | ConfirmationType** | Yes | Provider's way of confirming purchases after customer confirmation |
 | CallbackUrl***| No | Url to which will be made post request after customer has confirmed the sale |
 | Description | No | Purchase description |
