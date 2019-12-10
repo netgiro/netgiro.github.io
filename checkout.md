@@ -67,17 +67,17 @@ For any questions and concerns about API integration, please contact this mail: 
 ### **Provider can confirm cart in 3 ways (`CustomerId` param on `InsertCart`):
 - If provider specified **ServerCallback** as `ConfirmationType` (`CallbackUrl` has to be specified)
 	- **this is only possible if POS is connected with server which can receive callback from Netgiro api**
-	- Provider gets callback from server that loan is created
-	- Provider doesn't need to confirm cart, just calls `CheckCart` periodically and checks if loan is created (or canceled if customer rejected)
+	- Provider gets callback from server that payment is created
+	- Provider doesn't need to confirm cart, just calls `CheckCart` periodically and checks if payment is created (or canceled if customer rejected)
 
 - If provider specified **Automatic** as `ConfirmationType`
-	- Server automatically creates loan after customer confirmation
-	- Provider doesn't need to confirm cart, just calls `CheckCart` periodically and checks if loan is created (or canceled if customer rejected)
+	- Server automatically creates payment after customer confirmation
+	- Provider doesn't need to confirm cart, just calls `CheckCart` periodically and checks if payment is created (or canceled if customer rejected)
 
 - If provider specified **Manual** as `ConfirmationType`
 	- Server creates reservation after customer confirmation
 	- Provider calls `CheckCart` periodically and checks if reservation is created (or canceled if customer rejected)
-	- When `CheckCart` returns that reservation is created, provider needs to call `ConfirmCart` to create loan
+	- When `CheckCart` returns that reservation is created, provider needs to call `ConfirmCart` to create payment
 
 <br><br>
 ## InsertCart
@@ -131,7 +131,7 @@ Possible responses for `InsertCart`:
  <br><br>
 - This method needs to be called periodically to check status of cart when customer confirms/rejects cart.
 
-- If `ConfirmationType = Automatic or ServerCallback`, this method just tells provider that loan is created.
+- If `ConfirmationType = Automatic or ServerCallback`, this method just tells provider that payment is created.
 - If `ConfirmationType = Manual`, this method tells provider that customer confirmed cart and after that provider needs to confirm it by calling `ConfirmCart`.
 
  <br>
@@ -178,7 +178,7 @@ Possible responses for `CheckCart`:
     - PaymentSuccessful = false
     - ResultCode = ReservationCreatedAndWaitingForProviderConfirm (10426)
 
-  - Loan created
+  - Payment created
     - Success = true
     - PaymentSuccessful = TRUE
     - ResultCode = PaymentConfirmed (10200)
@@ -224,7 +224,7 @@ Possible responses for `ConfirmCart`:
     - PaymentSuccessful = false
     - ResultCode = 400 or some error other code
     
-  - Loan created
+  - Payment created
     - Success = true
     - PaymentSuccessful = true
     - ResultCode = PaymentConfirmed (10200)
@@ -262,7 +262,7 @@ PayementInfo body:
 | TotalAmount | Amount of payment |
 
 Possible responses for `CancelCart`:
-  - Customer confirms before provider cancel (loan exists, can't be canceled)
+  - Customer confirms before provider cancel (payment exists, can't be canceled)
     - Success = false
     - ResultCode = PaymentConfirmed (10200)
 			
