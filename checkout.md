@@ -28,17 +28,17 @@ For any questions and concerns about API integration, please contact this mail: 
 		
 ### **Provider can confirm cart in 3 ways (`ConfirmationType` param on `InsertCart`):
 - If provider specified **ServerCallback** as `ConfirmationType` (`CallbackUrl` has to be specified)
-	- Provider gets callback from server that loan is created
-	- Provider doesn't need to confirm cart, just calls `CheckCart` periodically and checks if loan is created (or canceled if customer rejected)
+	- Provider gets callback from server that payment is created
+	- Provider doesn't need to confirm cart, just calls `CheckCart` periodically and checks if payment is created (or canceled if customer rejected)
 
 - If provider specified **Automatic** as `ConfirmationType`
-	- Server automatically creates loan after customer confirmation
-	- Provider doesn't need to confirm cart, just calls `CheckCart` periodically and checks if loan is created (or canceled if customer rejected)
+	- Server automatically creates payment after customer confirmation
+	- Provider doesn't need to confirm cart, just calls `CheckCart` periodically and checks if payment is created (or canceled if customer rejected)
 
 - If provider specified **Manual** as `ConfirmationType`
 	- Server creates reservation after customer confirmation
 	- Provider calls `CheckCart` periodically and checks if reservation is created (or canceled if customer rejected)
-	- When `CheckCart` returns that reservation is created, provider needs to call `ConfirmCart` to create loan
+	- When `CheckCart` returns that reservation is created, provider needs to call `ConfirmCart` to create payment
 	<br><br>
 
 ## Offline checkout flow (POS)
