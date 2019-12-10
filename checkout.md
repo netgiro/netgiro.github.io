@@ -107,7 +107,6 @@ Response body:
 | TransactionId | GUID (cart identifier used later for checking or canceling cart) |
 | ProcessCartCheckIntervalMiliseconds | int? (The pace how often the cart should be checked by provider) |
 
-
 Possible responses for `InsertCart`:
   - Successful insert
       - Success = true
@@ -142,6 +141,18 @@ Response body:
 | Success | true, false |
 | PaymentSuccessful | true, false (describes if cart is confirmed by customer) |
 | ResultCode | 10200, 10201, 10425, 10426 |
+| PaymentInfo | object with data about payment |
+
+PayementInfo body:
+
+| Name  | Values |
+| ------------- | ------------- |
+| TransactionId | Identifier of the payment in Netgíró system |
+| InvoiceNumber | Invoice number for the payment |
+| ReferenceNumber | Reference number parameter from the request, identifying the order in the providers system |
+| StatusId | Status of payment: 1 - unconfirmed, 2 - confirmed, 5 - canceled |
+| Created | Time when payment was created |
+| TotalAmount | Amount of payment |
 
 Possible responses for `CheckCart`:
   - Cart canceled or doesn't exist, etc.
@@ -186,7 +197,18 @@ Response body:
 | Success | true, false |
 | PaymentSuccessful | true, false |
 | ResultCode | 200, 400 (or any other error code) |
+| PaymentInfo | object with data about payment |
 
+PayementInfo body:
+
+| Name  | Values |
+| ------------- | ------------- |
+| TransactionId | Identifier of the payment in Netgíró system |
+| InvoiceNumber | Invoice number for the payment |
+| ReferenceNumber | Reference number parameter from the request, identifying the order in the providers system |
+| StatusId | Status of payment: 1 - unconfirmed, 2 - confirmed, 5 - canceled |
+| Created | Time when payment was created |
+| TotalAmount | Amount of payment |
 
 Possible responses for `ConfirmCart`:
   - Payment failed
@@ -218,7 +240,18 @@ Response body:
 | ------------- | ------------- |
 | Success | true, false |
 | ResultCode | 10200, 10201 |
+| PaymentInfo | object with data about payment |
 
+PayementInfo body:
+
+| Name  | Values |
+| ------------- | ------------- |
+| TransactionId | Identifier of the payment in Netgíró system |
+| InvoiceNumber | Invoice number for the payment |
+| ReferenceNumber | Reference number parameter from the request, identifying the order in the providers system |
+| StatusId | Status of payment: 1 - unconfirmed, 2 - confirmed, 5 - canceled |
+| Created | Time when payment was created |
+| TotalAmount | Amount of payment |
 
 Possible responses for `CancelCart`:
   - Customer confirms before provider cancel (loan exists, can't be canceled)
