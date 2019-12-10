@@ -66,7 +66,7 @@ For any questions and concerns about API integration, please contact this mail: 
 		
 ### **Provider can confirm cart in 3 ways (`CustomerId` param on `InsertCart`):
 - If provider specified **ServerCallback** as `ConfirmationType` (`CallbackUrl` has to be specified)
-	- **this is only possible if POS is connected with server on which Netgiro api can send callback**
+	- **this is only possible if POS is connected with server which can receive callback from Netgiro api**
 	- Provider gets callback from server that loan is created
 	- Provider doesn't need to confirm cart, just calls `CheckCart` periodically and checks if loan is created (or canceled if customer rejected)
 
