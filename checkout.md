@@ -48,6 +48,7 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 3. Provider confirms cart **
 	- If `ConfirmationType = Automatic` => Cart is confirmed automatically on server and provider just calls `CheckCart` periodically to check status of cart
 	- If `ConfirmationType = Manual` => Provider calls `ConfirmCart`
+	- If `ConfirmationType = ServerCallback` => Provider gets callback from server that cart is confirmed
     
 ### *Customer can confirm cart in 3 ways (`CustomerId` param on `InsertCart` or `ConfirmCart`):
 - If provider entered **GSM** as `CustomerId`
@@ -61,7 +62,12 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 - If provider entered **AppCode** (customer reads it from mobile app) as `CustomerId`
 	- Provider calls `ConfirmCart`
 		
-### **Provider can confirm cart in 2 ways (`CustomerId` param on `InsertCart`):
+### **Provider can confirm cart in 3 ways (`CustomerId` param on `InsertCart`):
+- If provider specified **ServerCallback** as `ConfirmationType` (`CallbackUrl` has to be specified)
+	- **this is only possible if POS is connected with server on which Netgiro api can send callback**
+	- Provider gets callback from server that loan is created
+	- Provider doesn't need to confirm cart, just calls `CheckCart` periodically and checks if loan is created (or canceled if customer rejected)
+
 - If provider specified **Automatic** as `ConfirmationType`
 	- Server automatically creates loan after customer confirmation
 	- Provider doesn't need to confirm cart, just calls `CheckCart` periodically and checks if loan is created (or canceled if customer rejected)
