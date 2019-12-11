@@ -39,7 +39,13 @@ For any questions and concerns about API integration, please contact this mail: 
 	- Server creates reservation after customer confirmation
 	- Provider calls `CheckCart` periodically and checks if reservation is created (or canceled if customer rejected)
 	- When `CheckCart` returns that reservation is created, provider needs to call `ConfirmCart` to create payment
-	<br><br>
+	
+Flow is shown is graph below:
+<br>
+
+![ng-checkout-flow-gsm](https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/ng_checkout_flow_gsm_v2.png)
+<br><br>
+
 
 ## Offline checkout flow (POS)
 
