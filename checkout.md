@@ -12,7 +12,7 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 
 For any questions and concerns about API integration, please contact this mail: **dev@netgiro.is**
 
-## Online checkout flow (webshop) 
+## Online checkout (webshop) 
 
 ### Chronology
 1. Provider calls `InsertCart` (specifies `ConfirmationType` and `CustomerId`)
@@ -40,14 +40,13 @@ For any questions and concerns about API integration, please contact this mail: 
 	- Provider calls `CheckCart` periodically and checks if reservation is created (or canceled if customer rejected)
 	- When `CheckCart` returns that reservation is created, provider needs to call `ConfirmCart` to create payment
 	
-Flow is shown is graph below:
-<br>
+### Process flow
 
 ![ng-checkout-flow-gsm](https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/ng_checkout_flow_gsm_v2.png)
 <br><br>
 
 
-## Offline checkout flow (POS)
+## Offline checkout (POS)
 
 ### Chronology
 1. Provider calls `InsertCart` (specifies `ConfirmationType` and `CustomerId`)
