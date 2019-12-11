@@ -12,6 +12,11 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 
 For any questions and concerns about API integration, please contact this mail: **dev@netgiro.is**
 
+&nbsp;<details><summary>Collapsed Text</summary>When I try to add the hashtags inside
+&nbsp;<details><summary>Hidden Heading</summary>
+## New User
+&nbsp;</details></details>
+
 ## Online checkout (webshop)
 &nbsp;<details><summary>Details</summary>
 <p>
