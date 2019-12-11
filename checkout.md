@@ -13,8 +13,7 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 For any questions and concerns about API integration, please contact this mail: **dev@netgiro.is**
 
 ## Online checkout (webshop)
-<details><summary>Details</summary>
-<p>
+<details><summary>Details</summary><p>
 	
 ### Chronology
 1. Provider calls `InsertCart` (specifies `ConfirmationType` and `CustomerId`)
@@ -45,8 +44,7 @@ For any questions and concerns about API integration, please contact this mail: 
 	### Process flow
 
 	![ng-checkout-flow-gsm](https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/ng_checkout_flow_gsm_v2.png)
-</p>
-</details>
+</p></details>
 
 ## Offline checkout (POS)
 <details><summary>Details</summary>
