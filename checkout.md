@@ -12,13 +12,8 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 
 For any questions and concerns about API integration, please contact this mail: **dev@netgiro.is**
 
-&nbsp;<details><summary>Collapsed Text</summary>When I try to add the hashtags inside
-&nbsp;<details><summary>Hidden Heading</summary>
-## New User
-&nbsp;</details></details>
-
 ## Online checkout (webshop)
-&nbsp;<details><summary>Details</summary>
+<details><summary>Details</summary>
 <p>
 	
 ### Chronology
@@ -51,10 +46,10 @@ For any questions and concerns about API integration, please contact this mail: 
 
 	![ng-checkout-flow-gsm](https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/ng_checkout_flow_gsm_v2.png)
 </p>
-&nbsp;</details>
+</details>
 
 ## Offline checkout (POS)
-&nbsp;<details><summary>Details</summary>
+<details><summary>Details</summary>
 <p>
 	
 ### Chronology
@@ -93,14 +88,14 @@ For any questions and concerns about API integration, please contact this mail: 
 	- Provider calls `CheckCart` periodically and checks if reservation is created (or canceled if customer rejected)
 	- When `CheckCart` returns that reservation is created, provider needs to call `ConfirmCart` to create payment
 </p>
-&nbsp;</details>
+</details>
 
 ## InsertCart
 [**https://test.netgiro.is/api/checkout/InsertCart**](https://test.netgiro.is/api/swagger/ui/index#!/Checkout/Checkout_InsertCart)
 
 Creates and inserts cart
 
-&nbsp;<details><summary>Details</summary>
+<details><summary>Details</summary>
 <p>
 	
 Request body:
@@ -142,7 +137,7 @@ Possible responses for `InsertCart`:
     - Success = false
     - ResultCode = GenericError (400) or any other error code
 </p>
-&nbsp;</details>
+</details>
 
 ## CheckCart
 [**https://test.netgiro.is/api/checkout/CheckCart**](https://test.netgiro.is/api/swagger/ui/index#!/Checkout/Checkout_CheckCart)
@@ -151,7 +146,7 @@ This method needs to be called periodically to check status of cart when custome
 - If `ConfirmationType = Automatic or ServerCallback`, this method just tells provider that payment is created.
 - If `ConfirmationType = Manual`, this method tells provider that customer confirmed cart and after that provider needs to confirm it by calling `ConfirmCart`.
 
-&nbsp;<details><summary>Details</summary>
+<details><summary>Details</summary>
 <p>
 	
 Request body:
@@ -202,14 +197,14 @@ Possible responses for `CheckCart`:
     - PaymentSuccessful = TRUE
     - ResultCode = PaymentConfirmed (10200)
 </p>
-&nbsp;</details>
+</details>
 
 ## ConfirmCart
 [**https://test.netgiro.is/api/checkout/ConfirmCart**](https://test.netgiro.is/api/swagger/ui/index#!/Checkout/Checkout_ConfirmCart)
 
 Confirms cart from provider side if `ConfirmationType = Manual`.
 
-&nbsp;<details><summary>Details</summary>
+<details><summary>Details</summary>
 <p>
 	
 Request body:
@@ -251,14 +246,14 @@ Possible responses for `ConfirmCart`:
     - PaymentSuccessful = true
     - ResultCode = PaymentConfirmed (10200)
 </p>
-&nbsp;</details>
+</details>
 
 ## CancelCart
 [**https://test.netgiro.is/api/checkout/CancelCart**](https://test.netgiro.is/api/swagger/ui/index#!/Checkout/Checkout_CancelCart)
  <br><br>
 Cancels cart (if customer hasn't already confirmed it). If customer already confirmed cart it can't be canceled from provider side.
 
-&nbsp;<details><summary>Details</summary>
+<details><summary>Details</summary>
 <p>
 	
 Request body:
@@ -296,4 +291,4 @@ Possible responses for `CancelCart`:
     - Success = true
     - ResultCode = PaymentCanceled (10201)
 </p>
-&nbsp;</details>
+</details>
