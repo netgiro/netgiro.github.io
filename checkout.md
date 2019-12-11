@@ -101,6 +101,7 @@ Creates and inserts cart
 <summary>
 Details
 </summary>
+	
 Request body:
 
 | Name  | Required | Description |
@@ -152,6 +153,7 @@ This method needs to be called periodically to check status of cart when custome
 <summary>
 Details
 </summary>
+	
 Request body:
 
 | Name  | Required | Description |
@@ -210,6 +212,7 @@ Confirms cart from provider side if `ConfirmationType = Manual`.
 <summary>
 Details
 </summary>
+	
 Request body:
 
 | Name  | Required | Description |
