@@ -94,8 +94,8 @@ Details
 
 ## InsertCart
 [**https://test.netgiro.is/api/checkout/InsertCart**](https://test.netgiro.is/api/swagger/ui/index#!/Checkout/Checkout_InsertCart)
-<br><br>
-- Creates and inserts cart
+
+Creates and inserts cart
 
 <details>
 <summary>
@@ -143,9 +143,8 @@ Possible responses for `InsertCart`:
 
 ## CheckCart
 [**https://test.netgiro.is/api/checkout/CheckCart**](https://test.netgiro.is/api/swagger/ui/index#!/Checkout/Checkout_CheckCart)
- <br><br>
-- This method needs to be called periodically to check status of cart when customer confirms/rejects cart.
 
+This method needs to be called periodically to check status of cart when customer confirms/rejects cart.
 - If `ConfirmationType = Automatic or ServerCallback`, this method just tells provider that payment is created.
 - If `ConfirmationType = Manual`, this method tells provider that customer confirmed cart and after that provider needs to confirm it by calling `ConfirmCart`.
 
@@ -204,7 +203,7 @@ Possible responses for `CheckCart`:
 
 ## ConfirmCart
 [**https://test.netgiro.is/api/checkout/ConfirmCart**](https://test.netgiro.is/api/swagger/ui/index#!/Checkout/Checkout_ConfirmCart)
- <br><br>
+
 Confirms cart from provider side if `ConfirmationType = Manual`.
 
 <details>
