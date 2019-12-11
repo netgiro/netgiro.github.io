@@ -12,6 +12,13 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 
 For any questions and concerns about API integration, please contact this mail: **dev@netgiro.is**
 
+<details>
+  <summary>Collapsed Block
+</summary>
+
+  <h2 id="header">Header</h2>
+</details>
+
 ## Online checkout (webshop)
 <details><summary>Details</summary><p>
 	
