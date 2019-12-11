@@ -26,11 +26,11 @@ Details
 	- If `ConfirmationType = Automatic` => Cart is confirmed automatically on server and provider just calls `CheckCart` periodically to check status of cart
 	- If `ConfirmationType = Manual` => Provider calls `ConfirmCart`
 	- If `ConfirmationType = ServerCallback` => Provider gets callback from server that cart is confirmed
-    
+
 ### *Customer can confirm cart in 1 way (`CustomerId` param on `InsertCart`):
 - If provider entered **GSM** as `CustomerId`
 	- Customer gets **push notification** where he can accept/reject payment request (if customer doesn't have Netgiro mobile app he gets SMS to install it)
-		
+
 ### **Provider can confirm cart in 3 ways (`ConfirmationType` param on `InsertCart`):
 - If provider specified **ServerCallback** as `ConfirmationType` (`CallbackUrl` has to be specified)
 	- Provider gets callback from server that payment is created
@@ -43,11 +43,11 @@ Details
 - If provider specified **Manual** as `ConfirmationType`
 	- Server creates reservation after customer confirmation
 	- Provider calls `CheckCart` periodically and checks if reservation is created (or canceled if customer rejected)
-	- When `CheckCart` returns that reservation is created, provider needs to call `ConfirmCart` to create payment
-	
-### Process flow
+		- When `CheckCart` returns that reservation is created, provider needs to call `ConfirmCart` to create payment
 
-![ng-checkout-flow-gsm](https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/ng_checkout_flow_gsm_v2.png)
+	### Process flow
+
+	![ng-checkout-flow-gsm](https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/ng_checkout_flow_gsm_v2.png)
 </p>
 </details>
 
