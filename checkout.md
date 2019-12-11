@@ -20,7 +20,10 @@ For any questions and concerns about API integration, please contact this mail: 
 </details>
 
 ## Online checkout (webshop)
-<details><summary>Details</summary><p>
+<details>
+<summary>Details
+</summary>
+<p>
 	
 ### Chronology
 1. Provider calls `InsertCart` (specifies `ConfirmationType` and `CustomerId`)
@@ -51,7 +54,9 @@ For any questions and concerns about API integration, please contact this mail: 
 	### Process flow
 
 	![ng-checkout-flow-gsm](https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/ng_checkout_flow_gsm_v2.png)
-</p></details>
+</p>
+</details>
+<br>
 
 ## Offline checkout (POS)
 <details><summary>Details</summary>
@@ -94,6 +99,7 @@ For any questions and concerns about API integration, please contact this mail: 
 	- When `CheckCart` returns that reservation is created, provider needs to call `ConfirmCart` to create payment
 </p>
 </details>
+<br>
 
 ## InsertCart
 [**https://test.netgiro.is/api/checkout/InsertCart**](https://test.netgiro.is/api/swagger/ui/index#!/Checkout/Checkout_InsertCart)
@@ -143,6 +149,7 @@ Possible responses for `InsertCart`:
     - ResultCode = GenericError (400) or any other error code
 </p>
 </details>
+<br>
 
 ## CheckCart
 [**https://test.netgiro.is/api/checkout/CheckCart**](https://test.netgiro.is/api/swagger/ui/index#!/Checkout/Checkout_CheckCart)
@@ -203,6 +210,7 @@ Possible responses for `CheckCart`:
     - ResultCode = PaymentConfirmed (10200)
 </p>
 </details>
+<br>
 
 ## ConfirmCart
 [**https://test.netgiro.is/api/checkout/ConfirmCart**](https://test.netgiro.is/api/swagger/ui/index#!/Checkout/Checkout_ConfirmCart)
@@ -252,6 +260,7 @@ Possible responses for `ConfirmCart`:
     - ResultCode = PaymentConfirmed (10200)
 </p>
 </details>
+<br>
 
 ## CancelCart
 [**https://test.netgiro.is/api/checkout/CancelCart**](https://test.netgiro.is/api/swagger/ui/index#!/Checkout/Checkout_CancelCart)
