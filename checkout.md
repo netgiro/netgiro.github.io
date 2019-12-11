@@ -17,6 +17,7 @@ For any questions and concerns about API integration, please contact this mail: 
 <summary>
 Details
 </summary>
+<p>
 	
 ### Chronology
 1. Provider calls `InsertCart` (specifies `ConfirmationType` and `CustomerId`)
@@ -47,6 +48,7 @@ Details
 ### Process flow
 
 ![ng-checkout-flow-gsm](https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/ng_checkout_flow_gsm_v2.png)
+</p>
 </details>
 
 ## Offline checkout (POS)
@@ -54,7 +56,8 @@ Details
 <summary>
 Details
 </summary>
-
+<p>
+	
 ### Chronology
 1. Provider calls `InsertCart` (specifies `ConfirmationType` and `CustomerId`)
 	- If provider didn't specified `CustomerId` he needs to call `ConfirmCart` (with `CustomerId`) after `InsertCart`
@@ -90,6 +93,7 @@ Details
 	- Server creates reservation after customer confirmation
 	- Provider calls `CheckCart` periodically and checks if reservation is created (or canceled if customer rejected)
 	- When `CheckCart` returns that reservation is created, provider needs to call `ConfirmCart` to create payment
+</p>
 </details>
 
 ## InsertCart
@@ -101,6 +105,7 @@ Creates and inserts cart
 <summary>
 Details
 </summary>
+<p>
 	
 Request body:
 
@@ -140,6 +145,7 @@ Possible responses for `InsertCart`:
   - Wrong gsm (or not a customer) or any other validation error
     - Success = false
     - ResultCode = GenericError (400) or any other error code
+</p>
 </details>
 
 ## CheckCart
@@ -153,6 +159,7 @@ This method needs to be called periodically to check status of cart when custome
 <summary>
 Details
 </summary>
+<p>
 	
 Request body:
 
@@ -201,6 +208,7 @@ Possible responses for `CheckCart`:
     - Success = true
     - PaymentSuccessful = TRUE
     - ResultCode = PaymentConfirmed (10200)
+</p>
 </details>
 
 ## ConfirmCart
@@ -212,6 +220,7 @@ Confirms cart from provider side if `ConfirmationType = Manual`.
 <summary>
 Details
 </summary>
+<p>
 	
 Request body:
 
@@ -251,6 +260,7 @@ Possible responses for `ConfirmCart`:
     - Success = true
     - PaymentSuccessful = true
     - ResultCode = PaymentConfirmed (10200)
+</p>
 </details>
 
 ## CancelCart
@@ -262,6 +272,7 @@ Cancels cart (if customer hasn't already confirmed it). If customer already conf
 <summary>
 Details
 </summary>
+<p>
 	
 Request body:
 
@@ -297,4 +308,5 @@ Possible responses for `CancelCart`:
   - Provider cancels on time
     - Success = true
     - ResultCode = PaymentCanceled (10201)
+</p>
 </details>
