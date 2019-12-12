@@ -13,7 +13,6 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 For any questions and concerns about API integration, please contact this mail: **dev@netgiro.is**
 
 ## Online checkout (webshop)
-  <p>
 	
 ### Chronology
 1. Provider calls `InsertCart` (specifies `ConfirmationType` and `CustomerId`)
@@ -44,11 +43,9 @@ For any questions and concerns about API integration, please contact this mail: 
 	### Process flow
 
 	![ng-checkout-flow-gsm](https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/ng_checkout_flow_gsm_v2.png)
-</p>
 <br>
 
 ## Offline checkout (POS)
-<p>
 	
 ### Chronology
 1. Provider calls `InsertCart` (specifies `ConfirmationType` and `CustomerId`)
@@ -85,7 +82,6 @@ For any questions and concerns about API integration, please contact this mail: 
 	- Server creates reservation after customer confirmation
 	- Provider calls `CheckCart` periodically and checks if reservation is created (or canceled if customer rejected)
 	- When `CheckCart` returns that reservation is created, provider needs to call `ConfirmCart` to create payment
-</p>
 <br>
 
 ## InsertCart
@@ -93,7 +89,6 @@ For any questions and concerns about API integration, please contact this mail: 
 
 Creates and inserts cart
 
-<p>
 	
 Request body:
 
@@ -133,7 +128,6 @@ Possible responses for `InsertCart`:
   - Wrong gsm (or not a customer) or any other validation error
     - Success = false
     - ResultCode = GenericError (400) or any other error code
-</p>
 <br>
 
 ## CheckCart
@@ -192,7 +186,6 @@ Possible responses for `CheckCart`:
     - Success = true
     - PaymentSuccessful = TRUE
     - ResultCode = PaymentConfirmed (10200)
-</p>
 <br>
 
 ## ConfirmCart
@@ -200,7 +193,6 @@ Possible responses for `CheckCart`:
 
 Confirms cart from provider side if `ConfirmationType = Manual`.
 
-<p>
 	
 Request body:
 
@@ -240,7 +232,6 @@ Possible responses for `ConfirmCart`:
     - Success = true
     - PaymentSuccessful = true
     - ResultCode = PaymentConfirmed (10200)
-</p>
 <br>
 
 ## CancelCart
@@ -248,7 +239,6 @@ Possible responses for `ConfirmCart`:
  <br><br>
 Cancels cart (if customer hasn't already confirmed it). If customer already confirmed cart it can't be canceled from provider side.
 
-<p>
 	
 Request body:
 
@@ -284,4 +274,3 @@ Possible responses for `CancelCart`:
   - Provider cancels on time
     - Success = true
     - ResultCode = PaymentCanceled (10201)
-</p>
