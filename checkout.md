@@ -136,8 +136,6 @@ Possible responses for `InsertCart`:
 This method needs to be called periodically to check status of cart when customer confirms/rejects cart.
 - If `ConfirmationType = Automatic or ServerCallback`, this method just tells provider that payment is created.
 - If `ConfirmationType = Manual`, this method tells provider that customer confirmed cart and after that provider needs to confirm it by calling `ConfirmCart`.
-
-<p>
 	
 Request body:
 
