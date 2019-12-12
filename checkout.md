@@ -66,7 +66,7 @@ For any questions and concerns about API integration, please contact this mail: 
 </ul>
 
 <h3>Process flow</h3>
-
+<h4>GSM confirmation</h4>
 <img src="https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/ng_checkout_flow_gsm_v2.png" alt="ng-checkout-flow-gsm">
 </details>
 
@@ -130,6 +130,16 @@ For any questions and concerns about API integration, please contact this mail: 
       <li>When <code>CheckCart</code> returns that reservation is created, provider needs to call <code>ConfirmCart</code> to create payment</li>
     </ul>
 </ul>
+
+<h3>Process flow</h3>
+<h4>AppCode confirmation</h4>
+<img src="https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/ng_checkout_flow_appcode_v2.png" alt="ng-checkout-flow-gsm">
+<br>
+<h4>SSN confirmation</h4>
+<img src="https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/ng_checkout_flow_ssn_v2.png" alt="ng-checkout-flow-gsm">
+<br>
+<h4>GSM confirmation</h4>
+<img src="https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/ng_checkout_flow_gsm_v2.png" alt="ng-checkout-flow-gsm">
 </details>		
 
 
