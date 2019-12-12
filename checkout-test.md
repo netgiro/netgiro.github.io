@@ -12,17 +12,10 @@ Example application: [**https://demoshop.netgiro.is/**](https://demoshop.netgiro
 
 For any questions and concerns about API integration, please contact this mail: **dev@netgiro.is**
 
-<details>	
-  <summary>Collapsed Block	
-</summary>	
-
-  <h2 id="header">Header</h2>	
-</details>
-
 <h2>Online checkout (webshop)</h2>
 	
 <details>	
-  <summary>Collapsed Block	
+  <summary>Details	
 </summary>	
 
 <h3>Chronology</h3>
@@ -37,30 +30,42 @@ For any questions and concerns about API integration, please contact this mail: 
   </ul>
 </ol>
 
-<h3>*Customer can confirm cart in 1 way (`CustomerId` param on `InsertCart`):</h3>
+<h3>* Customer can confirm cart in 1 way (<code>CustomerId</code> param on <code>InsertCart</code>):</h3>
 <ul>
-  <li>If provider entered <b>GSM</b> as `CustomerId`</li>
+  <li>If provider entered <b>GSM</b> as <code>CustomerId</code></li>
     <ul>
-      <li> Customer gets <b>push notification</b> where he can accept/reject payment request (if customer doesn't have Netgiro mobile app he gets SMS to install it)</li>
+      <li>Customer gets <b>push notification</b> where he can accept/reject payment request (if customer doesn't have Netgiro mobile app he gets SMS to install it)</li>
     </ul>
 </ul>
-</details>
 
-<h3>**Provider can confirm cart in 3 ways (<code>ConfirmationType</code> param on <code>InsertCart</code>):</h3>
-- If provider specified **ServerCallback** as `ConfirmationType` (`CallbackUrl` has to be specified)
-	- Provider gets callback from server that payment is created
-	- Provider doesn't need to confirm cart, just calls `CheckCart` periodically and checks if payment is created (or canceled if customer rejected)
+<h3>** Provider can confirm cart in 3 ways (<code>ConfirmationType</code> param on <code>InsertCart</code>):</h3>
+<ul>
+  <li>If provider specified <b>ServerCallback</b> as <code>ConfirmationType</code> (<code>CallbackUrl</code> has to be specified)</li>
+    <ul>
+      <li>Provider gets callback from server that payment is created</li>
+      <li>Provider doesn't need to confirm cart, just calls <code>CheckCart</code> periodically and checks if payment is created (or canceled if customer rejected)</li>
+    </ul>
+</ul>
 
-- If provider specified **Automatic** as `ConfirmationType`
-	- Server automatically creates payment after customer confirmation
-	- Provider doesn't need to confirm cart, just calls `CheckCart` periodically and checks if payment is created (or canceled if customer rejected)
+<ul>
+  <li>If provider specified <b>Automatic</b> as <code>ConfirmationType</code></li>
+    <ul>
+      <li>Provider gets callback from server that payment is created</li>
+      <li>Server automatically creates payment after customer confirmation</li>
+      <li>Provider doesn't need to confirm cart, just calls <code>CheckCart</code> periodically and checks if payment is created (or canceled if customer rejected)</li>
+    </ul>
+</ul>
 
-- If provider specified **Manual** as `ConfirmationType`
-	- Server creates reservation after customer confirmation
-	- Provider calls `CheckCart` periodically and checks if reservation is created (or canceled if customer rejected)
-		- When `CheckCart` returns that reservation is created, provider needs to call `ConfirmCart` to create payment
+<ul>
+  <li>If provider specified <b>Manual</b> as <code>ConfirmationType</code></li>
+    <ul>
+      <li>Server creates reservation after customer confirmation</li>
+      <li>Provider calls <code>CheckCart</code> periodically and checks if reservation is created (or canceled if customer rejected)</li>
+      <li>When <code>CheckCart</code> returns that reservation is created, provider needs to call <code>ConfirmCart</code> to create payment</li>
+    </ul>
+</ul>
 
-</h3>Process flow</h3>
+<h3>Process flow</h3>
 
 ![ng-checkout-flow-gsm](https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/ng_checkout_flow_gsm_v2.png)
 </details>
