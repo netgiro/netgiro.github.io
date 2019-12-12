@@ -15,8 +15,7 @@ For any questions and concerns about API integration, please contact this mail: 
 ## Online checkout (webshop)
 
 <details>	
-  <summary>Details	
-</summary>
+<summary>Details</summary>
 	
 ### Chronology
 1. Provider calls `InsertCart` (specifies `ConfirmationType` and `CustomerId`)
