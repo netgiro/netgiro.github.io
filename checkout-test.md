@@ -1,7 +1,5 @@
 ---
 title: Checkout-test
-has_children: true
-nav_order: 9
 ---
 
 # Checkout-test
