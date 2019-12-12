@@ -1,3 +1,9 @@
+---
+title: Checkout2
+parent: API
+nav_order: 7
+---
+
 # Netgiro API - checkout
 
 Testing url (with swagger documentation): [**https://test.netgiro.is/api/checkout**](https://test.netgiro.is/api/swagger/ui/index#/Checkout)
