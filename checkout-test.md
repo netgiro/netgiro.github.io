@@ -67,7 +67,7 @@ For any questions and concerns about API integration, please contact this mail: 
 
 <h3>Process flow</h3>
 
-![ng-checkout-flow-gsm](https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/ng_checkout_flow_gsm_v2.png)
+<img src="https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/ng_checkout_flow_gsm_v2.png" alt="ng-checkout-flow-gsm">
 </details>
 <br>
 
