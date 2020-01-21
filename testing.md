@@ -37,15 +37,18 @@ YCFd6hiA8lUjZejVcIf/LhRXO4wTDxY0JhOXvQZwnMSiNynSxmNIMjMf1HHwdV6cMN48NX3ZipA9q9hL
 
 **Customer 1** - Has unlimited credit for purchases
 
-SSN: 1111111119, password: meerko1
+- SSN: 1111111119 
+- Password: meerko1
 
 **Customer 2** - Has NO credit (Good for testing an "error" result)
 
-SSN: 2222222229 password: daspass
+- SSN: 2222222229
+- Password: daspass
 
 ## Payment verification
 
 To verify a confirmed payment, you can login to the customer "My Pages" on [https://test.netgiro.is/customer/](https://test.netgiro.is/customer/) using the credentials for the Test customer as above.
+
 If you are verifying on the Production environment you log in to the Provider portal on [https://partner.netgiro.is/](https://partner.netgiro.is/) with the Provider's credentials.
 
 ## Token generator (For API/POS testing)
