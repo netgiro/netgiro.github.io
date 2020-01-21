@@ -162,7 +162,8 @@ Request body:
 | CallbackUrl***| No | Url to which will be made post request after customer has confirmed the sale |
 | Description | No | Purchase description |
 
-***SSN** for testing is **1111111119**, **GSM** for testing is **7700001**
+***SSN** for testing is **1111111119**, **GSM** for testing is **7700001**, **AppCode** can be generated [**here**](https://netgiro.github.io/testing.html) at the bottom of page
+
 
 **Confirmation type values: `0 - automatic`, `1 - server callback`, `2 - manual`
 
