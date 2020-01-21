@@ -191,7 +191,7 @@ Possible responses for `InsertCart`:
     - Success = false
     - ResultCode = GenericError (400) or any other error code
     
-**After you create cart with 7700001 (GSM number as CustomerId) you can simulate customer confirmation or rejection (as on mobile app) in [https://test.netgiro.is/customer/](https://test.netgiro.is/customer/).**
+**After you create cart with CustomerId = 7700001 (GSM number as CustomerId) you can simulate customer confirmation or rejection (as on mobile app) in [https://test.netgiro.is/customer/](https://test.netgiro.is/customer/).**
 
 <br>
 
