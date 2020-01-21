@@ -191,9 +191,8 @@ Possible responses for `InsertCart`:
     - Success = false
     - ResultCode = GenericError (400) or any other error code
     
-~~~
-Once you create cart you can simulate customer confirmation or rejection (as on mobile app) in [https://test.netgiro.is/customer/](https://test.netgiro.is/customer/).
-~~~
+**Once you create cart you can simulate customer confirmation or rejection (as on mobile app) in [https://test.netgiro.is/customer/](https://test.netgiro.is/customer/).**
+
 <br>
 
 ## CheckCart
