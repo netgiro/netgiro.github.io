@@ -45,11 +45,12 @@ YCFd6hiA8lUjZejVcIf/LhRXO4wTDxY0JhOXvQZwnMSiNynSxmNIMjMf1HHwdV6cMN48NX3ZipA9q9hL
 - SSN: 2222222229
 - Password: daspass
 
-## Payment verification
+## GSM payment verification
 
-To verify a confirmed payment, you can login to the customer "My Pages" on [https://test.netgiro.is/customer/](https://test.netgiro.is/customer/) using the credentials for the Test customer as above.
+To confirm a payment created with GSM number, you can login to the customer on [https://test.netgiro.is/customer/](https://test.netgiro.is/customer/) using the credentials for the Test customer as above.
 
-If you are verifying on the Production environment you log in to the Provider portal on [https://partner.netgiro.is/](https://partner.netgiro.is/) with the Provider's credentials.
+<img src="https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/payment_requests_on_customer.png" alt="payment_requests_on_customer">
+
 
 ## Token generator (For API/POS testing)
 
