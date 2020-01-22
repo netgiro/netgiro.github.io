@@ -187,11 +187,11 @@ Possible responses for `InsertCart`:
       - ResultCode = Success (200)
       - TransactionId = GUID
 
-  - Wrong gsm (or not a customer) or any other validation error
+  - Not a customer or any other validation error
     - Success = false
     - ResultCode = GenericError (400) or any other error code
     
-**After you create cart with CustomerId = 7700001 (GSM number as CustomerId) you can simulate customer confirmation or rejection (as in mobile app) on [https://test.netgiro.is/customer/](https://test.netgiro.is/customer/).**
+**After you create cart with CustomerId = 7700001 (GSM number as CustomerId) you can simulate customer confirmation or rejection (as in mobile app) on [https://test.netgiro.is/customer/](https://test.netgiro.is/customer/). See explanation [here.](https://github.com/netgiro/netgiro.github.io/blob/master/testing.md#gsm-payment-verification)**
 
 <br>
 
