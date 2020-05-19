@@ -82,7 +82,8 @@ Full api reference can be found at https://api.netgiro.is/v1/help . For now ther
 
 ## POS modules
 
-If you need to create your own POS integration for systems running on Windows you can use our .NET POS module. It's quite convenient method for fast and secure integration. The whole payment workflow is at hand with few lines of code in your system. See the .NET POS module documentation for more info. We also have a module written in Delphi available.
+If you need to create your own POS integration for systems running on Windows you can use our .NET POS module. It's quite convenient method for fast and secure integration. The whole payment workflow is at hand with few lines of code in your system. See the .NET POS module documentation for more info. We also have a module written in Delphi available. 
+<b>For any specific detail and further technical instructions about POS integration, please contact our developers at dev[at]netgiro.is.</b>
 
 | Download link | Description | Last updated | Details |
 | ------------- | ------------- | ------------- | ------------- |
@@ -101,7 +102,7 @@ We support all the major POS systems in Iceland. Please contact us for details a
 | LS Retail 6 |	LS Retail 6 (LS NAV 2009) |  |  |
 | LS Retail 8 - LS Retail 10 |	Module for various LS Retail versions (LS NAV 2013-2017) |  |  |
 | [Business Central / NAV 2018 (VERSION 1.0.1.9)](https://github.com/netgiro/netgiro.github.io/raw/master/documents/Netgiro_NAV2018_1.0.1.9.zip) |		Business Central / NAV 2018 module | 27.9.2019. | V.1.0.1.9. - Setup improvements |
-| Business Central / NAV 2018 (VERSION 1.0.1.8 - Not available) |	Business Central / NAV 2018 module | 22.8.2019. | 	V.1.0.1.8. - Simplified store setup |
+| Business Central / NAV 2018 (VERSION 1.0.1.8 - Not available) |	Business Central / NAV 2018 module | 22.8.2019. | 	V.1.0.1.8. - Simplified store setup 
 | SagaPOS |	SagaPOS from Strikamerki/Origo |  |  |
 
 ## Netposi
