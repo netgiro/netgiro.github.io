@@ -144,6 +144,29 @@ For any questions and concerns about API integration, please contact this mail: 
 <img src="https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/ng_checkout_flow_gsm_v2.png" alt="ng-checkout-flow-gsm">
 </details>		
 
+## Result codes
+In addition to the normal result codes (200, 400, etc.), custom codes have been introduced that provide a detailed explanation of the situation that occurred during payment. They are listed below:
+
+| Code | Explanation |
+| -------- | ---------------|
+| 10200 | Payment completed |
+| 10201 | Payment canceled | 
+| 10202 | Payment already canceled | 
+| 10203 | Payment already confirmed | 
+| 10302 | Customer is blacklisted | 
+| 10304 | Cart not valid | 
+| 10305 | Minimum amount error | 
+| 10306 | Customer does not exist | 
+| 10307 | Customer not verified | 
+| 10422 | Customer inactive |
+| 10423 | Customer declined payment |
+| 10424 | Cart not found |
+| 10425 | Pending customer payment confirmation (to confirm payment request in mobile app) |
+| 10426 | Reservation created and waiting for provider confirmation (when ConfirmationType = Manual, provider needs to call ConfirmCart) |
+| 10427 | Confirmation type not valid (when calling InsertCart) |
+| 10428 | Additional confirmation needed (in cases when after SSN, provider needs to enter SMS code from customer) |
+| 10429 | Reservation created and waiting for provider callback response (when ConfirmationType = ServerCallback) |
+
 
 ## InsertCart
 [**https://test.netgiro.is/api/checkout/InsertCart**](https://test.netgiro.is/api/swagger/ui/index#!/Checkout/Checkout_InsertCart)
@@ -177,7 +200,7 @@ Response body:
 | Name | Values |
 | ------------- |------------- |
 | Success | true, false |
-| ResultCode | 200, 400 (or any other error code) |
+| ResultCode | see ResultCodes section |
 | TransactionId | GUID (cart identifier used later for checking or canceling cart) |
 | ProcessCartCheckIntervalMiliseconds | int? (The pace how often the cart should be checked by provider) |
 
@@ -215,7 +238,7 @@ Response body:
 | ------------- | ------------- |
 | Success | true, false |
 | PaymentSuccessful | true, false (describes if cart is confirmed by customer) |
-| ResultCode | 10200, 10201, 10425, 10426 |
+| ResultCode | see ResultCodes section |
 | PaymentInfo | object with data about payment |
 
 PayementInfo body:
@@ -230,6 +253,12 @@ PayementInfo body:
 | TotalAmount | Amount of payment |
 
 Possible responses for `CheckCart`:
+
+  - Payment created
+    - Success = true
+    - PaymentSuccessful = TRUE
+    - ResultCode = PaymentConfirmed (10200)
+    
   - Cart canceled or doesn't exist, etc.
     - Success = true
     - PaymentSuccessful = false
@@ -239,16 +268,21 @@ Possible responses for `CheckCart`:
     - Success = true
     - PaymentSuccessful = false
     - ResultCode = PendingCustomerConfirmation (10425)
-
-  - Cart confirmed by customer, reservation created and provider needs to confirm purchase by calling `ConfirmCart` -> **this is only for cases where provider sends `ConfirmationType = Manual` on `InsertCart`**
+    
+- Cart confirmed by customer, reservation created and provider needs to confirm purchase by calling `ConfirmCart` -> **this is only for cases where provider sends `ConfirmationType = Manual` on `InsertCart`**
     - Success = true
     - PaymentSuccessful = false
     - ResultCode = ReservationCreatedAndWaitingForProviderConfirm (10426)
-
-  - Payment created
+    
+  - Cart active, additional confirmation needed (in cases where SMS code needs to be inserted after SSN to confirm cart)
     - Success = true
-    - PaymentSuccessful = TRUE
-    - ResultCode = PaymentConfirmed (10200)
+    - PaymentSuccessful = false
+    - ResultCode = AdditionalConfirmationNeeded (10428)
+
+- Cart confirmed by customer, reservation created and provider needs to confirm purchase by sending callback -> **this is only for cases where provider sends `ConfirmationType = ServerCallback` on `InsertCart`**
+    - Success = true
+    - PaymentSuccessful = false
+    - ResultCode = ReservationCreatedAndWaitingForProviderCallback (10429)
 <br>
 
 ## ConfirmCart
@@ -271,7 +305,7 @@ Response body:
 | ------------- | ------------- |
 | Success | true, false |
 | PaymentSuccessful | true, false |
-| ResultCode | 200, 400 (or any other error code) |
+| ResultCode | see ResultCodes section |
 | PaymentInfo | object with data about payment |
 
 PayementInfo body:
@@ -315,7 +349,7 @@ Response body:
 | Name  | Values |
 | ------------- | ------------- |
 | Success | true, false |
-| ResultCode | 10200, 10201 |
+| ResultCode | see ResultCodes section |
 | PaymentInfo | object with data about payment |
 
 PayementInfo body:
