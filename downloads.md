@@ -12,8 +12,8 @@ Please take a look at our [styleguide](https://netgiro.frontify.com/d/8oC7BJpSmc
 
 | Download link | Description |
 | ------------- | ------------- |
-| [logos](developer.netgiro.is/Attachments/documents/logo_multi_size.zip) | Set of netgiro logos in multiple sizes you can use when integrating netgiro. |
-| [logos in SVG format](developer.netgiro.is/Attachments/documents/Netgiro_logo_svg.zip) | Set of netgiro logos in SVG format. |
+| [logos](http://developer.netgiro.is/Attachments/documents/logo_multi_size.zip) | Set of netgiro logos in multiple sizes you can use when integrating netgiro. |
+| [logos in SVG format](http://developer.netgiro.is/Attachments/documents/Netgiro%20_logo_svg.zip) | Set of netgiro logos in SVG format. |
 | [logo](https://github.com/netgiro/netgiro.github.io/blob/master/images/Netgiro_Logo_100.png) | Path to Netgiro logo (Size 100) |
 
 ## Netgíró loader screen
