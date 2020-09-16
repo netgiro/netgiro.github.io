@@ -36,7 +36,7 @@ Screen with branding elements and a text to which purpose is to give user inform
 
 Netgíró branded widget that calculates the lowest possible installment for a given amount.
 
-<img src="images/ng-widget.png?raw=true" alt="widget.png">
+<img src="images/ng-widget-2.png?raw=true" alt="widget.png">
 
 | Link to reference | Description |
 | ------------- | ------------- |
