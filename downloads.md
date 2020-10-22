@@ -87,7 +87,7 @@ If you need to create your own POS integration for systems running on Windows yo
 
 | Download link | Description | Last updated | Details |
 | ------------- | ------------- | ------------- | ------------- |
-| [.NET POS module 3.2](https://github.com/netgiro/netgiro.github.io/raw/master/documents/Netg%C3%ADr%C3%B3%20-%20POS%20Module%20(v_3.2.1).zip) | 	.NET POS module (version 3.2). Supports .NET 3.5 and .NET 4.0+ | 29.4.2019. |  |
+| [.NET POS module 3.2](https://github.com/netgiro/netgiro.github.io/raw/master/documents/Netg%C3%ADr%C3%B3%20-%20POS%20Module%20(v_3.2.1).zip) | 	.NET POS module (version 3.2). Supports .NET 3.5 and .NET 4.0+ | 29.4.2019. | Documentation included  |
 
 ## Installable POS modules based on your system
 
