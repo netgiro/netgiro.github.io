@@ -84,18 +84,16 @@ If you need to create your own POS integration for systems running on Windows yo
 
 ## Installable POS modules based on your system
 
-We support all the major POS systems in Iceland. Please contact us for details and download packages based on your system version.
+We support all the major POS systems in Iceland. Please contact us at [netgiro@netgiro.is](mailto:netgiro@netgiro.is) for details and download packages based on your system version.
 
-| Download link | Description | Last updated | Details |
-| ------------- | ------------- | ------------- | ------------- |
-| Centara |	Centara |  |  |
-| Dynamics Ax |	Microsoft Dynamics Ax |  |  |
-| DK |	dkPos and dk iPos |  |  |
-| LS Retail 6 |	LS Retail 6 (LS NAV 2009) |  |  |
-| LS Retail 8 - LS Retail 10 |	Module for various LS Retail versions (LS NAV 2013-2017) |  |  |
-| [Business Central / NAV 2018 (VERSION 1.0.1.9)](https://github.com/netgiro/netgiro.github.io/raw/master/documents/Netgiro_NAV2018_1.0.1.9.zip) |		Business Central / NAV 2018 module | 27.9.2019. | V.1.0.1.9. - Setup improvements |
-| Business Central / NAV 2018 (VERSION 1.0.1.8 - Not available) |	Business Central / NAV 2018 module | 22.8.2019. | 	V.1.0.1.8. - Simplified store setup 
-| SagaPOS |	SagaPOS from Strikamerki/Origo |  |  |
+| POS System | Description | 
+| ------------- | ------------- | 
+| Centara |	Centara | 
+| Dynamics Ax |	Microsoft Dynamics Ax |  
+| DK |	dkPos and dk iPos |  
+| LS Retail |	Module for various LS Retail versions  |   
+| Business Central / NAV 2018  |		Business Central / NAV 2018 module |
+| SagaPOS |	SagaPOS from Strikamerki/Origo |   
 
 ## Netposi
 
