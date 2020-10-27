@@ -64,14 +64,7 @@ Netgiro exposes public API that you can use to calculate partial payments in Net
 
 ## Netgíró API
 
-Full api reference can be found at https://api.netgiro.is/v1/help . For now there is only .NET wrappers for API calls, soon there will be for all platforms. Also .NET wrappers are listed in NuGet, so it's easy to version and get them.
-
-## API wrappers
-
-| Download link | Description | Last updated | Details |
-| ------------- | ------------- | ------------- | ------------- |
-| [API wrapper 3.5](https://github.com/netgiro/netgiro.github.io/raw/master/documents/wrappers/Netg%C3%ADr%C3%B3%20-%20API%20Wrapper%203.5.zip) | API wrapper for .NET 3.5 | 2.2.2016. |  |
-| [API wrapper 4.0](https://github.com/netgiro/netgiro.github.io/raw/master/documents/wrappers/Netg%C3%ADr%C3%B3%20-%20API%20Wrapper%204.0.zip) | API wrapper for .NET 4.0 | 2.2.2016. |  |
+Full api reference can be found at [https://api.netgiro.is/v1/help](https://api.netgiro.is/v1/help).
 
 ## Demo projects
 
