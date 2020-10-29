@@ -1,4 +1,4 @@
-/*var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
 if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
 {
   let window = _____WB$wombat$assign$function_____("window");
@@ -9,7 +9,7 @@ if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; re
   let parent = _____WB$wombat$assign$function_____("parent");
   let frames = _____WB$wombat$assign$function_____("frames");
   let opener = _____WB$wombat$assign$function_____("opener");
-*/
+
 /*
 CryptoJS v3.0.2
 code.google.com/p/crypto-js
@@ -27,4 +27,4 @@ l;l++){if(16>l)m[l]=f[g+l]|0;else{var n=m[l-15],o=m[l-2];m[l]=((n<<25|n>>>7)^(n<
 e=8*f.sigBytes;g[e>>>5]|=128<<24-e%32;g[(e+64>>>9<<4)+15]=b;f.sigBytes=4*g.length;this._process()}});p.SHA256=f._createHelper(j);p.HmacSHA256=f._createHmacHelper(j)})(Math);
 
 
-//}
+}
