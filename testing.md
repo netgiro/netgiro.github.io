@@ -68,8 +68,8 @@ Token: <br><span class="bold" id="span-code" style="font-size:45px"></span>
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous">
 </script>
-<script src="https://github.com/netgiro/netgiro.github.io/blob/master/scripts/CodeGenerator.js" crossorigin="anonymous"></script>
-<script src="https://github.com/netgiro/netgiro.github.io/blob/master/scripts/sha256.js" crossorigin="anonymous"></script>
+<script src="raw.githubusercontent.com/netgiro/netgiro.github.io/master/scripts/CodeGenerator.js" crossorigin="anonymous" type="application/javascript"></script>
+<script src="raw.githubusercontent.com/netgiro/netgiro.github.io/master/scripts/sha256.js" crossorigin="anonymous" type="application/javascript"></script>
 <script>
     $(".btn-generate-code").on("click", function (e) {
         RequestConfirmation(e);
