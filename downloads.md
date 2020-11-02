@@ -12,7 +12,7 @@ Please take a look at our [styleguide](https://netgiro.frontify.com/d/8oC7BJpSmc
 
 | Download link | Description |
 | ------------- | ------------- |
-| [logos](https://github.com/netgiro/netgiro.github.io/blob/master/images/logo.zip) | Set of netgiro logos in multiple sizes and formats (png and svg) you can use when integrating netgiro. |
+| [logos](https://github.com/netgiro/netgiro.github.io/raw/master/images/logo.zip) | Set of netgiro logos in multiple sizes and formats (png and svg) you can use when integrating netgiro. |
 | [logo link](https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/Netgiro_Logo_100.png) | Path to Netgiro logo (Size 100) |
 
 ## Netgíró loader screen
