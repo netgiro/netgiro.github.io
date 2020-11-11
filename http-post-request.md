@@ -16,11 +16,9 @@ When the customer is ready to checkout you must make a POST request to Netgíró
 | PaymentConfirmedURL | string | No | If supplied, Netgíró will make server call to this url to confirm purchase. If call fails, purchase is canceled | shop.com/confirm |
 | PrefixUrlParameters| boolean | No | If provider is using WordPress or some other framework that has reserved terms, by sending this parameter, all response parameters from Netgíró will be prefixed to avoid collision. (http://codex.wordpress.org/Function_Reference/register_taxonomy#Reserved_Terms)| true |
 | ConfirmationType** | Numeric\(0,1,2) | Yes | 0 – No confirmation (default)  1 – Server side call from Netgíró on PaymentConfirmedURL  2 – purchase is in status ready, and merchant needs to confirm the purchase to Netgíró |
-| [deprecated] ReturnCustomerInfo | boolean | No | Indicates if Netgíró should return customer information to the merchant site | true or false |
 | AllowCustomerMessage| boolean | No | Indicates if Netgíró should show additional input field to customer, and return that information to the merchant site | true |
 | Message| string | No | Message that will be shown to customer on checkout page  |Tickets valid until 01.05. |
 | CustomerId| string|  No | If provider has enabled fast checkouts, here they can send customerId received from netgiro for faster checkout | usr123456asd |
-| [deprecated] OrderId | string | No | Identifier of the order in the merchants system | WEB-123 |
 | ReferenceNumber | string | Yes | Identifier of the order in the merchants system | WEB-123 |
 | Signature | string | Yes | Signature for the message, calculated as SHA256(SecretKey + ReferenceNumber / [deprecated] OrderId  + TotalAmount + ApplicationId) |
 | TotalAmount | numeric | Yes | Total amount for order. This amount should include total price of items, shipping and any additional costs, as well as any discounts | 1990 |
