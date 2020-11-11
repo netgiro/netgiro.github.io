@@ -194,16 +194,4 @@ Xorbin's SHA256 hash calculator
 
 ## Manual payment confirmation
 
-If merchant is confirming payments manually ([2.1.3.3](#manual-confirmation)) he will need to confirm payment either in his Netgíró merchant pages, or by making POST request to ConfirmPayment.Url for confirm payment is Url 
-for Netgíró payment + ConfirmPayment).
-
-| Name | Data Type | Required | Description | Example |
-| ApplicationID | string | Yes | Merchant identifier | 1234 |
-| [deprecated] OrderId | string | No|Identifier of the order in the merchants system | WEB-123 |
-| ReferenceNumber | string | Yes | Identifier of the order in the merchants system | WEB-123 |
-| [deprecated] ConfirmationCode | string | No| Reference number for the payment in Netgíró system | 982as34-1ss23123-4asd12 |
-| TransactionId | string | Yes | Identifier of the payment in Netgíró system | 982as34-1ss23123-4asd12 |
-| TotalAmount | numeric  | Yes | Total amount for order. This amount should include total price of items, shipping and any additional costs, as well as any discounts | 1990 |
-| InvoiceNumber | numeric | Yes | Invoice number for the payment. Customer gets this number in his invoice via email and in Netgíró system. | 1234 |
-| Result| boolean | Yes | True - confirm payment. False - cancel payment. | True|
-| Signature | string | Yes | Signature for the message calculated as SHA256(SecretKey, ApplicationId, ReferenceNumber / [deprecated] OrderId, TransactionId / [deprecated], ConfirmationCode, InvoiceNumber, TotalAmount, Result) |  |
+If merchant is confirming payments manually ([2.1.3.3](#manual-confirmation)) he will need to confirm payment though netgiro API https://netgiro.github.io/checkout.html#confirmcart
