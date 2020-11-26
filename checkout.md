@@ -153,12 +153,12 @@ In addition to the normal result codes (200, 400, etc.), custom codes have been 
 | 10201 | Payment canceled | 
 | 10202 | Payment already canceled | 
 | 10203 | Payment already confirmed | 
-| 10302 | Customer is blacklisted | 
+| 10302 | Customer declined payment | 
 | 10304 | Cart not valid | 
 | 10305 | Minimum amount error | 
 | 10306 | Customer does not exist | 
-| 10307 | Customer not verified | 
-| 10422 | Customer inactive |
+| 10307 | Customer declined payment | 
+| 10422 | Customer declined payment |
 | 10423 | Customer declined payment |
 | 10424 | Cart not found |
 | 10425 | Pending customer payment confirmation (to confirm payment request in mobile app) |
