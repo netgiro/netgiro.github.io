@@ -94,14 +94,14 @@ If we have attributes with these values:
 | Name  | Value | 
 | ------------- | ------------- |
 |netgiro_appkey|881E674F-7891-4C20-AFD8-56FE2624C4B5|
-|request_url|https://api.netgiro.is/v1/payment/GetByReference?ReferenceNumber=1378809819034|
+|request_url|https://api.netgiro.is/v1/sales/GetList?AllForCompany=true|
 |netgiro_nonce|635318618538563781|
 
 (formData is "" since we don't send anything in body)
 
 formated value should look like this:
 
-`635318618538563781https://api.netgiro.is/v1/payment/GetByReference?ReferenceNumber=1378809819034`
+`635318618538563781https://api.netgiro.is/v1/sales/GetList?AllForCompany=true`
 
 If secret key is:
 
