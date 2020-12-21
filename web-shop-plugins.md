@@ -18,7 +18,6 @@ If the plugin you need is not listed here, please contact us at netgiro@netgiro.
 | Joomla | Joomla plugin |  | See VirtueMart below |
 | [Magento](https://github.com/netgiro/magento-plugin) | Magento plugin | 7.1.2014. |  |
 | [Magento 2](https://marketplace.magento.com/netgiro-gateway.html) | Available on the Magento Marketplace | 30.9.2019. | For Magento 2 |
-| [nopCommerce](https://www.nopcommerce.com/p/2849/netgiro-iceland-payment-plugin.aspx) | Available on the nopCommerce Marketplace | 10.9.2019. | For versions 3.90 and 4.20 |
 | [OpenCart](https://github.com/netgiro/opencart-plugin) | OpenCart plugins | 5.12.2017. |  |
 | [PrestaShop](https://github.com/netgiro/prestashop-plugin) | PrestaShop plugins | 4.4.2017. |  |
 | [Shopify](https://netgiro.github.io/shopify-integration.html) | Shopify integration guide | 28.1.2017. |  |
