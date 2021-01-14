@@ -19,7 +19,7 @@ Please take a look at our [styleguide](https://netgiro.frontify.com/d/8oC7BJpSmc
 
 Screen with branding elements and a text to which purpose is to give user information that web-shop is contacting Netgíró payment service. Here is example of it:
 
-<img src="images/Netg%C3%ADr%C3%B3-loader-screen-example.png" alt="loader-screen-example">
+<img src="https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/Netgiro-loader-screen-example.png" alt="loader-screen-example">
 
 In table below there are logo and loader links that are used on loader screen, also there is finished html example which you can use as loader screen.
 
