@@ -29,12 +29,6 @@ In table below there are logo and loader links that are used on loader screen, a
 | [loader](https://static.netgiro.is/assets/loaders/dot-loader.gif) | Loader used in the design. |
 | [Netgiro loader screen example - html](https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/documents/NetgiroRedirectPage.html) | Example of html for loader screen |
 
-
-**Text required on the screen:**
-~~~
-"Við sendum þig innan skamms. Tengjumst Netgíró till að klára greiðsluna Tengist Netgíró…"
-~~~
-
 ## Netgíró Partial Payments Widget
 
 Netgíró branded widget that calculates the lowest possible installment for a given amount.
