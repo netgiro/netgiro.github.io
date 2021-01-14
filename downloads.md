@@ -17,14 +17,18 @@ Please take a look at our [styleguide](https://netgiro.frontify.com/d/8oC7BJpSmc
 
 ## Netgíró loader screen
 
-Screen with branding elements and a text to which purpose is to give user information that web-shop is contacting Netgíró payment service (Netposi). In case that connection fails, user can click on a link ("Tengist Netgíró") to establish a connection to Netgíró.
+Screen with branding elements and a text to which purpose is to give user information that web-shop is contacting Netgíró payment service. Here is example of it:
+
+<img src="images/Netg%C3%ADr%C3%B3-loader-screen-example.png" alt="loader-screen-example">
+
+In table below there are logo and loader links that are used on loader screen, also there is finished html example which you can use as loader screen.
 
 | Download link | Description |
 | ------------- | ------------- |
 | [logo](https://static.netgiro.is/assets/logo/logo-light-bg.svg) | Logo format used in the design. |
 | [loader](https://static.netgiro.is/assets/loaders/dot-loader.gif) | Loader used in the design. |
-| [Implementation example - Desktop](https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/Netg%C3%ADr%C3%B3-loader-desktop-example.png) | Example of how the loader screen should look on desktop. |
-| [Implementation example - Mobile](https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/Netg%C3%ADr%C3%B3-loader-mobile-example.png) | Example of how the loader screen should look on mobile. |
+| [Netgiro loader screen example - html](https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/documents/NetgiroRedirectPage.html) | Example of html for loader screen |
+
 
 **Text required on the screen:**
 ~~~
