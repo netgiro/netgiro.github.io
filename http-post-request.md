@@ -96,8 +96,8 @@ After successful purchase Netgíró will redirect the user to PaymentSuccessfulU
 | ReferenceNumber | string | Yes | Identifier of the order in the merchants system | WEB-123 |
 | [deprecated] Orderid | string | No | Identifier of the order in the merchants system | WEB-123 |
 | [deprecated] ConfirmationCode | string | No | Identifier of the payment in Netgíró system | 982as34-1ss23123-4asd12 |
-| [deprecated] Signature | string | No | Signature for the message calculated as SHA256(SecretKey, ReferenceNumber / [deprecated]OrderId) | |
-| NetgiroSignature| string | Yes | Signature for the message calculated as SHA256(SecretKey, ReferenceNumber / [deprecated] OrderId, TransactionId, InvoiceNumber, TotalAmount, Status) | |
+| [deprecated] Signature | string | No | Signature for the message calculated as SHA256(SecretKey, ReferenceNumber / [deprecated]OrderId) |
+| NetgiroSignature| string | Yes | Signature for the message calculated as SHA256(SecretKey, ReferenceNumber / [deprecated] OrderId, TransactionId, InvoiceNumber, TotalAmount, Status) |
 | Status | numeric| yes| 1 - unconfirmed, 2 - confirmed, 5 - canceled | 1 |
 | Address | string | No | Customer address line 1 | Address line 1 |
 | Address2 | string | No | Customer address line 2 | Address line 2 |
