@@ -16,9 +16,8 @@ When the customer is ready to checkout you must make a POST request to Netgíró
 | PaymentConfirmedURL | string | No | If supplied, Netgíró will make server call to this url to confirm purchase. If call fails, purchase is canceled | shop.com/confirm |
 | PrefixUrlParameters| boolean | No | If provider is using WordPress or some other framework that has reserved terms, by sending this parameter, all response parameters from Netgíró will be prefixed to avoid collision. (http://codex.wordpress.org/Function_Reference/register_taxonomy#Reserved_Terms)| true |
 | ConfirmationType** | Numeric\(0,1,2) | Yes | 0 – No confirmation (default)  1 – Server side call from Netgíró on PaymentConfirmedURL  2 – purchase is in status ready, and merchant needs to confirm the purchase to Netgíró |
-| AllowCustomerMessage| boolean | No | Indicates if Netgíró should show additional input field to customer, and return that information to the merchant site | true |
 | Message| string | No | Message that will be shown to customer on checkout page  |Tickets valid until 01.05. |
-| CustomerId| string|  No | If provider has enabled fast checkouts, here they can send customerId received from netgiro for faster checkout | usr123456asd |
+| CustomerId| string|  No | Can be phone number or SSN so thatdata is prefilled for faster checkout | usr123456asd |
 | ReferenceNumber | string | Yes | Identifier of the order in the merchants system | WEB-123 |
 | Signature | string | Yes | Signature for the message, calculated as SHA256(SecretKey + ReferenceNumber / [deprecated] OrderId  + TotalAmount + ApplicationId) |
 | TotalAmount | numeric | Yes | Total amount for order. This amount should include total price of items, shipping and any additional costs, as well as any discounts | 1990 |
@@ -37,45 +36,17 @@ When the customer is ready to checkout you must make a POST request to Netgíró
 | Items[n].Amount | numeric | Yes | Total price for product | 3980 |
 | Items[n].Quantity | numeric | Yes | Quantity of products | 2000 |
 
-### Subscriptions
-Subscriptions are optional, but each cart needs to have at least one item or subscription.
-
-| Name | Data Type | Required | Description | Example |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| Subscriptions[n].Name | string | yes | Name of subscription | Golf club membership |
-| Subscriptions[n].Code | string | no | Code of predefined subscription. This field can be used to associate subscription to predefined*** subscription in provider, so provider can easily change parameters of all subscriptions in future. | NG123 |
-| Subscriptions[n].IntervalType | numeric | yes | Interval of subscription(1 - week, 2 - month, 3 - year) | 2 |
-| Subscriptions[n].IntervalPrice | numeric | yes | Price of one subscription interval | 1000 |
-| Subscriptions[n].BillingInterval | numeric | yes | Bill every X intervals | 1 |
-| Subscriptions[n].TotalIntervalCount | numeric | no | Total number of intervals(if NULL, subscription has no end date) | 12 |
-| Subscriptions[n].Quantity | numeric | yes | Quantity of a subscription item | 1000|
-| Subscriptions[n].TrialPeriodDays| numeric | no | If subscription has free period at start(it will not be billed for TrialPeriodDays) | 30 |
-
 Amounts should be passed in lowest denomination of the currency, without thousand or decimal separators. For example, if the amount is €19.90 then it should be represented as 1990. Also if the amount is ISK 1990 then it should be represented as 1990.
 Quantity should be passed in 1/1000 units. For example if the quantity is 2 then it should be represented as 2000.
 
-Subscription will result with a new loan that will have an amount of IntervalPrice x Quantity x BillingInterval.
-
-You should repeat Items[n] fields for every product in the cart, where n is a sequential number starting from 0.
-
-*Partial payments depend on agreement with Netgíró, and provided options depend on that.
+You should repeat Items[n] fields for every product in the cart, **where n is a sequential number starting from 0**.
 
 **Payment processing depends on ConfirmationType. If type is manual confirmation, any unconfirmed payments will not be processed, and will be marked invalid after 7 days.
-
-***Subscriptions can be predefined in providers portal ([https://partner.netgiro.is](https://partner.netgiro.is)).
 
 ## HTTP Post integration with iFrame
 You can display Netgíró inside your site using an iFrame. In that case, you have to set the Iframe parameter of the request to true.
 
 To display Netgíró within an iframe you have to set up the iframe element on your site, and post the Netgíró request to the iframe.
-
-## Partial payments
-Netgíró offers the option of paying with partial payments i.e. multiple installments. Partial payments must be enabled before you can use them in the post request.
-
-You can control how Netgíró displays partial payment options to the user with optional parameter:
-
-- MaxNumberOfInstallments
-    - This parameter controls the maximum number of installments the user can choose to pay with. Please note that Netgíró determines the number of installments based on minimum monthly rate and other factors, so the actual number of installments offered to the user can be smaller than specified with this parameter, but it will never be bigger
 
 ## Payment confirmations
 Only confirmed payments are processed in Netgíró and in bank. If the payment is not confirmed, it can be confirmed manually, calling the confirmation POST request or doing it in merchant’s Netgíró pages. Netgíró has 3 types of confirmation options:
@@ -166,9 +137,6 @@ The input string for the hash function is determined using:
  ~~~ 
  SecretKey + ReferenceNumber + Total Amount + ApplicationId 
  ~~~
-
-
-(X) For **subscriptions** the "TotalAmount" parameter value should be 0 and the Total Amount for the signature is the amount in **Subscriptions[n].IntervalPrice**.
 
 Which gives:
 ~~~
