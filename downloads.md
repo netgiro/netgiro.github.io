@@ -33,7 +33,7 @@ In table below there are logo and loader links that are used on loader screen, a
 
 Netgíró branded widget that calculates the lowest possible installment for a given amount.
 
-<img src="images/ng-widget-2.png?raw=true" alt="widget.png">
+<img src="images/pp-widget-compact.png?raw=true" alt="widget.png">
 
 | Link to reference | Description |
 | ------------- | ------------- |
