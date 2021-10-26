@@ -91,6 +91,7 @@ We support all the major POS systems in Iceland. Please contact us at [netgiro@n
 | LS Retail |	Module for various LS Retail versions  |   
 | Business Central / NAV 2018  |		Business Central / NAV 2018 module |
 | SagaPOS |	SagaPOS from Strikamerki/Origo |   
+| Regla POS |	Regla POS |  
 
 ## Netposi
 
