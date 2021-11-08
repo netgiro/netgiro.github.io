@@ -33,11 +33,21 @@ In table below there are logo and loader links that are used on loader screen, a
 
 Netgíró branded widget that calculates the lowest possible installment for a given amount.
 
+### Compact Partial Payments Widget
+
 <img src="images/pp-widget-compact.png?raw=true" alt="widget.png">
 
 | Link to reference | Description |
 | ------------- | ------------- |
 | [Compact widget script](https://static.netgiro.is/dist/scripts/pp-widget-compact/pp-widget-compact.js) | Library for compact widget that needs to be referenced before sending in the request for a calculation. |
+
+### Slider Partial Payments Widget
+
+<img src="images/pp-slider-widget.png?raw=true" alt="widget.png">
+
+| Link to reference | Description |
+| ------------- | ------------- |
+| [Slider widget script](https://static.netgiro.is/dist/scripts/pp-widget/pp-widget.js) | Library for slider widget that needs to be referenced before sending in the request for a calculation. |
 
 In order to get our calculations, you need to send in following parameters:
 
