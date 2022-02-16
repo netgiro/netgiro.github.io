@@ -7,6 +7,7 @@ nav_order: 7
 # Netgiro API - checkout
 
 Testing url (with swagger documentation): [**https://test.netgiro.is/api/checkout**](https://test.netgiro.is/api/swagger/ui/index#/Checkout)
+
 Production url: [**https://api.netgiro.is/v1**](https://api.netgiro.is/v1)
 
 More info for testing process (test provider AppId and SecretKey, test user credentials etc.) can be found [**here**](https://netgiro.github.io/testing.html)
