@@ -186,6 +186,7 @@ Request body:
 | ConfirmationType** | Yes | Provider's way of confirming purchases after customer confirmation |
 | CallbackUrl***| No | Url to which will be made post request after customer has confirmed the sale |
 | Description | No | Purchase description |
+| CartItemRequests | No | Cart items |
 
 ***SSN** for testing is **1111111119**, **GSM** for testing is **7700001**, **AppCode** can be generated [**here**](https://netgiro.github.io/testing.html) at the bottom of page
 
