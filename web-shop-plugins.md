@@ -1,7 +1,7 @@
 ---
 title: Web shop plugins
-parent: Downloads
-nav_order: 13
+has_children: true
+nav_order: 9
 ---
 
 # Web shop plugins

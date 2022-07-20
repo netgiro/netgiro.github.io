@@ -1,7 +1,8 @@
 ---
 title: Shopify
+parent: Web shop plugins
 has_children: true
-nav_order: 9
+nav_order: 10
 ---
 
 # Netgíró Payments for Shopify

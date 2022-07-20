@@ -1,7 +1,7 @@
 ---
 title: Migrating merchants
 parent: Shopify
-nav_order: 11
+nav_order: 2
 ---
 
 # Migrating from current to new payments integration
