@@ -2,7 +2,7 @@ remote_theme: "pmarsceill/just-the-docs"
 title: Netgíró
 heading_anchors: true
 logo: "/images/brand-logo.svg"
-footer_content: "© 2020 Netgíró hf. - Kt: 6812122050 | Hallveigarstígur 1, 101 Reykjavík | Sími: 4 300 330 | netgiro@netgiro.is"
+footer_content: "© 2022 Netgíró Greiðslumiðlun. - Kt: 5101222830 | Katrínartún 2, 105 Reykjavík | Sími: 4 300 330 | netgiro@netgiro.is"
 aux_links:
   "Just the Docs on GitHub":
     - "//github.com/pmarsceill/just-the-docs"
