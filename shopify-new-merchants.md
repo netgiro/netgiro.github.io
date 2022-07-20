@@ -1,7 +1,8 @@
 ---
 title: New installation
 parent: Shopify
-nav_order: 1
+grand_parent: Web shop plugins
+nav_order: 11
 ---
 
 ## Installing the new Netgíró payments integration for Shopify

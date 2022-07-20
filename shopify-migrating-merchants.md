@@ -1,7 +1,8 @@
 ---
 title: Migrating merchants
 parent: Shopify
-nav_order: 2
+grand_parent: Web shop plugins
+nav_order: 12
 ---
 
 # Migrating from current to new payments integration
