@@ -49,6 +49,8 @@ YCFd6hiA8lUjZejVcIf/LhRXO4wTDxY0JhOXvQZwnMSiNynSxmNIMjMf1HHwdV6cMN48NX3ZipA9q9hL
 
 To confirm a payment created with GSM number, you can login to the customer on [https://test.netgiro.is/customer/](https://test.netgiro.is/customer/) using the credentials for the Test customer as above.
 
+***SSN** for testing is **1111111119**, **GSM** for testing is **7700001**, **AppCode** can be generated [**here**](https://netgiro.github.io/testing.html)
+
 <img src="https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/payment_requests_on_customer.png" alt="payment_requests_on_customer">
 
 
