@@ -6,7 +6,7 @@ nav_order: 7
 
 # Netgiro API - checkout
 
-Testing url (with swagger documentation): [**https://test.netgiro.is/api/checkout**](https://test.netgiro.is/api/swagger/ui/index#/Checkout)
+Testing url (with swagger documentation): [**https://test.netgiro.is/api/checkout**](https://test.netgiro.is/api/swagger)
 
 Production url: [**https://api.netgiro.is/v1**](https://api.netgiro.is/v1)
 
