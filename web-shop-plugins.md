@@ -14,7 +14,7 @@ If the plugin you need is not listed here, please contact us at netgiro@netgiro.
 | ------------- | ------------- | ------------- | ------------- |
 | [CS cart](https://github.com/netgiro/CS-cart-plugin) | CS cart plugin | 14.6.2019. | Version 4 created |
 | [Drupal](https://github.com/netgiro/drupal-plugin) | Drupal integration guide | 10.11.2019. |  |
-| [Dynamicweb](https://www.dynamicweb.com/) | Dynamicweb integration available through a partner. | 17.10.2019. | Please contact us for further details. |
+| [Dynamicweb](https://www.advania.is/vorur-og-thjonusta/dynamicweb/) | Dynamicweb integration available through a partner (Advania). | 17.10.2019. | Please contact us for further details. |
 | Joomla | Joomla plugin |  | See VirtueMart below |
 | [Magento](https://github.com/netgiro/magento-plugin) | Available on the [Magento Marketplace](https://marketplace.magento.com/netgiro-gateway.html) | 25.8.2021. | |
 | [OpenCart](https://github.com/netgiro/opencart-plugin) | OpenCart plugins | 11.10.2019. |  |
