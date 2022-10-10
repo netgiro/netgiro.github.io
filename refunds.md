@@ -8,6 +8,7 @@ grand_parent: Web shop plugins
 ## Using the refunds options in Shopify
 Go to your store.
 Under „Orders“ you can find all sales and those you need to refund or cancel.
+
 <img src="https://netgiro.github.io/images/1.png" alt="orders">
 Click on the order you need to refund. Click on refund.
 <img src="https://netgiro.github.io/images/2.png" alt="Select-order">
