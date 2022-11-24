@@ -6,7 +6,7 @@ nav_order: 8
 
 # Netgiro API - sales
 
-Testing url (with swagger documentation): [**https://test.netgiro.is/api/sales**](https://test.netgiro.is/api/swagger/ui/index#/sales)
+Testing url (with swagger documentation): [**https://test.netgiro.is/api/sales**](https://test.netgiro.is/api/swagger/)
 
 More info for testing process (test provider AppId and SecretKey, test user credentials etc.) can be found [**here**](https://netgiro.github.io/testing.html)
 
