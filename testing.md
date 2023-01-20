@@ -23,11 +23,11 @@ nav_order: 5
 
 Sandbox has been setup with test providers who either use POST or GET for callback.
 
-[https://test.netgiro.is/partner/] (https://test.netgiro.is/partner/)
+[https://test.netgiro.is/partner/](https://test.netgiro.is/partner/)
 
 User login: sandbox@netgiro.is
 
-Password: 
+Password: meerko11
 
 Select either account with POST or GET method. 
 
