@@ -109,7 +109,7 @@ If secret key is:
 
 Then **netgiro_signature** needs to be:
 
-`ec7fa41fa070a191b3e48caa6c49ea52e43b6fcc0a62ba32a4844fdea4b85e5a` (base 64 encoded string)
+`fab2e49378897fc3e36a51c747fe90792e604080459f4ea2c782596ce7e31cd2` (base 64 encoded string)
 
 ## Netgíró response
 
