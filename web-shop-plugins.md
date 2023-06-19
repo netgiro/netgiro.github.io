@@ -16,9 +16,9 @@ If the plugin you need is not listed here, please contact us at netgiro@netgiro.
 | [Drupal](https://github.com/netgiro/drupal-plugin) | Drupal integration guide | 10.11.2019. |  |
 | [Dynamicweb](https://www.advania.is/vorur-og-thjonusta/dynamicweb/) | Dynamicweb integration available through a partner (Advania). | 17.10.2019. | Please contact us for further details. |
 | Joomla | Joomla plugin |  | See VirtueMart below |
-| [Magento](https://github.com/netgiro/magento-plugin) | Available on the [Magento Marketplace](https://marketplace.magento.com/netgiro-gateway.html) | 25.8.2021. | |
+| [Magento](https://github.com/netgiro/magento-plugin) | Available on the [Magento Marketplace](https://marketplace.magento.com/netgiro-gateway.html) | 04.05.2023. | |
 | [OpenCart](https://github.com/netgiro/opencart-plugin) | OpenCart plugins | 11.10.2019. |  |
 | [PrestaShop](https://github.com/netgiro/prestashop-plugin) | PrestaShop plugins | 10.14.2019. |  |
 | [Shopify](https://apps.shopify.com/netgiroapp) | Shopify integration guide | 19.7.2022. |  |
 | [VirtueMart](https://github.com/netgiro/virtuemart-plugin) | Virtuemart (Joomla) plugin | 3.10.2019. |  |
-| [Woocommerce (Wordpress)](https://github.com/netgiro/woocommerce-plugin) | Woocommerce plugins | 24.5.2022. |  |
+| [Woocommerce (Wordpress)](https://github.com/netgiro/woocommerce-plugin) | Woocommerce plugins | 01.6.2023. |  |
