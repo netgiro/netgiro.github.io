@@ -21,4 +21,4 @@ If the plugin you need is not listed here, please contact us at netgiro@netgiro.
 | [PrestaShop](https://github.com/netgiro/prestashop-plugin) | PrestaShop plugins | 10.14.2019. |  |
 | [Shopify](https://apps.shopify.com/netgiroapp) | Shopify integration guide | 19.7.2022. |  |
 | [VirtueMart](https://github.com/netgiro/virtuemart-plugin) | Virtuemart (Joomla) plugin | 3.10.2019. |  |
-| [Woocommerce (Wordpress)](https://github.com/netgiro/woocommerce-plugin) | Woocommerce plugins | 01.6.2023. |  |
+| [Woocommerce (Wordpress)](https://github.com/netgiro/woocommerce-plugin) | Woocommerce plugins | 01.6.2023. | With refund  |
