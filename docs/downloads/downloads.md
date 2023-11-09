@@ -1,6 +1,9 @@
 ---
 title: Downloads
-nav_order: 13
+layout: default
+nav_order: 5
+
+permalink: /docs/downloads
 ---
 
 # Downloads & resources
@@ -11,14 +14,14 @@ Please take a look at our [styleguide](https://netgiro.frontify.com/d/8oC7BJpSmc
 
 | Download link | Description |
 | ------------- | ------------- |
-| [logos](https://github.com/netgiro/netgiro.github.io/raw/master/images/logo.zip) | Set of netgiro logos in multiple sizes and formats (png and svg) you can use when integrating netgiro. |
-| [logo link](https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/Netgiro_Logo_100.png) | Path to Netgiro logo (Size 100) |
+| [logos](/images/logo.zip) | Set of netgiro logos in multiple sizes and formats (png and svg) you can use when integrating netgiro. |
+| [logo link](/images/Netgiro_Logo_100.png) | Path to Netgiro logo (Size 100) |
 
 ## Netgíró loader screen
 
 Screen with branding elements and a text to which purpose is to give user information that web-shop is contacting Netgíró payment service. Here is example of it:
 
-<img src="https://raw.githubusercontent.com/netgiro/netgiro.github.io/master/images/Netgiro-loader-screen-example.png" alt="loader-screen-example">
+![loader-screen-example](/images/Netgiro-loader-screen-example.png)
 
 In table below there are logo and loader links that are used on loader screen, also there is finished html example which you can use as loader screen.
 
@@ -34,7 +37,7 @@ Netgíró branded widget that calculates the lowest possible installment for a g
 
 ### Compact Partial Payments Widget
 
-<img src="images/pp-widget-compact.png?raw=true" alt="widget.png">
+![compact-payments-widget](/images/pp-widget-compact.png)
 
 | Link to reference | Description |
 | ------------- | ------------- |
@@ -42,7 +45,7 @@ Netgíró branded widget that calculates the lowest possible installment for a g
 
 ### Slider Partial Payments Widget
 
-<img src="images/pp-slider-widget.png?raw=true" alt="widget.png">
+![slider-payments-widget](/images/pp-slider-widget.png)
 
 | Link to reference | Description |
 | ------------- | ------------- |
@@ -76,8 +79,8 @@ Full api reference can be found at [https://api.netgiro.is/v1/help](https://api.
 
 | Download link | Description |
 | ------------- | ------------- |
-| [Demo projects](https://github.com/netgiro/netgiro.github.io/raw/master/documents/demos/NetgiroDemos.zip) | Demo projects showing integration with Netgiro on ASP.NET MVC project. |
-| [Html demo projects](https://github.com/netgiro/netgiro.github.io/raw/master/documents/demos/Netgiro%20-%20html%20demos.zip) | Demo project showing integration with Netgiro using only html and javascript. |
+| [Demo projects](/documents/demos/NetgiroDemos.zip) | Demo projects showing integration with Netgiro on ASP.NET MVC project. |
+| [Html demo projects](/documents/demos/Netgiro%20-%20html%20demos.zip) | Demo project showing integration with Netgiro using only html and javascript. |
 
 ## POS modules
 
@@ -86,7 +89,7 @@ If you need to create your own POS integration for systems running on Windows yo
 
 | Download link | Description | Last updated | Details |
 | ------------- | ------------- | ------------- | ------------- |
-| [.NET POS module 3.3](https://github.com/netgiro/netgiro.github.io/raw/master/documents/Netgíró%20-%20POS%20Module%20(v_3.3).zip) | 	.NET POS module (version 3.3). Supports .NET 3.5 and .NET 4.0+ | 29.4.2019. | Documentation included  |
+| [.NET POS module 3.3](/documents/Netgíró%20-%20POS%20Module%20(v_3.3).zip) | 	.NET POS module (version 3.3). Supports .NET 3.5 and .NET 4.0+ | 29.4.2019. | Documentation included  |
 
 ## Installable POS modules based on your system
 
@@ -108,4 +111,4 @@ Netposi is Netgíró's POS web only solution. You need to be registered Netgír�
 
 | Download link | Description |
 | ------------- | ------------- |
-| [Netposi manual](https://github.com/netgiro/netgiro.github.io/raw/master/documents/Netposa-lei%C3%B0beiningar-v1.0.pdf) |	Quick instructions to get you up and running in no time - the quickest way to start charging Netgíró users. |
+| [Netposi manual](/documents/Netposa-lei%C3%B0beiningar-v1.0.pdf) |	Quick instructions to get you up and running in no time - the quickest way to start charging Netgíró users. |

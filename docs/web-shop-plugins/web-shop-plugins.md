@@ -1,7 +1,10 @@
 ---
 title: Web shop plugins
+layout: default
+nav_order: 4
+
 has_children: true
-nav_order: 9
+permalink: /docs/web-shop-plugins
 ---
 
 # Web shop plugins
