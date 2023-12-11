@@ -1,10 +1,11 @@
 ---
-title: HTTP Post request
-parent: Netgíró iFrame and HTTP POST
-nav_order: 2
+layout: default
+title: HTTP POST Request
+parent: HTTP POST and iFrame
+nav_order: 1
 ---
 
-# HTTP Post request
+# HTTP POST Request
 
 When the customer is ready to checkout you must make a POST request to Netgíró with the following parameters:
  
@@ -157,9 +158,9 @@ SHA256("abc") = ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
 You can try out the encryption with http://www.xorbin.com/tools/sha256-hash-calculator
 
 
-<img src="images/sha256calculator.png?raw=true" alt="sha256calculator.png">
+![sha256-calculator](/images/sha256calculator.png)
 Xorbin's SHA256 hash calculator
 
 ## Manual payment confirmation
 
-If merchant is confirming payments manually ([2.1.3.3](#manual-confirmation)) he will need to confirm payment though netgiro API https://netgiro.github.io/checkout.html#confirmcart
+If merchant is confirming payments manually ([2.1.3.3](#manual-confirmation)) he will need to confirm payment though [netgiro API](/docs/api/checkout/confirm-cart)

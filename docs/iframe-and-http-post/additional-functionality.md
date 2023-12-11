@@ -1,10 +1,13 @@
 ---
 title: Additional functionality
-parent: Netgíró iFrame and HTTP POST
-nav_order: 3
+layout: default
+nav_order: 2
+
+parent: HTTP POST and iFrame
 ---
 
 #  Additional functionality
+
 ##  Examples
 Here you can see examples of the request message, and also the implementation of message signing using C#.
 
