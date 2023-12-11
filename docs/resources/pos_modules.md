@@ -1,3 +1,11 @@
+---
+title: POS Modules
+layout: default
+nav_order: 1
+
+parent: Resources
+---
+
 ## POS modules
 
 If you need to create your own POS integration for systems running on Windows you can use our .NET POS module. It's quite convenient method for fast and secure integration. The whole payment workflow is at hand with few lines of code in your system. See the .NET POS module documentation for more info. We also have a module written in Delphi available. 
