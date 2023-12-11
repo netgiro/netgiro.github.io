@@ -1,23 +1,12 @@
 ---
-title: Testing
+title: Demo Projects
 layout: default
-nav_order: 2
-
-has_children: true
-permalink: /docs/testing
+nav_order: 4
 ---
 
-# Testing
+## Demo projects
 
-## URLs
-
-**Netgíró test URL for Web Pages (IFrame/POST) integration (Web Shop Plugins use this):**
-
-[https://test.netgiro.is/securepay/](https://test.netgiro.is/securepay/) 
-- (Production URL is [https://securepay.netgiro.is/v1/](https://securepay.netgiro.is/v1/)).
-
-
-**Netgíró test URL for Web Services (API) integration (Windows POS systems use this):**
-
-[https://test.netgiro.is/api/](https://test.netgiro.is/api/) 
-- (Production URL is [https://api.netgiro.is/v1/](https://api.netgiro.is/v1/)).
+| Download link | Description |
+| ------------- | ------------- |
+| [Demo projects](/documents/demos/NetgiroDemos.zip) | Demo projects showing integration with Netgiro on ASP.NET MVC project. |
+| [Html demo projects](/documents/demos/Netgiro%20-%20html%20demos.zip) | Demo project showing integration with Netgiro using only html and javascript. |
