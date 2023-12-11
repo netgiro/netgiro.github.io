@@ -1,7 +1,8 @@
 ---
 title: Refund API
+layout: default
 parent: API
-nav_order: 9
+nav_order: 6
 ---
 
 #Netgiro API - Refund API
