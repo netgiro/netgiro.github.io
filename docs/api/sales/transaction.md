@@ -1,20 +1,13 @@
 ---
-title: Sales
-parent: API
-nav_order: 8
+title: API - Transaction
+layout: default
+nav_order: 1
+
+parent: Sales
+grand_parent: API
 ---
 
-# Netgiro API - sales
-
-Testing url (with swagger documentation): [**https://test.netgiro.is/api/sales**](https://test.netgiro.is/api/swagger/)
-
-More info for testing process (test provider AppId and SecretKey, test user credentials etc.) can be found [**here**](https://netgiro.github.io/testing.html)
-
-Also, example application can be found at [**https://demoshop.netgiro.is/**](https://demoshop.netgiro.is/) with source code [**here**](https://github.com/netgiro/api-demo-client)
-
-For any questions and concerns about API integration, please contact this mail: **dev@netgiro.is**
-
-## Transaction
+# Transaction
 [**https://test.netgiro.is/api/transaction**](https://test.netgiro.is/api/swagger/ui/index#!/sales/transaction)
 
 Get details about sale
@@ -62,5 +55,3 @@ Possible responses for `Transaction`:
     - Success = false
     - Message = Error on request.
     - ResultCode = 500
-
-<br>
