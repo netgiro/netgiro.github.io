@@ -2,6 +2,8 @@
 title: Demo Projects
 layout: default
 nav_order: 4
+
+parent: Resources
 ---
 
 ## Demo projects
