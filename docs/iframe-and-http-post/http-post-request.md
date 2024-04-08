@@ -12,7 +12,7 @@ When the customer is ready to checkout you must make a POST request to Netgíró
 | Name | Data Type | Required | Description | Example |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | ApplicationID | string | Yes | Merchant identifier | 1234 |
-| PaymentSuccessfulURL | string | No | If supplied, Netgíró will redirect the user to this url after successful purchase | shop.com/success |
+| PaymentSuccessfulURL | string | No | If supplied, Netgíró will redirect the user to this url after successful purchase. | shop.com/success |
 | PaymentCancelledURL | string  | No | If supplied, Netgíró will show cancel button to user and redirect to this url | shop.com/cancel |
 | PaymentConfirmedURL | string | No | If supplied, Netgíró will make server call to this url to confirm purchase. If call fails, purchase is canceled | shop.com/confirm |
 | PrefixUrlParameters| boolean | No | If provider is using WordPress or some other framework that has reserved terms, by sending this parameter, all response parameters from Netgíró will be prefixed to avoid collision. (http://codex.wordpress.org/Function_Reference/register_taxonomy#Reserved_Terms)| true |
@@ -22,20 +22,11 @@ When the customer is ready to checkout you must make a POST request to Netgíró
 | ReferenceNumber | string | Yes | Identifier of the order in the merchants system | WEB-123 |
 | Signature | string | Yes | Signature for the message, calculated as SHA256(SecretKey + ReferenceNumber / [deprecated] OrderId  + TotalAmount + ApplicationId) |
 | TotalAmount | numeric | Yes | Total amount for order. This amount should include total price of items, shipping and any additional costs, as well as any discounts | 1990 |
-| ShippingAmount | numeric | No | Additional shipping cost | 1990 |
-| HandlingAmount | numeric | No | Additional handling cost | 1990 |
-| DiscountAmount | numeric | No | Discount amount for the order | 1990 |
 | Description | string | No | If provider is not sending any item information, he can just send description of the sale  | AB-34 |
 | LocationId | string | No | Provider's location identification | 1234 |
 | RegisterId| string | No | Provider's terminal identification | 1234 |
 | CurrentTimeUtc| DateTime | No | Time of request from merchant | 2014-02-28T12:33:45 |
 | ValidToTimeUtc| DateTime | No | Time until the offer is valid to (offer will be valid for CurrentTimeUtc - ValidToTimeUtc | 2014-02-28T12:38:45 |
-| Items[n].ProductNo | string | Yes | Product identifier from merchants system | AB-34 |
-| Items[n].Name | string | Yes | Product name | Example product |
-| Items[n].Description | string | No | Description of the product | Example product description |
-| Items[n].UnitPrice | numeric | Yes | Price of single product | 1990 |
-| Items[n].Amount | numeric | Yes | Total price for product | 3980 |
-| Items[n].Quantity | numeric | Yes | Quantity of products | 2000 |
 
 Amounts should be passed in lowest denomination of the currency, without thousand or decimal separators. For example, if the amount is €19.90 then it should be represented as 1990. Also if the amount is ISK 1990 then it should be represented as 1990.
 Quantity should be passed in 1/1000 units. For example if the quantity is 2 then it should be represented as 2000.
