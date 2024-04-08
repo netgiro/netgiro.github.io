@@ -9,7 +9,9 @@ permalink: /docs/api
 
 # API
 
-Netgíró provides Web API for easy client integration. API is available on [https://api.netgiro.is/v1/](https://api.netgiro.is/v1/). You can integrate your application with Netgíró from any platform that supports standard HTTP requests and can process JSON or XML results (.NET, Java, PHP, etc.).
+Netgíró provides Web API for easy client integration. API is available on [https://api.netgiro.is/v1/](https://api.netgiro.is/v1/).
+
+You can integrate your application with Netgíró from any platform that supports standard HTTP requests and can process JSON or XML results (.NET, Java, PHP, etc.).
 
 ## Requests/responses
 

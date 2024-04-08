@@ -8,7 +8,7 @@ grand_parent: API
 ---
 
 # Insert Cart
-[**https://test.netgiro.is/api/checkout/InsertCart**](https://test.netgiro.is/api/swagger/ui/index#!/Checkout/Checkout_InsertCart)
+[**https://api.test.netgiro.is/checkout/InsertCart**](https://api.test.netgiro.is/swagger/ui/index#!/Checkout/Checkout_InsertCart)
 	
 #### Request body
 
@@ -52,4 +52,4 @@ grand_parent: API
     - Success = false
     - ResultCode = GenericError (400) or any other error code
     
-**After you create cart with CustomerId = 7700001 (GSM number as CustomerId) you can simulate customer confirmation or rejection (as in mobile app) on [https://test.netgiro.is/customer/](https://test.netgiro.is/customer/). See explanation [here.](/docs/testing/customer#gsm-payment-verification)**
+**After you create cart with CustomerId = 7700001 (GSM number as CustomerId) you can simulate customer confirmation or rejection (as in mobile app) on [https://customer.test.netgiro.is/](https://customer.test.netgiro.is/). See explanation [here.](/docs/testing/customer#gsm-payment-verification)**

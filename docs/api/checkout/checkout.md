@@ -10,7 +10,7 @@ permalink: /docs/api/checkout
 
 # Checkout
 
-Testing url (with swagger documentation): [**https://test.netgiro.is/api/checkout**](https://test.netgiro.is/api/swagger)
+Testing url (with swagger documentation): [**https://api.test.netgiro.is/checkout**](https://api.test.netgiro.is/swagger)
 
 Production url: [**https://api.netgiro.is/v1**](https://api.netgiro.is/v1)
 

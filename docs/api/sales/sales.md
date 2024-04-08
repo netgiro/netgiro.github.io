@@ -10,7 +10,7 @@ permalink: /docs/api/sales
 
 # Sales
 
-Testing url (with swagger documentation): [**https://test.netgiro.is/api/sales**](https://test.netgiro.is/api/swagger/)
+Testing url (with swagger documentation): [**https://api.test.netgiro.is/sales**](https://api.test.netgiro.is/swagger/)
 
 More info for testing process (test provider AppId and SecretKey, test user credentials etc.) can be found [**here**](/docs/testing)
 
