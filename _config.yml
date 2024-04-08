@@ -5,9 +5,26 @@ logo: "/images/brand-logo.svg"
 favicon_ico: "/images/favicon.ico"
 
 heading_anchors: true
-footer_content: "© 2022 Netgíró Greiðslumiðlun. - Kt: 5101222830 | Katrínartún 2, 105 Reykjavík | Sími: 4 300 330 | netgiro@netgiro.is"
+footer_content: "© 2024 Netgíró Greiðslumiðlun. - Kt: 5101222830 | Katrínartún 2, 105 Reykjavík | Sími: 4 300 330 | netgiro@netgiro.is"
 
 permalink: /:title/
 aux_links:
   "Just the Docs on GitHub":
     - "//github.com/pmarsceill/just-the-docs"
+
+callouts_level: quiet # or loud
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red
