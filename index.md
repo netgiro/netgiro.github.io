@@ -5,6 +5,11 @@ nav_order: 0
 ---
 
 # Table of contents
+
+{: .warning }
+> Please take note that the URLs for the test environment have been changed. <br>
+All references of URLs are updated accordingly.
+
 <nav aria-label="Main">
   {% assign pages_top_size = site.html_pages
         | where_exp:"item", "item.title != nil"
