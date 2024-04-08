@@ -8,7 +8,10 @@ parent: Testing
 
 # Test customer info
 
-[https://test.netgiro.is/customer/](https://test.netgiro.is/customer/)
+{: .warning }
+> Please take note that the URL for test server has moved from test.netgiro.is/customer to [https://customer.test.netgiro.is/](https://customer.test.netgiro.is/).
+
+[https://customer.test.netgiro.is/](https://customer.test.netgiro.is/)
 
 ## Test customer credentials
 
