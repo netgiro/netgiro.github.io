@@ -11,13 +11,21 @@ permalink: /docs/testing
 
 ## URLs
 
-**Netgíró test URL for Web Pages (IFrame/POST) integration (Web Shop Plugins use this):**
+## Netgíró URL for IFrame/POST integration
 
-[https://test.netgiro.is/securepay/](https://test.netgiro.is/securepay/) 
-- (Production URL is [https://securepay.netgiro.is/v1/](https://securepay.netgiro.is/v1/)).
+{: .warning }
+> Please take note that the URL for test server has moved from [https://test.netgiro.is/securepay]() to [https://securepay.test.netgiro.is/](https://securepay.test.netgiro.is/).
 
 
-**Netgíró test URL for Web Services (API) integration (Windows POS systems use this):**
+- Sandbox URL - [https://securepay.test.netgiro.is/](https://securepay.test.netgiro.is/) 
+- Production URL - [https://securepay.netgiro.is/v1/](https://securepay.netgiro.is/v1/)
 
-[https://test.netgiro.is/api/](https://test.netgiro.is/api/) 
-- (Production URL is [https://api.netgiro.is/v1/](https://api.netgiro.is/v1/)).
+
+## Netgíró URL for API integration
+
+{: .warning }
+> Please take note that the URL for test server has moved from [https://test.netgiro.is/api]() to [https://api.test.netgiro.is/](https://api.test.netgiro.is/).
+
+
+- Sandbox URL - [https://api.test.netgiro.is/](https://api.test.netgiro.is/) 
+- Production URL - [https://api.netgiro.is/v1/](https://api.netgiro.is/v1/)
