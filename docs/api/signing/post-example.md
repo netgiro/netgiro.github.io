@@ -11,11 +11,11 @@ grand_parent: API
  
 #### POST Request
 
-| Name  | Value | 
+| Name  | Example Value | 
 | ------------- | ------------- |
-|netgiro_appkey| 881E674F-7891-4C20-AFD8-56FE2624C4B5 |
-|request_url| https://test.netgiro.is/api/checkout/InsertCart |
-|netgiro_nonce| 39084373214935208 |
+|netgiro_appkey | 881E674F-7891-4C20-AFD8-56FE2624C4B5 |
+|request_url | https://api.test.netgiro.is/checkout/InsertCart |
+|netgiro_nonce | 39084373214935208 |
 
 For the body we will be sending the following object:
 ```json

@@ -8,7 +8,7 @@ grand_parent: API
 ---
 
 # Cancel Cart
-[**https://test.netgiro.is/api/checkout/CancelCart**](https://test.netgiro.is/api/swagger/ui/index#!/Checkout/Checkout_CancelCart)
+[**https://api.test.netgiro.is/checkout/CancelCart**](https://api.test.netgiro.is/swagger/ui/index#!/Checkout/Checkout_CancelCart)
 
 Cancels cart (if customer hasn't already confirmed it). If customer already confirmed cart it can't be canceled from provider side.
 
