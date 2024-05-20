@@ -8,7 +8,7 @@ grand_parent: API
 ---
 
 # Insert Cart
-[**https://api.test.netgiro.is/checkout/InsertCart**](https://api.test.netgiro.is/swagger/ui/index#!/Checkout/Checkout_InsertCart)
+[**https://api.test.netgiro.is/checkout/InsertCart**](https://api.test.netgiro.is/swagger/)
 	
 #### Request body
 

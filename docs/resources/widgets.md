@@ -36,9 +36,3 @@ Example :
 NetgiroCalculator({amount: 10000, containerId: "#widget-wrapper"})
 ~~~
 
-## Calculations API
-
-Netgiro exposes public API that you can use to calculate partial payments in Netgiro
-
-[https://api.netgiro.is/calculator/swagger/index.html](https://api.netgiro.is/calculator/swagger/index.html)
-
