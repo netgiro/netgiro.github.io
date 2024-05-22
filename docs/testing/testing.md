@@ -28,4 +28,4 @@ permalink: /docs/testing
 
 
 - Sandbox URL - [https://api.test.netgiro.is/](https://api.test.netgiro.is/) 
-- Production URL - [https://api.netgiro.is/v1/](https://api.netgiro.is/)
+- Production URL - [https://api.netgiro.is/v1/](https://api.netgiro.is/v1/)
