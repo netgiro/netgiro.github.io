@@ -10,10 +10,8 @@ permalink: /docs/api/sales
 
 # Sales
 
-Testing url (with swagger documentation): [**https://api.test.netgiro.is/sales**](https://api.test.netgiro.is/swagger/)
+Testing url (with swagger documentation): [**https://api.test.netgiro.is/v1/sales**](https://api.test.netgiro.is/swagger/)
 
 More info for testing process (test provider AppId and SecretKey, test user credentials etc.) can be found [**here**](/docs/testing)
-
-Also, example application can be found at [**https://demoshop.netgiro.is/**](https://demoshop.netgiro.is/) with source code [**here**](https://github.com/netgiro/api-demo-client)
 
 For any questions and concerns about API integration, please contact this mail: **dev@netgiro.is**

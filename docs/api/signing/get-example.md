@@ -11,11 +11,11 @@ grand_parent: API
  
 #### GET Request
 
-| Name  | Value | 
+| Name  | Example Value | 
 | ------------- | ------------- |
-|netgiro_appkey|881E674F-7891-4C20-AFD8-56FE2624C4B5|
-|request_url|https://api.netgiro.is/v1/sales/GetList?AllForCompany=true|
-|netgiro_nonce|635318618538563781|
+|netgiro_appkey | 881E674F-7891-4C20-AFD8-56FE2624C4B5 |
+|request_url | https://api.netgiro.is/v1/sales/GetList?AllForCompany=true |
+|netgiro_nonce | 635318618538563781 |
 
 - formData is "" (empty string) since we don't send anything in body (GET request)
 

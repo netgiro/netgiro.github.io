@@ -8,7 +8,7 @@ grand_parent: API
 ---
 
 # Transaction
-[**https://api.test.netgiro.is/transaction**](https://api.test.netgiro.is/swagger/)
+[**https://api.test.netgiro.is/v1/transactions**](https://api.test.netgiro.is/swagger/)
 
 Get details about sale
 

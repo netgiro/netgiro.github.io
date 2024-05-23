@@ -8,7 +8,7 @@ grand_parent: API
 ---
 
 # Confirm Cart
-[**https://api.test.netgiro.is/checkout/ConfirmCart**](https://api.test.netgiro.is/swagger/)
+[**https://api.test.netgiro.is/v1/checkout/ConfirmCart**](https://api.test.netgiro.is/swagger/)
 
 Confirms cart from provider side if `ConfirmationType = Manual`.
 

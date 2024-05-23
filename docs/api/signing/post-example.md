@@ -14,17 +14,20 @@ grand_parent: API
 | Name  | Example Value | 
 | ------------- | ------------- |
 |netgiro_appkey | 881E674F-7891-4C20-AFD8-56FE2624C4B5 |
-|request_url | https://api.test.netgiro.is/checkout/InsertCart |
+|request_url | https://api.test.netgiro.is/v1/checkout/InsertCart |
 |netgiro_nonce | 39084373214935208 |
 
 For the body we will be sending the following object:
-```json
+```cs
+var requestBody = new
 {
-  "amount": 100,
-  "reference": "1005122-122331-113",
-  "customerId": "7700001",
-  "confirmationType": 0
-}
+    Amount = 1000,
+    Reference = "991100-123",
+    CustomerId = "7700001",
+    ConfirmationType = 1,
+    CallbackUrl = "www.example.com/callback-success/991100-123",
+    CallbackCancelUrl = "www.example.com/callback-cancel/991100-123"
+};
 ```
 
 Lets say our secret is:
@@ -35,4 +38,4 @@ Then calling the `CalculateSignature` method to obtain **netgiro_signature** sho
 
 - `CalculateSignature(secret, netgiro_nonce, request_url, JsonSerializer.Serialize(requestBody))` 
 
-- `d463a978220c9095ef5134c512fe24d8084f656453cf5b5aabed8a1576ef1d0b` (base 64 encoded string)
+- `330dcb77aa7a195d73e269f6a826e1b965f599e7a2ef4183d6e504595e5b73df` (base 64 encoded string)

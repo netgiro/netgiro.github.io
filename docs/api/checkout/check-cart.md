@@ -8,7 +8,7 @@ grand_parent: API
 ---
 
 # Check Cart
-[**https://api.test.netgiro.is/checkout/CheckCart**](https://api.test.netgiro.is/swagger/)
+[**https://api.test.netgiro.is/v1/checkout/CheckCart**](https://api.test.netgiro.is/swagger/)
 
 This method needs to be called periodically to check status of cart when customer confirms/rejects cart.
 - If `ConfirmationType = Automatic or ServerCallback`, this method just tells provider that payment is created.
