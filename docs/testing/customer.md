@@ -29,6 +29,6 @@ parent: Testing
 
 To confirm a payment created with GSM number, you can login to the customer panel using the credentials for the Test customer as above.
 
-***SSN** for testing is **1111111119**, **GSM** for testing is **7700001**, **AppCode** can be generated [**here**](/docs/testing/api-pos)
+***SSN** for testing is **1111111119**, **GSM** for testing is **8223281**, **AppCode** can be generated [**here**](/docs/testing/api-pos)
 
 ![customer-payment-requests](/images/payment_requests_on_customer.png)
