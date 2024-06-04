@@ -23,7 +23,7 @@ var requestBody = new
 {
     Amount = 1000,
     Reference = "991100-123",
-    CustomerId = "7700001",
+    CustomerId = "8223281",
     ConfirmationType = 1,
     CallbackUrl = "www.example.com/callback-success/991100-123",
     CallbackCancelUrl = "www.example.com/callback-cancel/991100-123"
@@ -38,4 +38,4 @@ Then calling the `CalculateSignature` method to obtain **netgiro_signature** sho
 
 - `CalculateSignature(secret, netgiro_nonce, request_url, JsonSerializer.Serialize(requestBody))` 
 
-- `330dcb77aa7a195d73e269f6a826e1b965f599e7a2ef4183d6e504595e5b73df` (base 64 encoded string)
+- `b3fe4c9a4d1727d69e408fad24700bdae624d21303efad6c011385c8312a79ee` (base 64 encoded string)

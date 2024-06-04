@@ -23,7 +23,7 @@ grand_parent: API
 | Description | No | Purchase description |
 | CartItemRequests | No | Cart items |
 
-***SSN** for testing is **1111111119**, **GSM** for testing is **7700001**, **AppCode** can be generated [**here**](/docs/testing/api-pos) at the bottom of page
+***SSN** for testing is **1111111119**, **GSM** for testing is **8223281**, **AppCode** can be generated [**here**](/docs/testing/api-pos) at the bottom of page
 
 
 **Confirmation type values: `0 - automatic`, `1 - server callback`, `2 - manual`
@@ -52,4 +52,4 @@ grand_parent: API
     - Success = false
     - ResultCode = GenericError (400) or any other error code
     
-**After you create cart with CustomerId = 7700001 (GSM number as CustomerId) you can simulate customer confirmation or rejection (as in mobile app) on [https://customer.test.netgiro.is/](https://customer.test.netgiro.is/). See explanation [here.](/docs/testing/customer#gsm-payment-verification)**
+**After you create cart with CustomerId = 8223281 (GSM number as CustomerId) you can simulate customer confirmation or rejection (as in mobile app) on [https://customer.test.netgiro.is/](https://customer.test.netgiro.is/). See explanation [here.](/docs/testing/customer#gsm-payment-verification)**
