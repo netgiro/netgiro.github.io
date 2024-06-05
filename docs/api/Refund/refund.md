@@ -17,7 +17,7 @@ Click on the URL to view the Swagger docs.
 ## Test URL
 
 {: .warning }
-> Please take note that the URL for test server has moved from [https://test.netgiro.is/partnerapi]() to [https://partner-api.test.netgiro.is/](https://partner-api.test.netgiro.is/).
+> Please take note that the URL for test server has moved from [https://test.netgiro.is/partnerapi]() to [https://partner-api.test.netgiro.is/]().
 
 Click on the URL to view the Swagger docs.
 

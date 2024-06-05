@@ -9,7 +9,7 @@ parent: Testing
 # Test provider info
 
 {: .warning }
-> Please take note that the URL for test server has moved from [https://test.netgiro.is/partner/]() to [https://partner.test.netgiro.is/](https://partner.test.netgiro.is/).
+> Please take note that the URL for test server has moved from [https://test.netgiro.is/partner/]() to [https://partner.test.netgiro.is/]().
 
 Sandbox has been setup with test providers who either use POST or GET for callback.
 
