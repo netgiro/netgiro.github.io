@@ -44,11 +44,23 @@ jobs:
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v1
 
-  # Deployment job
-  deploy:
+  # Deployment job - GitHub.io Pages
+  deploy_github_pages:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
+
+  # Deployment job - Redirect Page
+  deploy_developer_page:
+    environment:
+      name: netgiro-developer
+      url: "https://developer.netgiro.is/"
     runs-on: ubuntu-latest
     needs: build
     steps:
