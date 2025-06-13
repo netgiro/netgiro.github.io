@@ -38,4 +38,4 @@ Then calling the `CalculateSignature` method to obtain **netgiro_signature** sho
 
 - `CalculateSignature(secret, netgiro_nonce, request_url, JsonSerializer.Serialize(requestBody))` 
 
-- `b3fe4c9a4d1727d69e408fad24700bdae624d21303efad6c011385c8312a79ee` (base 64 encoded string)
+- `8ff35684c44ae5279f16f5b024b80a7f4de18f45b71aafc9c03a2f07ac3e9856` (base 64 encoded string)
