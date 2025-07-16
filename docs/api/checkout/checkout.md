@@ -10,9 +10,9 @@ permalink: /docs/api/checkout
 
 # Checkout
 
-Testing url (with swagger documentation): [**https://api.test.netgiro.is/v1/checkout**](https://api.test.netgiro.is/swagger)
+Testing url (with swagger documentation): [**https://api.test.netgiro.is/v1/Checkout**](https://api.test.netgiro.is/swagger)
 
-Production url: **https://api.netgiro.is/v1/checkout**
+Production url: **https://api.netgiro.is/v1/Checkout**
 
 More info for testing process (test provider AppId and SecretKey, test user credentials etc.) can be found [**here**](/docs/testing)
 
