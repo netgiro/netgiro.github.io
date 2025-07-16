@@ -14,7 +14,7 @@ grand_parent: API
 | Name  | Example Value | 
 | ------------- | ------------- |
 |netgiro_appkey | 881E674F-7891-4C20-AFD8-56FE2624C4B5 |
-|request_url | https://api.test.netgiro.is/v1/checkout/InsertCart |
+|request_url | https://api.test.netgiro.is/v1/Checkout/InsertCart |
 |netgiro_nonce | 39084373214935208 |
 
 For the body we will be sending the following object:

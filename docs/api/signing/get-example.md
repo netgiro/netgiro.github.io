@@ -14,7 +14,7 @@ grand_parent: API
 | Name  | Example Value | 
 | ------------- | ------------- |
 |netgiro_appkey | 881E674F-7891-4C20-AFD8-56FE2624C4B5 |
-|request_url | https://api.netgiro.is/v1/sales/GetList?AllForCompany=true |
+|request_url | https://api.netgiro.is/v1/Sales/GetList?AllForCompany=true |
 |netgiro_nonce | 635318618538563781 |
 
 - formData is "" (empty string) since we don't send anything in body (GET request)
@@ -27,4 +27,4 @@ Then calling the `CalculateSignature` method to obtain **netgiro_signature** sho
 
 - `CalculateSignature(secret, netgiro_nonce, request_url, request_formData)` 
 
-- `fab2e49378897fc3e36a51c747fe90792e604080459f4ea2c782596ce7e31cd2` (base 64 encoded string)
+- `1fcfcbf71b1350cf914ebb952c71d74551416a965ee3b65c38a16b35e687f87c` (base 64 encoded string)
