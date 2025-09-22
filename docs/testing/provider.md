@@ -12,6 +12,7 @@ parent: Testing
 > Please take note that the URL for test server has moved from [https://test.netgiro.is/partner/]() to [https://partner.test.netgiro.is/]().
 
 Sandbox has been setup with test providers who either use POST or GET for callback.
+ **Important:** The **GET method is considered *legacy*** and should only be used for maintaining older integrations. For all new integrations, please use **POST**.
 
 [https://partner.test.netgiro.is/](https://partner.test.netgiro.is/)
 
@@ -23,10 +24,10 @@ Select either account with POST or GET method.
 
 **About POST and GET**
 
-   - GET Method: Data is requested from a specific resource
-   - POST Method: Data is submitted to be processed to a specific resource
+   - GET Method (Legacy): Data is requested from a specific resource
+   - POST Method (Recommended): Data is submitted to be processed to a specific resource
 
-## NETGIRO POST - USER ACCOUNT
+## NETGIRO POST - USER ACCOUNT(Default testing account)
 
 **ApplicationID**
 
@@ -36,7 +37,10 @@ Select either account with POST or GET method.
 
 YCFd6hiA8lUjZejVcIf/LhRXO4wTDxY0JhOXvQZwnMSiNynSxmNIMjMf1HHwdV6cMN48NX3ZipA9q9hLPb9C1ZIzMH5dvELPAHceiu7LbZzmIAGeOf/OUaDrk2Zq2dbGacIAzU6yyk4KmOXRaSLi8KW8t3krdQSX7Ecm8Qunc/A=
 
-## NETGIRO GET - USER ACCOUNT
+{: .info }
+> If you prefer not to use the default test account above, you can **create your own test account** here: [https://partner.test.netgiro.is/Account/Register](https://partner.test.netgiro.is/Account/Register)
+
+## NETGIRO GET - USER ACCOUNT (LEGACY)
 
 **ApplicationID**
 
