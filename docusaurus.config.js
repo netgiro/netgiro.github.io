@@ -70,17 +70,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'docsSidebar',
             position: 'left',
-            label: 'Docs',
-          },
-          {
-            to: '/docs/checkout',
-            label: 'Checkout',
-            position: 'left',
-          },
-          {
-            to: '/docs/transaction',
-            label: 'Transaction',
-            position: 'left',
+            label: 'Documentation',
           },
           {
             type: 'docsVersionDropdown',
