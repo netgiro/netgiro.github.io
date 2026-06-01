@@ -5,21 +5,47 @@ title: Overview
 
 # Netgiro Developer Documentation
 
-There are two ways to integrate Netgiro payments:
+Choose your integration path based on where you accept payments.
 
-## Option 1: API Integration
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', margin: '2rem 0'}}>
 
-Build a custom integration using the Netgiro REST API. You own the checkout UI — Netgiro handles the payment processing behind the scenes. Best for custom-built stores, POS systems, and apps.
+<div style={{border: '1px solid var(--ng-border)', borderRadius: '12px', padding: '1.75rem', borderTop: '4px solid #64C3A2'}}>
 
-- [**Get started with the V2 API**](/docs/api) — Authentication, checkout, transactions, settlements
-- **Base URL:** `https://api.netgiro.is/v2`
+<h3 style={{marginTop: 0, display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+<span style={{fontSize: '1.5rem'}}>🌐</span> Online Checkout
+</h3>
 
-## Option 2: Web Shop Plugin
+<p style={{color: 'var(--ng-text-muted)', fontSize: '0.9rem'}}>For web shops and e-commerce</p>
 
-Use a pre-built plugin for your e-commerce platform. No API work needed — install the plugin, enter your credentials, and you're live.
+**Plugin (quickest)**
+- [Shopify](/docs/web-shop-plugins/shopify)
+- [WooCommerce, Magento, and more](/docs/web-shop-plugins)
 
-- [**Shopify**](/docs/web-shop-plugins/shopify) — Install from the Shopify App Store
-- [**WooCommerce, Magento, PrestaShop, and more**](/docs/web-shop-plugins) — See all supported platforms
+**API (custom build)**
+- [V2 API Guide](/docs/api)
+- Base URL: `https://api.netgiro.is/v2`
+
+</div>
+
+<div style={{border: '1px solid var(--ng-border)', borderRadius: '12px', padding: '1.75rem', borderTop: '4px solid #00AEEF'}}>
+
+<h3 style={{marginTop: 0, display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+<span style={{fontSize: '1.5rem'}}>🏪</span> POS Checkout
+</h3>
+
+<p style={{color: 'var(--ng-text-muted)', fontSize: '0.9rem'}}>For physical stores and terminals</p>
+
+**POS Module (quickest)**
+- [.NET and platform modules](/docs/resources/pos-modules)
+- [Netposi — web-based POS](/docs/resources/pos-modules#netposi)
+
+**API (custom build)**
+- [V2 API Guide](/docs/api) 
+- Base URL: `https://api.netgiro.is/v2`
+
+</div>
+
+</div>
 
 ---
 
@@ -29,11 +55,10 @@ Whichever path you choose, start in the [sandbox environment](/docs/testing) bef
 
 - [**Provider credentials**](/docs/testing/provider) — Test ApplicationId and SecretKey
 - [**Customer credentials**](/docs/testing/customer) — Test SSN and passwords
-- [**Token generator**](/docs/testing/api-pos) — Generate barcodes and SMS tokens
+- [**Token generator**](/docs/testing/api-pos) — Generate barcodes
 
 ## Resources
 
-- [**POS Modules**](/docs/resources/pos-modules) — .NET module and installable POS packages
 - [**Logos**](/docs/resources/logos) — Brand assets and loader screen
 - [**Widgets**](/docs/resources/widgets) — Partial payments calculator widgets
 
