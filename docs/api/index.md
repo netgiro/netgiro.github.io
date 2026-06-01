@@ -7,7 +7,7 @@ title: API
 
 **Base URL:** `https://api.netgiro.is/v2`
 
-The V2 API is a purely REST-based payment integration. No iframe, no redirect — the merchant owns the checkout UI completely. It works identically for POS and online integrations.
+The V2 API is a purely REST-based payment integration. It works identically for POS and online integrations.
 
 ## Quick start
 

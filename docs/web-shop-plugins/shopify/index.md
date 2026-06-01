@@ -5,7 +5,7 @@ title: Shopify
 
 # Netgiro Payments for Shopify
 
-![shopify-logo](/images/shopify-logo-785x231.png)
+<img src="/images/shopify-logo-785x231.png" alt="shopify-logo" width="200" />
 
 Netgiro is available as an alternative payment method using Shopify's new Payments Platform.
 

@@ -63,7 +63,8 @@ const config = {
         title: '',
         logo: {
           alt: 'Netgiro',
-          src: 'images/brand-logo.svg',
+          src: 'images/logo/Dark/Netgiro_Logo_130.svg',
+          srcDark: 'images/logo/Light/Netgiro_Logo_130.svg',
         },
         items: [
           {
