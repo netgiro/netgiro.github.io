@@ -104,6 +104,11 @@ body {
 .navbar__inner {
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0;
+}
+
+.navbar__brand {
+  margin-right: auto;
 }
 
 .navbar__logo {
@@ -702,6 +707,7 @@ table tbody td:nth-child(3) {
   background: rgba(0, 174, 239, 0.08);
   border: 1px solid rgba(0, 174, 239, 0.12);
   color: var(--ng-blue);
+  margin-bottom: 1.25rem;
 }
 
 .theme-doc-version-banner {

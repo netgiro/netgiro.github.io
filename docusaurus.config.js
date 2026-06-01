@@ -83,7 +83,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/netgiro/netgiro.github.io',
+            href: 'https://github.com/netgiro',
             'aria-label': 'GitHub',
             position: 'right',
             className: 'navbar__link--github',

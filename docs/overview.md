@@ -7,16 +7,7 @@ title: Overview
 
 **Base URL:** `https://api.netgiro.is/v2`
 
-The Netgiro V2 API is a purely API-based payment integration. There is no iframe, no redirect — the merchant owns the checkout UI completely.
-
-## Key differences from V1
-
-| Feature | V1 | V2 |
-|---------|----|----|
-| Auth | HMAC signature + nonce | API key header |
-| Checkout | Cart-based (InsertCart → CheckCart → ConfirmCart) | Single payment endpoint |
-| UI | iFrame/redirect option | Merchant-owned UI only |
-| POS vs Online | Different flows | Same API, different `CustomerIdentifier` |
+The Netgiro V2 API is a purely API-based payment integration. 
 
 ## How it works
 
