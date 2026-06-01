@@ -19,7 +19,6 @@ Every request to the V2 API must include your API key in a custom header.
 X-Netgiro-Api-Key: 881E674F-7891-4C20-AFD8-56FE2624C4B5
 ```
 
-No signature calculation, no nonce — just the API key.
 
 ## Error response
 
@@ -36,4 +35,4 @@ If the API key is missing or invalid, you'll receive an HTTP 401 response:
 
 Your ApplicationId is available in the [Netgiro Partner Portal](https://partner.netgiro.is). Log in and navigate to your integration settings.
 
-For testing, use the sandbox credentials from the [V1 testing guide](/docs/v1/testing/provider).
+For testing, use the sandbox credentials from the [testing guide](/docs/testing/provider).

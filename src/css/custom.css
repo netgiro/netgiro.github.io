@@ -228,7 +228,7 @@ aside.theme-doc-sidebar-container > div {
 }
 
 .menu__link {
-  font-size: 0.84rem;
+  font-size: 0.875rem;
   font-weight: 450;
   color: var(--ng-text-muted);
   border-radius: 8px;
@@ -249,7 +249,7 @@ aside.theme-doc-sidebar-container > div {
 .menu__link--sublist-caret {
   font-weight: 600;
   color: var(--ng-dark);
-  font-size: 0.84rem;
+  font-size: 0.875rem;
 }
 
 [data-theme='dark'] .menu__link--sublist-caret {
@@ -469,8 +469,7 @@ table {
   border-spacing: 0;
   border: 1px solid var(--ng-border);
   border-radius: 12px;
-  overflow: hidden;
-  margin: 1.25rem 0;
+  margin: 1.25rem 0 1.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
 }
 
@@ -491,6 +490,22 @@ table thead th {
   padding: 0.75rem 1rem;
   border-bottom: 1px solid var(--ng-border);
   text-align: left;
+}
+
+table thead th:first-child {
+  border-top-left-radius: 11px;
+}
+
+table thead th:last-child {
+  border-top-right-radius: 11px;
+}
+
+table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 11px;
+}
+
+table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 11px;
 }
 
 table tbody td {

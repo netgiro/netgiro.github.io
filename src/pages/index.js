@@ -14,7 +14,7 @@ const features = [
         <path d="M7 11V7a5 5 0 0 1 10 0v4" />
       </svg>
     ),
-    link: '/docs/authentication',
+    link: '/docs/api/authentication',
   },
   {
     title: 'Unified API',
@@ -35,7 +35,7 @@ const features = [
         <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
       </svg>
     ),
-    link: '/docs/checkout/flows',
+    link: '/docs/api/checkout/flows',
   },
   {
     title: 'Hold & Capture',
@@ -45,7 +45,7 @@ const features = [
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
-    link: '/docs/transaction/capture',
+    link: '/docs/api/transaction/capture',
   },
   {
     title: 'Refunds',
@@ -56,7 +56,7 @@ const features = [
         <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
       </svg>
     ),
-    link: '/docs/transaction/refund',
+    link: '/docs/api/transaction/refund',
   },
   {
     title: 'Settlements',
@@ -68,7 +68,7 @@ const features = [
         <line x1="10" y1="3" x2="10" y2="21" />
       </svg>
     ),
-    link: '/docs/settlement',
+    link: '/docs/api/settlement',
   },
 ];
 

@@ -98,7 +98,7 @@ const config = {
             items: [
               {
                 label: 'V2 API',
-                to: '/docs/overview',
+                to: '/docs/api',
               },
               {
                 label: 'V1 API',
