@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --ifm-color-primary: #00aeef;
+  --ifm-color-primary-dark: #009dd7;
+  --ifm-color-primary-darker: #0094cb;
+  --ifm-color-primary-darkest: #007aa7;
+  --ifm-color-primary-light: #19b6f1;
+  --ifm-color-primary-lighter: #26baf2;
+  --ifm-color-primary-lightest: #4dc8f4;
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 174, 239, 0.1);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #4dc8f4;
+  --ifm-color-primary-dark: #27bdf2;
+  --ifm-color-primary-darker: #14b7f1;
+  --ifm-color-primary-darkest: #0a99cc;
+  --ifm-color-primary-light: #73d3f6;
+  --ifm-color-primary-lighter: #86d9f7;
+  --ifm-color-primary-lightest: #b8e8fa;
+  --docusaurus-highlighted-code-line-bg: rgba(77, 200, 244, 0.15);
+}
+
+.navbar__logo img {
+  height: 28px;
+}
+
+.footer--dark {
+  background-color: #1a1a2e;
+}
+
+article h1 {
+  font-size: 2rem;
+}
+
+table {
+  display: table;
+  width: 100%;
+}

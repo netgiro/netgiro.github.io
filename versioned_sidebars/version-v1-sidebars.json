@@ -1,0 +1,98 @@
+{
+  "docsSidebar": [
+    {
+      "type": "category",
+      "label": "HTTP POST and iFrame",
+      "link": { "type": "doc", "id": "iframe-and-http-post/index" },
+      "items": [
+        "iframe-and-http-post/http-post-request",
+        "iframe-and-http-post/additional-functionality"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Testing",
+      "link": { "type": "doc", "id": "testing/index" },
+      "items": [
+        "testing/provider",
+        "testing/customer",
+        "testing/api-pos"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "API",
+      "link": { "type": "doc", "id": "api/index" },
+      "items": [
+        "api/request-protocol",
+        "api/response",
+        {
+          "type": "category",
+          "label": "Signing",
+          "link": { "type": "doc", "id": "api/signing/index" },
+          "items": [
+            "api/signing/get-example",
+            "api/signing/post-example"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Checkout",
+          "link": { "type": "doc", "id": "api/checkout/index" },
+          "items": [
+            {
+              "type": "category",
+              "label": "Chronology",
+              "link": { "type": "doc", "id": "api/checkout/chronology/index" },
+              "items": [
+                "api/checkout/chronology/online-checkout",
+                "api/checkout/chronology/offline-checkout"
+              ]
+            },
+            "api/checkout/insert-cart",
+            "api/checkout/check-cart",
+            "api/checkout/confirm-cart",
+            "api/checkout/cancel-cart",
+            "api/checkout/result-codes"
+          ]
+        },
+        {
+          "type": "category",
+          "label": "Sales",
+          "link": { "type": "doc", "id": "api/sales/index" },
+          "items": [
+            "api/sales/transaction"
+          ]
+        },
+        "api/refund"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Web Shop Plugins",
+      "link": { "type": "doc", "id": "web-shop-plugins/index" },
+      "items": [
+        {
+          "type": "category",
+          "label": "Shopify",
+          "link": { "type": "doc", "id": "web-shop-plugins/shopify/index" },
+          "items": [
+            "web-shop-plugins/shopify/new-merchants",
+            "web-shop-plugins/shopify/migrating-merchants",
+            "web-shop-plugins/shopify/refunds"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Resources",
+      "link": { "type": "doc", "id": "resources/index" },
+      "items": [
+        "resources/pos-modules",
+        "resources/logos",
+        "resources/widgets"
+      ]
+    }
+  ]
+}
