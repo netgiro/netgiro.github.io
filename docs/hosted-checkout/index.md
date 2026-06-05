@@ -7,8 +7,6 @@ title: Hosted Checkout
 
 A server-side checkout integration. Your backend creates a cart via a JSON API call, receives a checkout URL, and redirects the customer's browser to that URL. The customer confirms payment on the Netgiro checkout page and is redirected back to your site.
 
-No signature calculation required — just an API key header.
-
 ## Authentication
 
 Send the API key as a header (same key as the V2 API):

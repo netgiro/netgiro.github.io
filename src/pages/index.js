@@ -71,6 +71,10 @@ function IntegrationPaths() {
                 <strong>Web Shop Plugin</strong>
                 <span>Shopify, WooCommerce, Magento, and more</span>
               </Link>
+              <Link to="/docs/hosted-checkout" className={styles.pathLink}>
+                <strong>Hosted Checkout</strong>
+                <span>Redirect customers to Netgiro's checkout page</span>
+              </Link>
               <Link to="/docs/api" className={styles.pathLink}>
                 <strong>V2 API</strong>
                 <span>Build a fully custom checkout</span>
@@ -92,9 +96,13 @@ function IntegrationPaths() {
             <h3 className={styles.pathTitle}>POS Checkout</h3>
             <p className={styles.pathDesc}>For physical stores and terminals</p>
             <div className={styles.pathOptions}>
+              <Link to="/docs/resources/pos-modules#netposi" className={styles.pathLink}>
+                <strong>Netposi</strong>
+                <span>Web-based POS — quickest way to start</span>
+              </Link>
               <Link to="/docs/resources/pos-modules" className={styles.pathLink}>
-                <strong>POS Module / Netposi</strong>
-                <span>Ready-made for major POS systems</span>
+                <strong>POS Module</strong>
+                <span>.NET module and packages for major POS systems</span>
               </Link>
               <Link to="/docs/api" className={styles.pathLink}>
                 <strong>V2 API</strong>
