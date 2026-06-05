@@ -21,9 +21,11 @@ Choose your integration path based on where you accept payments.
 - [Shopify](/docs/web-shop-plugins/shopify)
 - [WooCommerce, Magento, and more](/docs/web-shop-plugins)
 
+**Hosted Checkout (redirect)**
+- [Hosted Checkout](/docs/hosted-checkout) — Create a cart via API, redirect the customer to Netgiro's checkout page
+
 **API (custom build)**
-- [V2 API Guide](/docs/api)
-- Base URL: `https://api.netgiro.is/v2`
+- [V2 API Guide](/docs/api) — Full control over the checkout UI
 
 </div>
 

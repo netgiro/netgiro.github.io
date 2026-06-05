@@ -2,6 +2,7 @@
 const sidebars = {
   docsSidebar: [
     'overview',
+    'hosted-checkout/index',
     {
       type: 'category',
       label: 'API',
