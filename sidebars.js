@@ -2,7 +2,16 @@
 const sidebars = {
   docsSidebar: [
     'overview',
-    'hosted-checkout/index',
+    {
+      type: 'category',
+      label: 'Hosted Checkout',
+      link: { type: 'doc', id: 'hosted-checkout/index' },
+      items: [
+        'hosted-checkout/create-checkout',
+        'hosted-checkout/payment-confirmation',
+        'hosted-checkout/flow',
+      ],
+    },
     {
       type: 'category',
       label: 'API',
