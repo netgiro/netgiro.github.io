@@ -14,17 +14,15 @@ The simplest flow. A barcode scan at the register triggers instant payment.
 1. **POST** `/v2/checkout/payment` with barcode as `CustomerIdentifier`
 2. Response: `Status: Confirmed` — done
 
-```
-Merchant                         Netgiro
-   |                                |
-   |  POST /v2/checkout/payment     |
-   |  (barcode)                     |
-   |------------------------------->|
-   |                                |
-   |  Status: Confirmed             |
-   |<-------------------------------|
-   |                                |
-   Done - show receipt
+```mermaid
+sequenceDiagram
+    participant M as Merchant
+    participant N as Netgiro
+
+    M->>N: POST /v2/checkout/payment<br/>(barcode)
+    N-->>M: Status: Confirmed
+
+    Note over M: Done — show receipt
 ```
 
 ## POS/Online — phone number (remote)
@@ -37,27 +35,25 @@ The customer confirms in the Netgiro app. The merchant polls for status or recei
 4. Merchant polls **GET** `/v2/checkout/status/{id}` — eventually `Status: Confirmed`
 5. _(Or receives callback if `CallbackUrl` was provided)_
 
-```
-Merchant                         Netgiro                       Customer
-   |                                |                              |
-   |  POST /v2/checkout/payment     |                              |
-   |  (phone)                       |                              |
-   |------------------------------->|                              |
-   |                                |  Push notification           |
-   |  Status: Pending               |----------------------------->|
-   |<-------------------------------|                              |
-   |                                |                              |
-   |  GET /v2/checkout/status/{id}  |                              |
-   |------------------------------->|                              |
-   |  Status: Pending               |                              |
-   |<-------------------------------|  Confirms in app             |
-   |                                |<-----------------------------|
-   |  GET /v2/checkout/status/{id}  |                              |
-   |------------------------------->|                              |
-   |  Status: Confirmed             |                              |
-   |<-------------------------------|                              |
-   |                                |                              |
-   Done - show receipt
+```mermaid
+sequenceDiagram
+    participant M as Merchant
+    participant N as Netgiro
+    participant C as Customer
+
+    M->>N: POST /v2/checkout/payment<br/>(phone)
+    N-->>M: Status: Pending
+    N->>C: Push notification
+
+    M->>N: GET /v2/checkout/status/{id}
+    N-->>M: Status: Pending
+
+    C->>N: Confirms in app
+
+    M->>N: GET /v2/checkout/status/{id}
+    N-->>M: Status: Confirmed
+
+    Note over M: Done — show receipt
 ```
 
 ## Authorization — barcode (hold + capture)
@@ -69,25 +65,20 @@ For scenarios where the merchant wants to hold funds before charging (e.g., hote
 3. Later: **POST** `/v2/transaction/capture`
 4. Response: `Status: Confirmed`
 
-```
-Merchant                         Netgiro
-   |                                |
-   |  POST /v2/checkout/payment     |
-   |  (barcode, ManualCapture)      |
-   |------------------------------->|
-   |                                |
-   |  Status: Authorized            |
-   |<-------------------------------|
-   |                                |
-   |  ... time passes ...           |
-   |                                |
-   |  POST /v2/transaction/capture  |
-   |------------------------------->|
-   |                                |
-   |  Status: Confirmed             |
-   |<-------------------------------|
-   |                                |
-   Done - show receipt
+```mermaid
+sequenceDiagram
+    participant M as Merchant
+    participant N as Netgiro
+
+    M->>N: POST /v2/checkout/payment<br/>(barcode, ManualCapture: true)
+    N-->>M: Status: Authorized
+
+    Note over M,N: Time passes...
+
+    M->>N: POST /v2/transaction/capture
+    N-->>M: Status: Confirmed
+
+    Note over M: Done — show receipt
 ```
 
 ## Authorization — phone (hold + capture)
@@ -101,26 +92,25 @@ Combines remote confirmation with manual capture.
 5. Later: **POST** `/v2/transaction/capture`
 6. Response: `Status: Confirmed`
 
-```
-Merchant                         Netgiro                       Customer
-   |                                |                              |
-   |  POST /v2/checkout/payment     |                              |
-   |  (phone, ManualCapture)        |                              |
-   |------------------------------->|  Push notification           |
-   |  Status: Pending               |----------------------------->|
-   |<-------------------------------|                              |
-   |                                |  Confirms in app             |
-   |  GET /v2/checkout/status/{id}  |<-----------------------------|
-   |------------------------------->|                              |
-   |  Status: Authorized            |                              |
-   |<-------------------------------|                              |
-   |                                |                              |
-   |  ... time passes ...           |                              |
-   |                                |                              |
-   |  POST /v2/transaction/capture  |                              |
-   |------------------------------->|                              |
-   |  Status: Confirmed             |                              |
-   |<-------------------------------|                              |
-   |                                |                              |
-   Done - show receipt
+```mermaid
+sequenceDiagram
+    participant M as Merchant
+    participant N as Netgiro
+    participant C as Customer
+
+    M->>N: POST /v2/checkout/payment<br/>(phone, ManualCapture: true)
+    N-->>M: Status: Pending
+    N->>C: Push notification
+
+    C->>N: Confirms in app
+
+    M->>N: GET /v2/checkout/status/{id}
+    N-->>M: Status: Authorized
+
+    Note over M,N: Time passes...
+
+    M->>N: POST /v2/transaction/capture
+    N-->>M: Status: Confirmed
+
+    Note over M: Done — show receipt
 ```

@@ -7,31 +7,23 @@ title: Flow Diagram
 
 ## Standard flow
 
-```
-Merchant Server                  Netgiro                        Customer Browser
-      |                              |                                |
-      |  POST /Checkout/Payment      |                                |
-      |  (JSON + API key)            |                                |
-      |----------------------------->|                                |
-      |                              |                                |
-      |  { CheckoutUrl: "..." }      |                                |
-      |<-----------------------------|                                |
-      |                              |                                |
-      |  302 Redirect to CheckoutUrl |                                |
-      |------------------------------------------------------------->|
-      |                              |                                |
-      |                              |  Customer confirms payment     |
-      |                              |<-------------------------------|
-      |                              |                                |
-      |  Callback POST (if provided) |                                |
-      |<-----------------------------|                                |
-      |  Return HTTP 200             |                                |
-      |----------------------------->|                                |
-      |                              |                                |
-      |                              |  302 Redirect to SuccessUrl    |
-      |                              |  (?TransactionId=...&Status=2) |
-      |                              |------------------------------->|
-      |                              |                                |
+```mermaid
+sequenceDiagram
+    participant M as Merchant Server
+    participant N as Netgiro
+    participant C as Customer Browser
+
+    M->>N: POST /Checkout/Payment<br/>(JSON + API key)
+    N-->>M: { CheckoutUrl: "..." }
+    M->>C: 302 Redirect to CheckoutUrl
+    C->>N: Opens checkout page
+    N->>C: Checkout UI
+    C->>N: Confirms payment
+    opt CallbackUrl provided
+        N->>M: POST callback (JSON)
+        M-->>N: HTTP 200
+    end
+    N->>C: 302 Redirect to SuccessUrl<br/>(?TransactionId=...&Status=2)
 ```
 
 ## Confirmation types
@@ -48,33 +40,23 @@ The combination of `ManualCapture` and `CallbackUrl` determines how the payment 
 
 Set `ManualCapture: true` to hold funds without charging. Useful for bookings, pre-orders, or any scenario where you need to confirm availability before charging.
 
-```
-Merchant Server                  Netgiro                        Customer Browser
-      |                              |                                |
-      |  POST /Checkout/Payment      |                                |
-      |  (ManualCapture: true)       |                                |
-      |----------------------------->|                                |
-      |                              |                                |
-      |  { CheckoutUrl: "..." }      |                                |
-      |<-----------------------------|                                |
-      |                              |                                |
-      |  302 Redirect to CheckoutUrl |                                |
-      |------------------------------------------------------------->|
-      |                              |                                |
-      |                              |  Customer confirms             |
-      |                              |  (funds held, not charged)     |
-      |                              |<-------------------------------|
-      |                              |                                |
-      |                              |  302 Redirect to SuccessUrl    |
-      |                              |------------------------------->|
-      |                              |                                |
-      |  ... time passes ...         |                                |
-      |                              |                                |
-      |  POST /v2/transaction/capture|                                |
-      |----------------------------->|                                |
-      |  Status: Confirmed           |                                |
-      |<-----------------------------|                                |
-      |                              |                                |
+```mermaid
+sequenceDiagram
+    participant M as Merchant Server
+    participant N as Netgiro
+    participant C as Customer Browser
+
+    M->>N: POST /Checkout/Payment<br/>(ManualCapture: true)
+    N-->>M: { CheckoutUrl: "..." }
+    M->>C: 302 Redirect to CheckoutUrl
+    C->>N: Confirms payment
+    Note over N: Funds held,<br/>not charged
+    N->>C: 302 Redirect to SuccessUrl
+
+    Note over M,N: Time passes...
+
+    M->>N: POST /v2/transaction/capture
+    N-->>M: Status: Confirmed
 ```
 
 After the customer confirms:
