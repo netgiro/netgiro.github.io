@@ -5,27 +5,13 @@ title: Provider
 
 # Test provider info
 
-:::warning
-Please take note that the URL for test server has moved from https://test.netgiro.is/partner/ to https://partner.test.netgiro.is/.
-:::
-
-Sandbox has been setup with test providers who either use POST or GET for callback.
-**Important:** The **GET method is considered *legacy*** and should only be used for maintaining older integrations. For all new integrations, please use **POST**.
-
 [https://partner.test.netgiro.is/](https://partner.test.netgiro.is/)
 
 User login: sandbox@netgiro.is
 
 Password: meerko11
 
-Select either account with POST or GET method.
-
-**About POST and GET**
-
-   - GET Method (Legacy): Data is requested from a specific resource
-   - POST Method (Recommended): Data is submitted to be processed to a specific resource
-
-## NETGIRO POST - USER ACCOUNT (Default testing account)
+## Test account credentials
 
 **ApplicationID**
 
@@ -38,13 +24,3 @@ YCFd6hiA8lUjZejVcIf/LhRXO4wTDxY0JhOXvQZwnMSiNynSxmNIMjMf1HHwdV6cMN48NX3ZipA9q9hL
 :::info
 If you prefer not to use the default test account above, you can **create your own test account** here: [https://partner.test.netgiro.is/Account/Register](https://partner.test.netgiro.is/Account/Register)
 :::
-
-## NETGIRO GET - USER ACCOUNT (LEGACY)
-
-**ApplicationID**
-
-cf4dda0f-2698-4aeb-8092-a41c675590d2
-
-**SecretKey**
-
-5ElNQUxq58KmQIsVlVbOu9Lu04h0QNTkrTfDjYYvvRDO2EAC1L0SbL4M+AZjCeITiTZnKwguYph+Gj6wMr+GRY0pGMx2Cnl5ax/2iQDoNZIpC9HtLsM9Yt5pfD2oL/MG5Kn3FqbdAl22Apuvj+6O40a2Peap+EFPrknni6oQIbo=
