@@ -5,10 +5,6 @@ title: Customer
 
 # Test customer info
 
-:::warning
-Please take note that the URL for test server has moved from https://test.netgiro.is/customer to https://customer.test.netgiro.is/.
-:::
-
 [https://customer.test.netgiro.is/](https://customer.test.netgiro.is/)
 
 ## Test customer credentials
