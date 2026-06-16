@@ -7,7 +7,7 @@ title: Cancel
 
 **POST** `/v2/transaction/cancel`
 
-Cancel a payment, reservation, or pending checkout. Works at any stage — pending customer confirmation, authorized hold, or confirmed payment (within the cancellation window).
+Cancel a payment, reservation, or pending checkout. Works at any stage — pending customer confirmation, authorized hold, or confirmed payment.
 
 ## Request body
 
