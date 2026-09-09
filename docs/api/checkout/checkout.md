@@ -14,6 +14,6 @@ Testing url (with swagger documentation): [**https://api.test.netgiro.is/v1/Chec
 
 Production url: **https://api.netgiro.is/v1/Checkout**
 
-More info for testing process (test provider AppId and SecretKey, test user credentials etc.) can be found [**here**](/docs/testing)
+More info for testing process (test provider registration, test user credentials etc.) can be found [**here**](/docs/testing)
 
 For any questions and concerns about API integration, please contact this mail: **dev@netgiro.is**
