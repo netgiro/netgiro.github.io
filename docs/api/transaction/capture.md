@@ -34,3 +34,17 @@ Capture a previously authorized payment. Used after a payment was created with `
   "PollIntervalMs": null
 }
 ```
+
+## Error — transaction not found
+
+Returned for a full capture (no `Amount`) when the transaction does not exist or belongs to another merchant.
+
+```json
+{
+  "Success": false,
+  "Message": "Loan does not exist",
+  "Status": null,
+  "TransactionId": "abc-123",
+  "PollIntervalMs": null
+}
+```

@@ -28,3 +28,17 @@ Cancel a payment, reservation, or pending checkout. Works at any stage — pendi
   "PollIntervalMs": null
 }
 ```
+
+## Error — transaction not found
+
+Returned when the transaction does not exist or belongs to another merchant.
+
+```json
+{
+  "Success": false,
+  "Message": "Cart does not exist!",
+  "Status": null,
+  "TransactionId": "abc-123",
+  "PollIntervalMs": null
+}
+```

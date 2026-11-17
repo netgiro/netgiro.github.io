@@ -28,5 +28,8 @@ When required fields are missing or invalid, the API returns HTTP 400 with detai
 | Missing customer identifier | `'CustomerIdentifier' must not be empty.` |
 | Invalid customer identifier | `Customer not verified.` |
 | Customer blacklisted | `Customer is blacklisted` |
-| Invalid API key | `API key is required` (HTTP 401) |
-| Transaction not found | `Transaction not found` |
+| Missing API key | `API key is required` (HTTP 401) |
+| Invalid, archived or ApplicationId used as API key | `Invalid API key` (HTTP 401) — see [Authentication](../authentication.md#invalid-api-key) |
+| Transaction not found (status) | `Transaction not found` |
+| Transaction not found or another merchant's (capture) | `Loan does not exist` |
+| Transaction not found or another merchant's (cancel) | `Cart does not exist!` |

@@ -9,12 +9,12 @@ Your backend creates a cart via a JSON API call, receives a checkout URL, and re
 
 ## Quick start
 
-1. Register at the [Test Partner Portal](https://partner.test.netgiro.is) and get your ApplicationId
-2. Call the endpoint with your key:
+1. Register at the [Test Partner Portal](https://partner.test.netgiro.is) and get your SecretKey
+2. Call the endpoint from your server with your key:
 
 ```bash
 curl -X POST https://securepay.test.netgiro.is/v1/Checkout/Payment \
-  -H "X-Netgiro-Api-Key: YOUR_APPLICATION_ID" \
+  -H "X-Netgiro-Api-Key: YOUR_SECRET_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "Amount": 5000,
@@ -48,5 +48,5 @@ That's it — Netgiro handles the rest.
 Use the [test environment](/docs/testing) to try the full flow:
 
 - **Test endpoint:** `https://securepay.test.netgiro.is/v1/Checkout/Payment`
-- **API key:** Register at the [Test Partner Portal](https://partner.test.netgiro.is) to get your test ApplicationId
+- **API key:** Register at the [Test Partner Portal](https://partner.test.netgiro.is) to get your test SecretKey
 - **Test customer SSN:** `1111111119`, password: `meerko1` ([more test customers](/docs/testing/customer))

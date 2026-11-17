@@ -14,11 +14,15 @@ title: Create Checkout
 
 ## Authentication
 
-Send the API key as a header (same key as the [V2 API](/docs/api/authentication)):
+Send the API key as a header (same key as the [V2 API](/docs/api/authentication)). The API key is the **SecretKey** of your integration key, not the ApplicationId:
 
 ```
-X-Netgiro-Api-Key: <ApplicationId GUID>
+X-Netgiro-Api-Key: YOUR_SECRET_KEY
 ```
+
+:::warning Call from your server
+Create the checkout from your backend only, then redirect the customer's browser to the returned `CheckoutUrl`. Never send the SecretKey to the browser.
+:::
 
 ## Request
 
@@ -66,12 +70,14 @@ Redirect the customer's browser to `CheckoutUrl`. The customer will identify the
 }
 ```
 
-### Business error (HTTP 400)
+### Invalid API key (HTTP 400)
+
+Returned when the key does not match an active integration key, for example an ApplicationId or an archived key.
 
 ```json
 {
   "Success": false,
-  "Message": "Invalid application key"
+  "Message": "Invalid app key"
 }
 ```
 

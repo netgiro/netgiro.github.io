@@ -5,26 +5,34 @@ title: Authentication
 
 # Authentication
 
-Every request to the V2 API must include your API key in a custom header.
+Every request to the V2 API must include your API key in a custom header. The API key is the **SecretKey** of your integration key.
+
+:::warning Keep the key secret
+Call the API from your server only. Never put the SecretKey in a web page, browser JavaScript or an app that customers can download. Anyone who has it can create payments, capture, cancel and refund on your behalf.
+
+Your **ApplicationId** is not an API key and is rejected. It is a public identifier, for example in hosted checkout forms.
+:::
 
 ## Headers
 
 | Header | Required | Description |
 |--------|----------|-------------|
-| `X-Netgiro-Api-Key` | Yes | Your ApplicationId GUID from the provider integration key |
+| `X-Netgiro-Api-Key` | Yes | The SecretKey of your integration key |
 | `NETGIRO_CLIENTINFO` | No | Identifies your integration platform (e.g. `System: WooCommerce 5.0`). Used for debugging and support. |
 
 ### Example
 
 ```
-X-Netgiro-Api-Key: 881E674F-7891-4C20-AFD8-56FE2624C4B5
+X-Netgiro-Api-Key: YOUR_SECRET_KEY
 NETGIRO_CLIENTINFO: System: Custom POS
 ```
 
 
-## Error response
+## Error responses
 
-If the API key is missing or invalid, you'll receive an HTTP 401 response:
+Both cases return HTTP 401.
+
+### Missing API key
 
 ```json
 {
@@ -33,8 +41,21 @@ If the API key is missing or invalid, you'll receive an HTTP 401 response:
 }
 ```
 
+### Invalid API key
+
+Returned when the key does not match an active integration key: a wrong value, an ApplicationId, an archived integration key, or an inactive merchant account.
+
+```json
+{
+  "Data": null,
+  "Success": false,
+  "Message": "Invalid API key",
+  "ResultCode": 401
+}
+```
+
 ## Getting your API key
 
-Your ApplicationId is available in the [Netgiro Partner Portal](https://partner.netgiro.is). Log in and navigate to your integration settings.
+Your SecretKey is shown with your integration key in the [Netgiro Partner Portal](https://partner.netgiro.is). Log in and navigate to your integration settings.
 
 For testing, use the sandbox credentials from the [testing guide](/docs/testing/provider).

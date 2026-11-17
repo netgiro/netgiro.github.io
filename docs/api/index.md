@@ -11,14 +11,14 @@ The V2 API is a purely REST-based payment integration. It works identically for 
 
 ## Quick start
 
-1. Get your **ApplicationId** from the [Partner Portal](https://partner.netgiro.is) (or use the [test credentials](/docs/testing/provider))
-2. Set the `X-Netgiro-Api-Key` header on every request
+1. Get your **SecretKey** from the [Partner Portal](https://partner.netgiro.is) (or use the [test credentials](/docs/testing/provider))
+2. Send it in the `X-Netgiro-Api-Key` header on every request, from your server only
 3. POST to `/v2/checkout/payment` with an amount and customer identifier
 4. Handle the response — instant confirmation for barcodes, or poll for phone-based payments
 
 ```bash
 curl -X POST https://api.netgiro.is/v2/checkout/payment \
-  -H "X-Netgiro-Api-Key: YOUR_APPLICATION_ID" \
+  -H "X-Netgiro-Api-Key: YOUR_SECRET_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "Amount": 5000,

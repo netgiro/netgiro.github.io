@@ -12,4 +12,4 @@ To start testing, register your own test account:
 3. Log in at [https://partner.test.netgiro.is/](https://partner.test.netgiro.is/)
 4. Navigate to your integration settings to find your **ApplicationId** and **SecretKey**
 
-Use your **ApplicationId** as the `X-Netgiro-Api-Key` header value when calling the test API endpoints.
+Use your **SecretKey** as the `X-Netgiro-Api-Key` header value when calling the V2 API and hosted checkout test endpoints. The ApplicationId is not accepted as an API key.

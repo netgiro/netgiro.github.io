@@ -32,7 +32,13 @@ Poll the status of a payment.
 
 `PollIntervalMs` is only present when the status is `Pending` — it tells the merchant how frequently to poll (in milliseconds).
 
+:::note Unknown transactions
+A `transactionId` that does not exist, or that belongs to another merchant, returns `Success: true` with `Status: "Cancelled"`. Only poll transaction IDs that your own payment requests returned.
+:::
+
 ## Error — transaction not found
+
+Returned when the customer has confirmed but no payment was recorded for the transaction.
 
 ```json
 {
