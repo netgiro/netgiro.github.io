@@ -63,4 +63,4 @@ After the customer confirms:
 
 1. Funds are held on the customer's account
 2. When ready to charge, call [POST /v2/transaction/capture](/docs/api/transaction/capture)
-3. To release the hold without charging, call [POST /v2/transaction/cancel](/docs/api/transaction/cancel)
+3. To release the hold without charging, call [POST /v2/transaction/cancel](/docs/api/transaction/cancel). A hold that is neither captured nor cancelled is released automatically when the reservation expires.

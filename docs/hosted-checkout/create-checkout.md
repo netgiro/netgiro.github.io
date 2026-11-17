@@ -10,7 +10,7 @@ title: Create Checkout
 | Environment | URL |
 |-------------|-----|
 | Production | `https://securepay.netgiro.is/v1/Checkout/Payment` |
-| Test | `https://securepay.test.netgiro.is/v1/Checkout/Payment` |
+| Test | `https://securepay.test.netgiro.is/Checkout/Payment` |
 
 ## Authentication
 

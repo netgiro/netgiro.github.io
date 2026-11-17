@@ -15,5 +15,5 @@ The transaction endpoints handle post-payment operations: viewing details, captu
 |--------|----------|-------------|
 | GET | [`/v2/transaction/details/{transactionId}`](./details.md) | Get transaction details |
 | POST | [`/v2/transaction/capture`](./capture.md) | Capture an authorization |
-| POST | [`/v2/transaction/cancel`](./cancel.md) | Cancel a payment or reservation |
+| POST | [`/v2/transaction/cancel`](./cancel.md) | Cancel a pending payment or release an authorization |
 | POST | [`/v2/transaction/refund`](./refund.md) | Refund (partial or full) |
